@@ -15,12 +15,6 @@ public class AiBehaviour : MonoBehaviour
     public NavMeshAgent Hydogen;
     //Player
     public Transform Player;
-    
-    //Layer Recognize
-    public LayerMask GroundMask, PlayerMask;
-
-    //PlayerinSight
-    public float playerInSight;
 
     public float range = 0.5f;
     int i = 0;
@@ -41,8 +35,6 @@ public class AiBehaviour : MonoBehaviour
     
     void Update()
     {
-        
-
             //Enum depends on chasing and attacking
             switch (trackType)
             {
@@ -55,11 +47,19 @@ public class AiBehaviour : MonoBehaviour
             }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+
+        }
+    }
+
     //Hydogen Attack System
     private void Attack()
     {
         //Chases Player for Attack
-        Hydogen.SetDestination(Player.position);
+
 
     }
 
