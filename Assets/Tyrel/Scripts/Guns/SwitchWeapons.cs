@@ -9,7 +9,7 @@ public class SwitchWeapons : MonoBehaviour
 
     public GameObject Shotgun;
     public GameObject AssualtRifle;
-
+    public GameObject Sniper;
 
     void Start()
     {
@@ -29,7 +29,16 @@ public class SwitchWeapons : MonoBehaviour
             weaponSelected = 2;
         }
 
-        if(Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            weaponSelected = 3;
+        }
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 1)
+        {
+            weaponSelected = 3;
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             weaponSelected = 2;
         }
@@ -43,15 +52,20 @@ public class SwitchWeapons : MonoBehaviour
             case 1:
                 Shotgun.SetActive(false);
                 AssualtRifle.SetActive(true);
-                
+                Sniper.SetActive(false);
                 break;
 
             case 2:
                 Shotgun.SetActive(true);
                 AssualtRifle.SetActive(false);
+                Sniper.SetActive(false);
                 break;
 
-
+            case 3:
+                Sniper.SetActive(true);
+                Shotgun.SetActive(false);
+                AssualtRifle.SetActive(false);
+                break;
         }
 
 

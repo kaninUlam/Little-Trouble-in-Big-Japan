@@ -13,7 +13,7 @@ public class GunFire : MonoBehaviour
 
     public float assualtRange = 1;
     public float shotgunRange = 0.2f;
-    
+    public float sniperRange = 5f;
 
     public virtual void FireProjectile()
     {
