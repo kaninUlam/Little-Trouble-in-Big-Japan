@@ -21,7 +21,7 @@ public class GunDamage : MonoBehaviour
             {
                 Debug.Log("hit");
                 Destroy(gameObject);
-                healthComponent.TakeDamage(DamageDealt);
+                healthComponent.takeDamage(DamageDealt);
             }
 
         }
