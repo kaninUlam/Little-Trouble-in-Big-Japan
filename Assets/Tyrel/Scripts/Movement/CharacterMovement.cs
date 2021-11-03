@@ -7,9 +7,6 @@ using UnityEngine.UI;
 public class CharacterMovement : MonoBehaviour
 {
 
-    
-
-    
     public GameObject fpsCamera = null;
 
     public CharacterController controller;
@@ -18,14 +15,9 @@ public class CharacterMovement : MonoBehaviour
     public float runSpeed = 20;
     public float normalSpeed = 12;
     public float gravity = -9.8f;
+    float mass = 5f;
 
-    public float stamina = 5f;
-    public float maxStamina = 5f;
-    public float minStamina = 0f;
-    public float staminaDrain = 2;
-    public float staminaRegen = 2;
     bool sprinting = false;
-    bool regenerated = true;
 
     AudioSource aSource = null;
 
@@ -93,24 +85,14 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (regenerated == true)
-            {
+
                 sprinting = true;
                 
                 PlayRunning();
-                stamina -= staminaDrain * Time.deltaTime;
                 
                 fpsCamera.GetComponentInChildren<Camera>().fieldOfView = Mathf.Lerp(80, 85, 1);
                 speed = runSpeed;
-                
-                if (stamina <= 0)
-                {
-                    
-                    regenerated = false;
-                    sprinting = false;
-                    
-                }
-            }
+  
         }
         else
         {
@@ -140,19 +122,7 @@ public class CharacterMovement : MonoBehaviour
         if (sprinting == false)
         {
             speed = normalSpeed;
-            if (stamina <= maxStamina)
-            {
-                
-                
-                stamina += staminaRegen * Time.deltaTime;
-
-                if (stamina >= maxStamina)
-                {
-                    regenerated = true;
-                    
-                    
-                }
-            }
+            
 
         }
 

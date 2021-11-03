@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 3726448722575715558}
   - component: {fileID: 3726448722575715561}
   - component: {fileID: 4538376605571452334}
+  - component: {fileID: 7000051661611659045}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: ShotgunProjectile
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3726448722575715560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9103062, y: -1.1301231, z: 5.1298933}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,7 +120,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 963d36aff37d3ac4a93267c88cd72ae3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -140,7 +141,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.24
+  m_Time: 0.13
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -170,8 +171,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.5, g: 0.2236842, b: 0, a: 1}
+      key1: {r: 0.8301887, g: 0.4373366, b: 0, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -247,3 +248,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8162a7db4122e242a7d39417e8760fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7000051661611659045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726448722575715560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd146fb7edeb73a498cc2620d39e4a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageDealt: 20

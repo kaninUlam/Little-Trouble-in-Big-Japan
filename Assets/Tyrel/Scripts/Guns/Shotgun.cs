@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Shotgun : GunFire
 {
-    public float spread = 5;
-    public float Damage = 10;
+    public float fireRate = 1f;
 
-    public override void FireProjectile()
+    public float nextFire;
+
+    
+
+
+    void Update()
     {
-        for (int i = 10; i >= 0; i--)
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire)
         {
-            GameObject Shells = Instantiate(Projectile, transform.position, transform.rotation);
-            Shells.transform.Rotate(0, Random.Range(spread, -spread), 0);
-
+            FireProjectile();
+            nextFire = Time.time + fireRate;
         }
     }
+
+    
 
 }
