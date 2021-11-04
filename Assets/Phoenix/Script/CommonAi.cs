@@ -10,6 +10,8 @@ public class CommonAi : AiBehaviour
 
     public float damageDealt;
 
+    int damageTaken = 20;
+
     Health playerHP;
 
     private void Start()
@@ -34,11 +36,6 @@ public class CommonAi : AiBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerHP.takeDamage(damageDealt);
-            
-            //if (playerHP != null)
-            //{
-            //    playerHP.takeDamage(10f);
-            //}
         }
     }
 }
