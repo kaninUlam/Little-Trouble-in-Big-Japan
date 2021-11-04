@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PukeFace : AiBehaviour
 {
+    [SerializeField] private float startingHP = 150;
+    private float currentHP;
+
     private PukeFace ai;
     private float threshold;
-
-    [SerializeField] private float startingHP;
-    private float currentHP;
 
     private void Start()
     {
