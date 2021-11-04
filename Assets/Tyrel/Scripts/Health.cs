@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : ParticleSpawn
 {
     public float HealthPoints = 100;
 
@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
         if (HealthPoints <= 0)
         {
             Destroy(gameObject);
+            Instantiate(EnemyParticleDeath, transform.position, transform.rotation);
         }
 
     }
