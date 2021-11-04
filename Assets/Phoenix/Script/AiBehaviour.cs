@@ -8,11 +8,8 @@ public class AiBehaviour : MonoBehaviour
     public enum Tracking { Attack, Chase}
     public Tracking trackType = Tracking.Attack;
 
-    //Audio (Will be commented out if unnecessary)
-    public AudioSource Asource = null;
-
-    //Hydogen
-    public NavMeshAgent Hydogen;
+    //Hyogen
+    public NavMeshAgent Hyogen;
     //Player
     public Transform Player;
 
@@ -26,7 +23,7 @@ public class AiBehaviour : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").transform;
 
         //NavMesh Agent Component so it will move independently around the map
-        Hydogen = GetComponent<NavMeshAgent>();
+        Hyogen = GetComponent<NavMeshAgent>();
 
         //Audio for the Monster
         //Asource.GetComponent<AudioSource>();
@@ -47,26 +44,20 @@ public class AiBehaviour : MonoBehaviour
             }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-
-        }
-    }
-
-    //Hydogen Attack System
+    //Hyogen Attack System
     private void Attack()
     {
         //Chases Player for Attack
+        Hyogen.SetDestination(transform.position);
 
-
+        
     }
 
     private void ChasePlayer()
     {
         //Chases Player
-        Hydogen.SetDestination(Player.position);
+        Hyogen.SetDestination(Player.position);
         transform.LookAt(Player);
+
     }
 }
