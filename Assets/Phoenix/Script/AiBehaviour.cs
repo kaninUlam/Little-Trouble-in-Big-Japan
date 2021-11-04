@@ -49,7 +49,6 @@ public class AiBehaviour : MonoBehaviour
     {
         //Chases Player for Attack
         Hyogen.SetDestination(transform.position);
-
         
     }
 
@@ -57,7 +56,6 @@ public class AiBehaviour : MonoBehaviour
     {
         //Chases Player
         Hyogen.SetDestination(Player.position);
-        transform.LookAt(Player);
 
     }
 }

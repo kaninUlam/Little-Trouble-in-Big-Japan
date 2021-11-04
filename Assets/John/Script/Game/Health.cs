@@ -22,4 +22,13 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void takeDamage(float amount)
+    {
+        currentHealthPoints -= amount;
+        healthBar.SetHealth(currentHealthPoints);
+        if (currentHealthPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

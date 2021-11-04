@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Bullet
+  - Enemy
   - Ground
   layers:
   - Default
@@ -15,7 +17,7 @@ TagManager:
   - 
   - 
   - Ground
-  - Player
+  - 
   - 
   - 
   - 
