@@ -7,21 +7,28 @@ public class Menu : MonoBehaviour
     bool mouseOver = false;
 
     Vector3 pos;
+    Vector3 newPos;
 
     private void Start()
     {
         pos = transform.position;
+        newPos = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
     }
 
     private void OnMouseOver()
     {
         mouseOver = true;
-        transform.position += Vector3.up; 
+
+        transform.position = newPos;
+        
     }
     private void OnMouseExit()
     {
         mouseOver = false;
     }
+
+      
+    
 
     private void Update()
     {
