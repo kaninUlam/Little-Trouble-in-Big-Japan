@@ -23,13 +23,17 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(enemyStorage.Count);
         if( waveIsDone == true)
         {
             if(enemyStorage.Count <= 0)
             {
                 StartCoroutine(waveSpawner());
             }
+        }
+        if (Input.GetKeyDown("t"))
+        {
+            enemyCount += 3;
+            SpawnRate -= 0.1f;
         }
     }
     IEnumerator waveSpawner()
@@ -46,9 +50,9 @@ public class Spawner : MonoBehaviour
                 yield return new WaitForSeconds(SpawnRate);
             }
         }
-
+/*
         SpawnRate -= 0.1f;
-        enemyCount += 3;
+        enemyCount += 3;*/
 
         yield return new WaitForSeconds(TimeBetweenSpawnning);
 
