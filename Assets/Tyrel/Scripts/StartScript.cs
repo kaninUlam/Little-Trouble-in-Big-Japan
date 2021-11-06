@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class StartScript : MonoBehaviour
 {
 
-
+    public Animator animator;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,16 +35,43 @@ public class StartScript : MonoBehaviour
 
                 if(hit.transform.gameObject.tag == "Start")
                 {
-                    SceneManager.LoadScene(1);
+                    Debug.Log("Start");
+                    animator.SetBool("StartPressed", true);
+                    StartCoroutine(LoadStart());
+                }
+                else
+                {
+                    animator.SetBool("StartPressed", false);
                 }
 
-                if(hit.transform.gameObject.tag == "Exit")
+                if (hit.transform.gameObject.tag == "Exit")
                 {
                     Application.Quit();
+                }
+
+                if(hit.transform.gameObject.tag == "Options")
+                {
+                    
+                    animator.SetBool("Options", true);
+                    Debug.Log("Options");
+                }
+                else
+                {
+                    animator.SetBool("Options", false);
                 }
             }
 
         }
 
     }
+
+    IEnumerator LoadStart()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(1);
+    }
+
+
+
+
 }
