@@ -9,8 +9,13 @@ public class Menu : MonoBehaviour
     Vector3 pos;
     Vector3 newPos;
 
+
+    
+
     private void Start()
     {
+       
+
         pos = transform.position;
         newPos = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
     }
@@ -29,6 +34,7 @@ public class Menu : MonoBehaviour
 
       
     
+
 
     private void Update()
     {
