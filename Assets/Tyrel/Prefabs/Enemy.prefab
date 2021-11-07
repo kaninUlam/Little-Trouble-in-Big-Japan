@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8151405446171116593}
   - component: {fileID: 6511362754768859811}
   - component: {fileID: 5496108541470067564}
-  - component: {fileID: 9164958568656911853}
   - component: {fileID: 7278368519593773436}
   m_Layer: 0
   m_Name: Enemy
@@ -98,19 +97,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9164958568656911853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971241812983705899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 905f3f2a659a80b4785e71d95480061a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HealthPoints: 100
 --- !u!54 &7278368519593773436
 Rigidbody:
   m_ObjectHideFlags: 0
