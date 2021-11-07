@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sniper : GunFire
 {
 
-    public SniperAmmo SAmmo;
+    public float ammo = 0;
 
     public float fireRate = 0.5f;
 
@@ -15,14 +15,15 @@ public class Sniper : GunFire
 
     private void Start()
     {
-        SAmmo.GetComponent<SniperAmmo>();
+        
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && SAmmo.ammo > 0)
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && ammo > 0)
         {
             FireAssualtProjectile();
+            ammo--;
             nextFire = Time.time + fireRate;
         }
     }

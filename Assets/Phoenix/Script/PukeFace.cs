@@ -18,5 +18,5 @@ public class PukeFace : AiBehaviour
     public float GetCurrentHP()
     {
         return currentHP;
-    }
+    } 
 }

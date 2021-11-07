@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class SniperAmmo : MonoBehaviour
 {
-
-    public float ammo = 0;
+    public Sniper sniper;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Hit");
+            sniper.ammo += 20;
             Destroy(gameObject);
-            ammo += 20;
+            
+        }
+
+        if (collision.gameObject)
+        {
+            Debug.Log(collision.gameObject);
         }
     }
-
-
 }

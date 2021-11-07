@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Start
   - Exit
+  - SAmmo
   layers:
   - Default
   - TransparentFX

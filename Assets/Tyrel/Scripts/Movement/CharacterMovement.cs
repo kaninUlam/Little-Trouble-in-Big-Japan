@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour
     public float runSpeed = 20;
     public float normalSpeed = 12;
     public float gravity = -9.8f;
-    float mass = 5f;
+    
 
     bool sprinting = false;
 
