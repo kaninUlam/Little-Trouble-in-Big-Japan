@@ -13,8 +13,6 @@ public class GunDamage : Health
     {
         if (collision.collider.tag == "Enemy")
         {
-
-
             
             Health healthComponent = collision.gameObject.GetComponent<Health>();
             if (healthComponent != null)

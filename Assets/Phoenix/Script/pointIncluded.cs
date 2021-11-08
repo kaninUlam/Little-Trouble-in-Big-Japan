@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pointIncluded : MonoBehaviour
 {
-    public float points = 0;
+    public float points;
 
     // Start is called before the first frame update
     void Start()

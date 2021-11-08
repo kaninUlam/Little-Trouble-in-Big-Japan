@@ -25,8 +25,6 @@ public class AiBehaviour : MonoBehaviour
         //NavMesh Agent Component so it will move independently around the map
         Hyogen = GetComponent<NavMeshAgent>();
 
-        //Audio for the Monster
-        //Asource.GetComponent<AudioSource>();
     }
 
     
