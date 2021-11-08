@@ -28,7 +28,7 @@ public class CharacterMovement : MonoBehaviour
 
     public AudioClip[] aClips = null;
 
-    Vector3 velocity;
+    public Vector3 velocity;
 
     public float timerMax = 1f;
     public float timer = 0;
@@ -72,7 +72,11 @@ public class CharacterMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        velocity.y += gravity * Time.deltaTime;
+        if (!isGrounded)
+        {
+            velocity.y += gravity * Time.deltaTime;
+        }
+        
 
         controller.Move(velocity * Time.deltaTime);
 

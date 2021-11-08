@@ -10,6 +10,8 @@ TagManager:
   - Start
   - Exit
   - SAmmo
+  - FireRatePerk
+  - SpeedUpPerk
   layers:
   - Default
   - TransparentFX
@@ -21,6 +23,7 @@ TagManager:
   - 
   - Ground
   - PostProcessing
+  - Player
   - 
   - 
   - 

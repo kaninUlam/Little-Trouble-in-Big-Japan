@@ -7,15 +7,15 @@ public class Sniper : GunFire
 
     public float ammo = 0;
 
-    public float fireRate = 0.5f;
-
+    public float fireRate = 1f;
+    float normalFireRate = 1f;
     public float nextFire;
 
     
 
     private void Start()
     {
-        
+        fireRate = normalFireRate;
     }
 
     void Update()
