@@ -35,11 +35,16 @@ public class CommonAi : AiBehaviour
 
     private void Update()
     {
-        if (enemyHP <= 0) //When Enemy HP is set to 0
+        if (enemyHP <= 0) // When Enemy HP is set to 0
         {
-            Instantiate(healthPack, transform.position, Quaternion.identity); //Leaves a Health Pack for the Player
-            Destroy(gameObject); // Destroys gameObject when it Dies
+            EnemyDeath(); // Code below this one
         }
+    }
+
+    public void EnemyDeath()
+    {
+        Instantiate(healthPack, transform.position, Quaternion.identity); //Leaves a Health Pack for the Player
+        Destroy(gameObject); // Destroys gameObject when it Dies
     }
 
     private void OnCollisionEnter(Collision collision) // Collision with the Player and Emoji
