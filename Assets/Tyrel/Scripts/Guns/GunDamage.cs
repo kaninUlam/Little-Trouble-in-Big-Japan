@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GunDamage : MonoBehaviour
+public class GunDamage : Health
 {
 
     public float DamageDealt = 50;
@@ -13,8 +13,6 @@ public class GunDamage : MonoBehaviour
     {
         if (collision.collider.tag == "Enemy")
         {
-
-
             
             Health healthComponent = collision.gameObject.GetComponent<Health>();
             if (healthComponent != null)
