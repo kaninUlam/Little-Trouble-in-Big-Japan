@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Score : MonoBehaviour
+public class pointIncluded : MonoBehaviour
 {
+    public float points = 0;
+
     // Start is called before the first frame update
     void Start()
     {
