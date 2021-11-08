@@ -12,7 +12,7 @@ public class PukeFace : AiBehaviour
     public float damageDealt; // The damage it deals to Player
     public float takeDamage = 50; //How much damage the enemy takes
 
-    private pointIncluded _uiManager;
+    private pointSystem _uiManager;
 
     public GameObject healthPack; //Health Pack tied to the Enemy
 
@@ -23,7 +23,7 @@ public class PukeFace : AiBehaviour
         enemyHP = startingHP; // enemy HP is the same as the Starting HP
         playerHP = Player.GetComponent<Health>(); // Player HP
 
-        _uiManager = GameObject.Find("Canvas").GetComponent<pointIncluded>();
+        _uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>();
     }
 
     private void Update()
@@ -47,7 +47,7 @@ public class PukeFace : AiBehaviour
         {
             if (_uiManager != null)
             {
-                _uiManager.UpdateScore();
+                _uiManager.UpdateScore(10);
             }
         }
     }
