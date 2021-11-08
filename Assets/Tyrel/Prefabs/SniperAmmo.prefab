@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7145187315903963796}
   - component: {fileID: 4900594742749401977}
   m_Layer: 0
-  m_Name: Smmo
+  m_Name: SniperAmmo
   m_TagString: SAmmo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1f902c0caa9694a8b9b5a4fc1fdb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sammo: {fileID: -2363351137078437690, guid: 35c8ed3718b7edc4e85b4522b82c79a7, type: 3}
+  sniper: {fileID: -2363351137078437690, guid: 35c8ed3718b7edc4e85b4522b82c79a7, type: 3}
