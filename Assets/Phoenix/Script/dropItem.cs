@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class dropItem : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public int[] table =
     {
-        if (CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
+        70, //
+        30, //
+        30, //
+        30 //
+    };
 }

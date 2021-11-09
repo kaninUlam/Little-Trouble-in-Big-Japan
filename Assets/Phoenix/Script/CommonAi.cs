@@ -41,7 +41,6 @@ public class CommonAi : AiBehaviour
 
     public void EnemyDeath()
     {
-        Instantiate(healthPack, new Vector3(0.0f, 5f, 0.0f), Quaternion.identity); //Leaves a Health Pack for the Player
         Destroy(gameObject); // Destroys gameObject when it Dies
     }
 
@@ -52,11 +51,11 @@ public class CommonAi : AiBehaviour
             playerHP.takeDamage(damageDealt); // The Player takes Damage
         }
 
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet") //When colliding with the bullet
         {
             if (_uiManager != null)
             {
-                _uiManager.UpdateScore(10);
+                _uiManager.UpdateScore(10); //Sends points to the UI
             }
         }
     }
