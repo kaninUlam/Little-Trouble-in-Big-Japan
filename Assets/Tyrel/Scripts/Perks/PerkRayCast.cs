@@ -46,7 +46,7 @@ public class PerkRayCast : MonoBehaviour
             {
                 if (hit.collider.tag == "FireRatePerk" && fireRatePerk == false)
                 {
-                    
+                    Debug.Log("fire");
                     GameObject fireRateUpPerk = hit.collider.gameObject;
                     fireRateUpPerk.GetComponent<FireRateUp>().FireRateUpPerk();
                     fireRatePerk = true;
@@ -82,15 +82,18 @@ public class PerkRayCast : MonoBehaviour
 
             if (hit.collider.tag == "FireRatePerk")
             {
+                
                 fireRateText.gameObject.SetActive(true);
             }
             else
             {
+                
                 fireRateText.gameObject.SetActive(false);
             }
 
             if (hit.collider.tag == "SpeedUpPerk")
             {
+                
                 SpeedUpText.gameObject.SetActive(true);
             }
             else
@@ -100,6 +103,7 @@ public class PerkRayCast : MonoBehaviour
 
             if(hit.collider.tag == "GunDamageUpPerk")
             {
+                
                 gunDamageUpText.gameObject.SetActive(true);
             }
             else
@@ -109,6 +113,7 @@ public class PerkRayCast : MonoBehaviour
 
             if(hit.collider.tag == "HealthUpPerk")
             {
+                
                 healthUpText.gameObject.SetActive(true);
             }
             else

@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 3726448722575715560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3726448722575715560}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: 0ff62741bb946d249be49f1cd9e69c76, type: 3}
 --- !u!23 &3726448722575715557
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -261,4 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd146fb7edeb73a498cc2620d39e4a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+  currentHealthPoints: 100
+  healthBar: {fileID: 0}
   DamageDealt: 150
