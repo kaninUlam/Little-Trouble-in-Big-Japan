@@ -7,7 +7,7 @@ using TMPro;
 
 public class pointSystem: MonoBehaviour
 {
-    [SerializeField] private int _playerScore;
+    [SerializeField] public int _playerScore;
     [SerializeField] private TMP_Text _scoreText;
 
     private void Start()
@@ -20,10 +20,5 @@ public class pointSystem: MonoBehaviour
         //update UI Score
         _playerScore += points;
         _scoreText.text = "Score: " + _playerScore.ToString();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        
     }
 }
