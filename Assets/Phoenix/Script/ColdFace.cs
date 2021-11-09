@@ -1,20 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class CommonAi : AiBehaviour
+public class ColdFace : AiBehaviour
 {
-    [SerializeField] private float startingHP = 100; // Max Enemy HP
+    [SerializeField] private float startingHP = 150; // Max Enemy HP
     public float enemyHP; // current amount of health it has
 
-    public float damageDealt; // The damage it deals out to the player
-
-    public GameObject healthPack; //Health Pack tied to the Enemy
-
-    private int damageTaken = 20; // The amount of Damage it takes
+    public float damageDealt; // The damage it deals to Player
+    public float takeDamage = 50; //How much damage the enemy takes
 
     private pointSystem _uiManager;
+
+    public GameObject healthPack; //Health Pack tied to the Enemy
 
     Health playerHP; // Recognizes the Player Damage
 
@@ -26,23 +24,13 @@ public class CommonAi : AiBehaviour
         _uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>();
     }
 
-    public float GetCurrentHP() //Current HP
-    {
-        return enemyHP;
-    }
-
     private void Update()
     {
-        if (enemyHP <= 0) // When Enemy HP is set to 0
+        if (enemyHP <= 0) //When Enemy HP is set to 0
         {
-            EnemyDeath(); // Code below this one
-        }
-    }
+            Destroy(gameObject); // Destroys gameObject when it Dies
 
-    public void EnemyDeath()
-    {
-        Instantiate(healthPack, new Vector3(0.0f, 5f, 0.0f), Quaternion.identity); //Leaves a Health Pack for the Player
-        Destroy(gameObject); // Destroys gameObject when it Dies
+        }
     }
 
     private void OnCollisionEnter(Collision collision) // Collision with the Player and Emoji
@@ -56,7 +44,7 @@ public class CommonAi : AiBehaviour
         {
             if (_uiManager != null)
             {
-                _uiManager.UpdateScore(10);
+                _uiManager.UpdateScore(20);
             }
         }
     }

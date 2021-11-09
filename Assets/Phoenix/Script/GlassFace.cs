@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pointIncluded : MonoBehaviour
+public class GlassFace : MonoBehaviour
 {
-    public float points;
-
     // Start is called before the first frame update
     void Start()
     {

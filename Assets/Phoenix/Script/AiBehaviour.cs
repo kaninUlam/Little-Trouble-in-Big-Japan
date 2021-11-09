@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AiBehaviour : MonoBehaviour
 {
-    public enum Tracking { Attack, Chase}
+    public enum Tracking { Attack, Chase} //States
     public Tracking trackType = Tracking.Attack;
 
     //Hyogen
