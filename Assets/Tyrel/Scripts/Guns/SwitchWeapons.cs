@@ -14,6 +14,19 @@ public class SwitchWeapons : MonoBehaviour
     void Start()
     {
         weaponSelected = 1;
+
+        GunsActive();
+    }
+
+    IEnumerator GunsActive()
+    {
+        Shotgun.SetActive(true);
+        AssualtRifle.SetActive(true);
+        Sniper.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        Shotgun.SetActive(false);
+        AssualtRifle.SetActive(false);
+        Sniper.SetActive(false);
     }
 
     // Update is called once per frame
