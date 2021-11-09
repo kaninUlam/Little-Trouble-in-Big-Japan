@@ -8,9 +8,13 @@ public class AssualtRifle : GunFire
     float normalFireRate = 0.5f;
     public float nextFire;
 
+    public GunDamage gunDamage;
+    public float newDamage = 50;
 
-    private void Start()
+    void Start()
     {
+        gunDamage.GetComponent<GunDamage>();
+        newDamage = 50;
         fireRate = normalFireRate;
     }
 
@@ -18,6 +22,7 @@ public class AssualtRifle : GunFire
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire)
         {
+            gunDamage.DamageDealt = newDamage;
             FireAssualtProjectile();
             nextFire = Time.time + fireRate;
         }

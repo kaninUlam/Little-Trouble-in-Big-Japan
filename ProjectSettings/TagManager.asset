@@ -12,6 +12,8 @@ TagManager:
   - SAmmo
   - FireRatePerk
   - SpeedUpPerk
+  - GunDamageUpPerk
+  - HealthUpPerk
   layers:
   - Default
   - TransparentFX

@@ -8,19 +8,28 @@ public class PerkRayCast : MonoBehaviour
     public LayerMask layersToCheck;
 
     bool fireRatePerk = false;
-    bool speedUpPerk = false;
+    bool speedPerk = false;
+    bool gunDamagePerk = false;
+    bool healthPerk = false;
 
     public Text fireRateText;
     public Text SpeedUpText;
+    public Text gunDamageUpText;
+    public Text healthUpText;
 
     // Start is called before the first frame update
     void Start()
     {
         fireRatePerk = false;
-        speedUpPerk = false;
+        speedPerk = false;
+        gunDamagePerk = false;
+        healthPerk = false;
 
         fireRateText.gameObject.SetActive(false);
         SpeedUpText.gameObject.SetActive(false);
+        gunDamageUpText.gameObject.SetActive(false);
+        healthUpText.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -43,16 +52,32 @@ public class PerkRayCast : MonoBehaviour
                     fireRatePerk = true;
                     
                 }
-                if (hit.collider.tag == "SpeedUpPerk" && speedUpPerk == false)
+                if (hit.collider.tag == "SpeedUpPerk" && speedPerk == false)
                 {
                     GameObject SpeedUpPerk = hit.collider.gameObject;
                     SpeedUpPerk.GetComponent<SpeedUp>().SpeedUpPerk();
-                    speedUpPerk = true;
+                    speedPerk = true;
                 }
+                if (hit.collider.tag == "GunDamageUpPerk" && gunDamagePerk == false)
+                {
+                    Debug.Log("hit");
+                    GameObject gunDamageUpPerk = hit.collider.gameObject;
+                    gunDamageUpPerk.GetComponent<DamageUp>().DamageUpPerk();
+                    gunDamagePerk = true;
+                }
+                if(hit.collider.tag == "HealthUpPerk")
+                {
+                    GameObject healthUpPerk = hit.collider.gameObject;
+
+                    healthPerk = true;
+                }
+
+
+
             }
         }
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 50, layersToCheck))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 20, layersToCheck))
         {
 
             if (hit.collider.tag == "FireRatePerk")
@@ -72,6 +97,25 @@ public class PerkRayCast : MonoBehaviour
             {
                 SpeedUpText.gameObject.SetActive(false);
             }
+
+            if(hit.collider.tag == "GunDamageUpPerk")
+            {
+                gunDamageUpText.gameObject.SetActive(true);
+            }
+            else
+            {
+                gunDamageUpText.gameObject.SetActive(false);
+            }
+
+            if(hit.collider.tag == "HealthUpPerk")
+            {
+                healthUpText.gameObject.SetActive(true);
+            }
+            else
+            {
+                healthUpText.gameObject.SetActive(false);
+            }
+
 
         }
 
