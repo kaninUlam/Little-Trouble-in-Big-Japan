@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 710978403577070972}
   m_Layer: 0
-  m_Name: Crying Emoji
-  m_TagString: Untagged
+  m_Name: Crying Laughter
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
