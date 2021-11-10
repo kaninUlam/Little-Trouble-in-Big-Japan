@@ -68,7 +68,7 @@ public class PerkRayCast : MonoBehaviour
                 if(hit.collider.tag == "HealthUpPerk")
                 {
                     GameObject healthUpPerk = hit.collider.gameObject;
-
+                    healthUpPerk.GetComponent<HealthUp>().HealthUpPerk();
                     healthPerk = true;
                 }
 
