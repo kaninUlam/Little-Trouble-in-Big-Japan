@@ -6,18 +6,25 @@ using UnityEngine.UI;
 public class GunDamage : Health
 {
 
-    public float DamageDealt = 50;
     
+    public float DamageDealt = 50;
+
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "Ground")
+        {
+
+            Debug.Log(DamageDealt);
+        }
+
         if (collision.collider.tag == "Enemy")
         {
             
             Health healthComponent = collision.gameObject.GetComponent<Health>();
             if (healthComponent != null)
             {
-                Debug.Log("hit");
+                Debug.Log(DamageDealt);
                 Destroy(gameObject);
                 healthComponent.takeDamage(DamageDealt);
             }

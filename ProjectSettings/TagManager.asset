@@ -12,6 +12,9 @@ TagManager:
   - SAmmo
   - FireRatePerk
   - SpeedUpPerk
+  - GunDamageUpPerk
+  - HealthUpPerk
+  - Options
   layers:
   - Default
   - TransparentFX
@@ -24,7 +27,6 @@ TagManager:
   - Ground
   - PostProcessing
   - Player
-  - 
   - 
   - 
   - 

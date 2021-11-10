@@ -126,6 +126,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectile: {fileID: 3726448722575715560, guid: 9bc30d5aa755c4c48a7b906a5cfcc8f8, type: 3}
+  gunEnd: {fileID: 0}
   spread: 5
+  assualtRange: 1
+  shotgunRange: 0.2
+  sniperRange: 5
   fireRate: 1
   nextFire: 0
+  ammo: 0
+  gunDamage: {fileID: 7000051661611659045, guid: 9bc30d5aa755c4c48a7b906a5cfcc8f8, type: 3}
+  newDamage: 20

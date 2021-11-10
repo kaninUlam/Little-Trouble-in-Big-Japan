@@ -10,17 +10,23 @@ public class Shotgun : GunFire
 
     public float ammo = 0;
 
+    public GunDamage gunDamage;
+    public float newDamage = 20;
 
-    private void Start()
+    void Start()
     {
+        gunDamage.GetComponent<GunDamage>();
         fireRate = normalFireRate;
+        newDamage = 20;
     }
 
     void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && ammo > 0)
         {
+            gunDamage.DamageDealt = newDamage;
             FireProjectile();
+            ammo--;
             nextFire = Time.time + fireRate;
         }
     }

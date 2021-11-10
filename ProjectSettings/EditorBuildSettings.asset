@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tyrel/scenes/StartScreenMenu.unity
     guid: 35ded1e37d715924da169200ececd5b4
+  - enabled: 1
+    path: Assets/John/Scenes/TestArea2.unity
+    guid: fc5d4adf95601164b9ac7c07a4093d64
   m_configObjects: {}

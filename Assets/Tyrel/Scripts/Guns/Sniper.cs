@@ -11,17 +11,22 @@ public class Sniper : GunFire
     float normalFireRate = 1f;
     public float nextFire;
 
+    public GunDamage gunDamage;
+    public float newDamage = 150;
     
 
-    private void Start()
+    void Start()
     {
+        gunDamage.GetComponent<GunDamage>();
         fireRate = normalFireRate;
+        newDamage = 150;
     }
 
     void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && ammo > 0)
         {
+            gunDamage.DamageDealt = newDamage;
             FireAssualtProjectile();
             ammo--;
             nextFire = Time.time + fireRate;

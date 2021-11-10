@@ -63,7 +63,9 @@ public class CharacterMovement : MonoBehaviour
         if(isGrounded && velocity.y < 0)
         {
             velocity.y = 0f;
-        } 
+        }
+
+        
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -83,7 +85,9 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            Debug.Log("jump");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            Debug.Log(velocity.y);
         }
 
 
