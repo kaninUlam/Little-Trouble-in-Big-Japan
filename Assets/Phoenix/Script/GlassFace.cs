@@ -10,7 +10,6 @@ public class GlassFace : AiBehaviour
 
     private pointSystem _uiManager;
 
-
     Health playerHP; // Recognizes the Player Damage
 
     private void Start()

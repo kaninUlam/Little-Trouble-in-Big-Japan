@@ -6,13 +6,10 @@ using UnityEngine.UI;
 
 public class PukeFace : AiBehaviour
 {
-
     public float damageDealt; //The damage it deals to Player
     public float takeDamage = 50; //How much damage the enemy takes
 
     private pointSystem _uiManager; //From pointSystem Script it will be called uiManager
-
-    private GameObject healthPack; //Health Pack tied to the Enemy
 
     Health playerHP; //Recognizes the Player Damage
 
