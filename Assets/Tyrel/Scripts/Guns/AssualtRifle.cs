@@ -11,6 +11,8 @@ public class AssualtRifle : GunFire
     public GunDamage gunDamage;
     public float newDamage = 50;
 
+    public Animator animator;
+
     void Start()
     {
         gunDamage.GetComponent<GunDamage>();
@@ -24,7 +26,12 @@ public class AssualtRifle : GunFire
         {
             gunDamage.DamageDealt = newDamage;
             FireAssualtProjectile();
+            animator.Play("AssualtRifle");
             nextFire = Time.time + fireRate;
         }
+        
     }
+
+
+    
 }

@@ -12,6 +12,7 @@ public class Shotgun : GunFire
 
     public GunDamage gunDamage;
     public float newDamage = 20;
+    public Animator animator;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class Shotgun : GunFire
         {
             gunDamage.DamageDealt = newDamage;
             FireProjectile();
+            animator.Play("Shotgun");
             ammo--;
             nextFire = Time.time + fireRate;
         }
