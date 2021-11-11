@@ -7,7 +7,7 @@ public class PerkRayCast : MonoBehaviour
 {
     public LayerMask layersToCheck;
 
-
+    
     public pointSystem scoreSystem;
 
     bool fireRatePerk = false;
@@ -65,7 +65,7 @@ public class PerkRayCast : MonoBehaviour
                     GameObject fireRateUpPerk = hit.collider.gameObject;
                     fireRateUpPerk.GetComponent<FireRateUp>().FireRateUpPerk();
                     fireRatePerk = true;
-                    
+                    scoreSystem._playerScore -= 1000;
                 }
                 if (hit.collider.tag == "SpeedUpPerk" && speedPerk == false && scoreSystem._playerScore >= 1000)
                 {
@@ -73,6 +73,7 @@ public class PerkRayCast : MonoBehaviour
                     GameObject SpeedUpPerk = hit.collider.gameObject;
                     SpeedUpPerk.GetComponent<SpeedUp>().SpeedUpPerk();
                     speedPerk = true;
+                    scoreSystem._playerScore -= 1000;
                 }
                 if (hit.collider.tag == "GunDamageUpPerk" && gunDamagePerk == false && scoreSystem._playerScore >= 1000)
                 {
@@ -80,6 +81,7 @@ public class PerkRayCast : MonoBehaviour
                     GameObject gunDamageUpPerk = hit.collider.gameObject;
                     gunDamageUpPerk.GetComponent<DamageUp>().DamageUpPerk();
                     gunDamagePerk = true;
+                    scoreSystem._playerScore -= 1000;
                 }
                 if(hit.collider.tag == "HealthUpPerk" && healthPerk == false && scoreSystem._playerScore >= 1000)
                 {
@@ -87,6 +89,7 @@ public class PerkRayCast : MonoBehaviour
                     GameObject healthUpPerk = hit.collider.gameObject;
                     healthUpPerk.GetComponent<HealthUp>().HealthUpPerk();
                     healthPerk = true;
+                    scoreSystem._playerScore -= 1000;
                 }
 
 

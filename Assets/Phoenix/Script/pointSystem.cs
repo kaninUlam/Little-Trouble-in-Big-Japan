@@ -13,13 +13,18 @@ public class pointSystem: MonoBehaviour
 
     private void Start()
     {
-        _playerScore = 0;
+        _playerScore = 5000;
     }
 
     public void UpdateScore(int points)
     {
         //update UI Score
         _playerScore += points;
+        
+    }
+
+    void Update()
+    {
         ScoreText.text = "Score: " + _playerScore;
     }
 }
