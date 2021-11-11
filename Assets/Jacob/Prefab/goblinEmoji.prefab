@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6734377684024209348}
   - component: {fileID: 6059645053283022371}
   - component: {fileID: -1929868429668413272}
+  - component: {fileID: -4266811624305488880}
   m_Layer: 0
   m_Name: goblinEmoji
   m_TagString: Untagged
@@ -183,7 +184,19 @@ MonoBehaviour:
   Hyogen: {fileID: 6059645053283022371}
   Player: {fileID: 0}
   range: 0.5
-  startingHP: 100
-  enemyHP: 0
   damageDealt: 0
-  healthPack: {fileID: 0}
+--- !u!114 &-4266811624305488880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971572397156572210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701ae31d37c0f904e87804048aca847e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 150
+  MaxEnemyHealth: 150
+  dropItem: {fileID: 1817070790947968178, guid: 5b4079c3ddae93043b12c18862c6185f, type: 3}

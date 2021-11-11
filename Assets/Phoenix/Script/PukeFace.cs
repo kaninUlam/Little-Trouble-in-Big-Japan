@@ -6,32 +6,18 @@ using UnityEngine.UI;
 
 public class PukeFace : AiBehaviour
 {
-    [SerializeField] private float startingHP = 150; //Max Enemy HP
-    public float enemyHP; //current amount of health it has
-
     public float damageDealt; //The damage it deals to Player
     public float takeDamage = 50; //How much damage the enemy takes
 
     private pointSystem _uiManager; //From pointSystem Script it will be called uiManager
 
-    public GameObject healthPack; //Health Pack tied to the Enemy
-
     Health playerHP; //Recognizes the Player Damage
 
     private void Start()
     {
-        enemyHP = startingHP; //enemy HP is the same as the Starting HP
         playerHP = Player.GetComponent<Health>(); // Player HP
 
         _uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>(); //If the gameobject Canvas has pointSystem in it
-    }
-
-    private void Update()
-    {
-        if (enemyHP <= 0) //When Enemy HP is set to 0
-        {
-            Destroy( gameObject ); //Destroys gameObject when it Dies
-        }
     }
 
     private void OnCollisionEnter(Collision collision) //Collision with the Player and Emoji
