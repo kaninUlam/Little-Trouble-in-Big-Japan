@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class HealthUp : MonoBehaviour
 {
-    public CharacterMovement character;
+    public Health character;
 
-
+    public float newHealth = 200;
 
     public void HealthUpPerk()
     {
-        
+        character.GetComponent<Health>();
+
+        character.maxHealthPoints = newHealth;
+        character.currentHealthPoints = newHealth;
     }
 }

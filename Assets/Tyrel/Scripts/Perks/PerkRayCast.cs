@@ -17,6 +17,11 @@ public class PerkRayCast : MonoBehaviour
     public Text gunDamageUpText;
     public Text healthUpText;
 
+    public Image fireRateImg;
+    public Image speedUpImg;
+    public Image gunDamageUpImg;
+    public Image healthUpImg;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +34,10 @@ public class PerkRayCast : MonoBehaviour
         SpeedUpText.gameObject.SetActive(false);
         gunDamageUpText.gameObject.SetActive(false);
         healthUpText.gameObject.SetActive(false);
+        healthUpImg.gameObject.SetActive(false);
+        gunDamageUpImg.gameObject.SetActive(false);
+        speedUpImg.gameObject.SetActive(false);
+        fireRateImg.gameObject.SetActive(false);
 
     }
 
@@ -46,7 +55,8 @@ public class PerkRayCast : MonoBehaviour
             {
                 if (hit.collider.tag == "FireRatePerk" && fireRatePerk == false)
                 {
-                    Debug.Log("fire");
+                    
+                    fireRateImg.gameObject.SetActive(true);
                     GameObject fireRateUpPerk = hit.collider.gameObject;
                     fireRateUpPerk.GetComponent<FireRateUp>().FireRateUpPerk();
                     fireRatePerk = true;
@@ -54,21 +64,23 @@ public class PerkRayCast : MonoBehaviour
                 }
                 if (hit.collider.tag == "SpeedUpPerk" && speedPerk == false)
                 {
+                    speedUpImg.gameObject.SetActive(true);
                     GameObject SpeedUpPerk = hit.collider.gameObject;
                     SpeedUpPerk.GetComponent<SpeedUp>().SpeedUpPerk();
                     speedPerk = true;
                 }
                 if (hit.collider.tag == "GunDamageUpPerk" && gunDamagePerk == false)
                 {
-                    Debug.Log("hit");
+                    gunDamageUpImg.gameObject.SetActive(true);
                     GameObject gunDamageUpPerk = hit.collider.gameObject;
                     gunDamageUpPerk.GetComponent<DamageUp>().DamageUpPerk();
                     gunDamagePerk = true;
                 }
                 if(hit.collider.tag == "HealthUpPerk")
                 {
+                    healthUpImg.gameObject.SetActive(true);
                     GameObject healthUpPerk = hit.collider.gameObject;
-
+                    healthUpPerk.GetComponent<HealthUp>().HealthUpPerk();
                     healthPerk = true;
                 }
 
