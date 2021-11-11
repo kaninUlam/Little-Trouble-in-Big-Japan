@@ -91,7 +91,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5285866719048635443}
   - component: {fileID: 1151754266964401918}
-  - component: {fileID: -4025646901729255926}
+  - component: {fileID: -522457820305501694}
+  - component: {fileID: -6589190884129275160}
   m_Layer: 0
   m_Name: Red Angry
   m_TagString: Enemy
@@ -136,7 +137,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-4025646901729255926
+--- !u!114 &-522457820305501694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,13 +146,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4760581242779618953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03c3c96f4a246d845ae2ff191b7bfc16, type: 3}
+  m_Script: {fileID: 11500000, guid: ceda2cc2a6cdc6448868c6459c92b7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trackType: 0
-  Hyogen: {fileID: 1151754266964401918}
+  Hyogen: {fileID: 0}
   Player: {fileID: 0}
   range: 0.5
-  startingHP: 100
-  enemyHP: 0
   damageDealt: 0
+  takeDamage: 50
+--- !u!114 &-6589190884129275160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4760581242779618953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701ae31d37c0f904e87804048aca847e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 100
+  MaxEnemyHealth: 100
+  dropItem: {fileID: 8091996041551283065, guid: 8ea2f3a48e2b9c149a21b6b47b60b288, type: 3}
