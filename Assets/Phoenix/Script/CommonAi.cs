@@ -10,8 +10,6 @@ public class CommonAi : AiBehaviour
 
     public float damageDealt; // The damage it deals out to the player
 
-    public GameObject healthPack; //Health Pack tied to the Enemy
-
     private int damageTaken = 20; // The amount of Damage it takes
 
     private pointSystem _uiManager;

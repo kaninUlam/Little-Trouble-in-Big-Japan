@@ -20,13 +20,20 @@ public class GunDamage : Health
 
         if (collision.collider.tag == "Enemy")
         {
-            
+            EnemyHealth enemyHP = collision.gameObject.GetComponent<EnemyHealth>();
             Health healthComponent = collision.gameObject.GetComponent<Health>();
             if (healthComponent != null)
             {
                 Debug.Log(DamageDealt);
                 Destroy(gameObject);
                 healthComponent.takeDamage(DamageDealt);
+
+            }
+
+            if (enemyHP != null)
+            {
+                Destroy(gameObject);
+                enemyHP.takeDamage(DamageDealt);
             }
 
         }
