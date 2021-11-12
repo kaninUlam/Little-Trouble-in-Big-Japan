@@ -11,14 +11,18 @@ public class Spawner : MonoBehaviour
 
     public bool waveIsDone = true;
 
-    public GameObject enemyClone;
-    public GameObject enemy;
-    public GameObject EnemyHolder;
+    GameObject enemyClone;
+    GameObject EnemyHolder;
+    GameObject actualspawn;
+    public List<GameObject>EnemiesToSpawn;
     public GameObject[] spawners = null;
-    public List<GameObject> enemyStorage = new List<GameObject>();
+    
+    List<GameObject> enemyStorage = new List<GameObject>();
     private void Start()
     {
         EnemyHolder = new GameObject("EnemyHolder");
+        EnemiesToSpawn = new List<GameObject>();
+
     }
     // Update is called once per frame
     void Update()
@@ -44,15 +48,17 @@ public class Spawner : MonoBehaviour
         {
             foreach (GameObject obj in spawners)
             {
-                enemyClone = Instantiate(enemy, obj.transform.position, obj.transform.rotation, EnemyHolder.transform);
-                enemyClone.AddComponent<SpawnerRemover>().mySpawner = this;
-                enemyStorage.Add(enemyClone);
-                yield return new WaitForSeconds(SpawnRate);
+                for (int spawnVariant = 0; spawnVariant < EnemiesToSpawn.Count; spawnVariant   ++)
+                {
+                    int SpawnFromList = Random.Range(0, EnemiesToSpawn.Count);
+
+                    enemyClone = Instantiate(EnemiesToSpawn[SpawnFromList], obj.transform.position, obj.transform.rotation, EnemyHolder.transform);
+                    enemyClone.AddComponent<SpawnerRemover>().mySpawner = this;
+                    enemyStorage.Add(enemyClone);
+                    yield return new WaitForSeconds(SpawnRate);
+                }
             }
         }
-/*
-        SpawnRate -= 0.1f;
-        enemyCount += 3;*/
 
         yield return new WaitForSeconds(TimeBetweenSpawnning);
 
