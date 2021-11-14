@@ -13,7 +13,8 @@ public class Sniper : GunFire
 
     public GunDamage gunDamage;
     public float newDamage = 150;
-    
+
+    public Animator animator;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class Sniper : GunFire
         {
             gunDamage.DamageDealt = newDamage;
             FireAssualtProjectile();
+            animator.Play("Sniper");
             ammo--;
             nextFire = Time.time + fireRate;
         }

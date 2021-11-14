@@ -56,6 +56,16 @@ public class StartScript : MonoBehaviour
                 {
                     animator.SetBool("Options", false);
                 }
+
+                if(hit.transform.gameObject.tag == "Back")
+                {
+                    Debug.Log("back");
+                    animator.SetBool("BackToMenu", true);
+                }
+                else
+                {
+                    animator.SetBool("BackToMenu", false);
+                }
             }
 
         }

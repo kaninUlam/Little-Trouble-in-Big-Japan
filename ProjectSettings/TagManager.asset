@@ -15,6 +15,7 @@ TagManager:
   - GunDamageUpPerk
   - HealthUpPerk
   - Options
+  - Back
   layers:
   - Default
   - TransparentFX

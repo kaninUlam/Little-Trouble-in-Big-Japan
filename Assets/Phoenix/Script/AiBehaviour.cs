@@ -30,6 +30,11 @@ public class AiBehaviour : MonoBehaviour
     
     void Update()
     {
+        Vector3 lookVector = Player.transform.position - transform.position;
+        lookVector.y = transform.position.y;
+        Quaternion rot = Quaternion.LookRotation(lookVector);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rot, 1);
+
             //Enum depends on chasing and attacking
             switch (trackType)
             {
@@ -47,6 +52,7 @@ public class AiBehaviour : MonoBehaviour
     {
         //Chases Player for Attack
         Hyogen.SetDestination(transform.position);
+
         
     }
 

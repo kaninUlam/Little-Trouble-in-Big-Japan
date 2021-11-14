@@ -9,16 +9,22 @@ public class pointSystem: MonoBehaviour
 {
     [SerializeField] public int _playerScore;
     [SerializeField] private TMP_Text _scoreText;
+    public Text ScoreText;
 
     private void Start()
     {
-        _playerScore = 0;
+        _playerScore = 5000;
     }
 
     public void UpdateScore(int points)
     {
         //update UI Score
         _playerScore += points;
-        _scoreText.text = "Score: " + _playerScore.ToString();
+        
+    }
+
+    void Update()
+    {
+        ScoreText.text = "Score: " + _playerScore;
     }
 }
