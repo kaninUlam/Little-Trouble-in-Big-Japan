@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     public GameObject EnemyHolder;
 
     public List<GameObject> Enemies = new List<GameObject>();
-
+    public List<GameObject> enemyStorage = new List<GameObject>();
     public GameObject[] spawners = null;
     private void Start()
     {
