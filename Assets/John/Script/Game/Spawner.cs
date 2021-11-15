@@ -20,13 +20,17 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         EnemyHolder = new GameObject("EnemyHolder");
+
     }
     // Update is called once per frame
     void Update()
     {
         if( waveIsDone == true)
         {
-            StartCoroutine(waveSpawner());
+            if(enemyStorage.Count <= 0)
+            {
+                StartCoroutine(waveSpawner());
+            }
         }
         if (Input.GetKeyDown("t"))
         {
@@ -58,5 +62,9 @@ public class Spawner : MonoBehaviour
             waveIsDone = true;
         }
         Debug.Log(TimeBetweenSpawnning);
+    }
+    public void RemoveFromList(GameObject enemyToRemove)
+    {
+        enemyStorage.Remove(enemyToRemove);
     }
 }

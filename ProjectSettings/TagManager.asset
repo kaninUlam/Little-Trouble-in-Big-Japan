@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Enemy
+  - Ground
+  - Start
+  - Exit
+  - SAmmo
+  - FireRatePerk
+  - SpeedUpPerk
+  - GunDamageUpPerk
+  - HealthUpPerk
+  - Options
+  - Back
   layers:
   - Default
   - TransparentFX
@@ -13,9 +25,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Ground
+  - PostProcessing
+  - Player
   - 
   - 
   - 
