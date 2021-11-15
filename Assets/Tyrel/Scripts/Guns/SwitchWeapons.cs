@@ -23,7 +23,7 @@ public class SwitchWeapons : MonoBehaviour
         Shotgun.SetActive(true);
         AssualtRifle.SetActive(true);
         Sniper.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1);
         Shotgun.SetActive(false);
         AssualtRifle.SetActive(false);
         Sniper.SetActive(false);
