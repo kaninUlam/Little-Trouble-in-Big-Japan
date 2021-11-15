@@ -10,6 +10,6 @@ public class WaveCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        WaveNum.GetComponent<UnityEngine.UI.Text>().text = CurrentWave.WaveCount.ToString();
+        WaveNum.GetComponent<UnityEngine.UI.Text>().text = "Wave: " + CurrentWave.WaveCount.ToString();
     }
 }

@@ -56,12 +56,11 @@ public class Spawner : MonoBehaviour
                 yield return new WaitForSeconds(SpawnRate);
             }
         }
-        if(enemyCount <= 0)
+        if(enemyStorage.Count <= 0)
         {
             yield return new WaitForSeconds(TimeBetweenSpawnning);
             waveIsDone = true;
         }
-        Debug.Log(TimeBetweenSpawnning);
     }
     public void RemoveFromList(GameObject enemyToRemove)
     {
