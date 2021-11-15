@@ -6,33 +6,82 @@ using UnityEngine.UI;
 
 public class PukeFace : AiBehaviour
 {
-    public float damageDealt; //The damage it deals to Player
-    public float takeDamage = 50; //How much damage the enemy takes
+    public enum Attack { Puke, Reset }
+    Attack attackType = Attack.Puke;
 
-    private pointSystem _uiManager; //From pointSystem Script it will be called uiManager
+    public float timeBetweenAttack;
+    private bool alreadyAttacked;
 
-    Health playerHP; //Recognizes the Player Damage
+    public GameObject puke;
 
-    private void Start()
+    public void Start()
     {
-        playerHP = Player.GetComponent<Health>(); // Player HP
-
-        _uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>(); //If the gameobject Canvas has pointSystem in it
+        
     }
 
-    private void OnCollisionEnter(Collision collision) //Collision with the Player and Emoji
+    public void Update()
     {
-        if (collision.gameObject.tag == "Player") //If colliding with the Player
-        {
-            playerHP.takeDamage(damageDealt); //The Player takes Damage
-        }
+       switch (attackType)
+       {
+            case Attack.Puke: 
+                Puke();
+                break;
+            case Attack.Reset:
+                Attacking();
+                break;
+       }
+    }
 
-        if (collision.gameObject.tag == "Bullet") //Colliding with bullet
+    private void Puke()
+    {
+        Hyogen.SetDestination(transform.position);
+
+        transform.LookAt(Player);
+
+        if (!alreadyAttacked)
         {
-            if (_uiManager != null) 
-            {
-                _uiManager.UpdateScore(20); //Sends 20 Points to UI
-            }
+            Rigidbody rb = Instantiate(puke, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+
+            //
+
+            alreadyAttacked = true;
+            Invoke(nameof(Attacking), timeBetweenAttack);
         }
     }
+
+    private void Attacking()
+    {
+        alreadyAttacked = false;
+        Hyogen.SetDestination(Player.position);
+    }
+
+    /*public float damageDealt;*/ //The damage it deals to Player
+
+    /*private pointSystem _uiManager;*/ //From pointSystem Script it will be called uiManager
+
+    /*Health playerHP;*/ //Recognizes the Player Damage
+
+    //private void Start()
+    //{
+    //    playerHP = Player.GetComponent<Health>(); // Player HP
+
+    //    _uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>(); //If the gameobject Canvas has pointSystem in it
+    //}
+
+    //private void OnCollisionEnter(Collision collision) //Collision with the Player and Emoji
+    //{
+    //    if (collision.gameObject.tag == "Player") //If colliding with the Player
+    //    {
+    //        playerHP.takeDamage(damageDealt); //The Player takes Damage
+    //    }
+
+    //    if (collision.gameObject.tag == "Bullet") //Colliding with bullet
+    //    {
+    //        if (_uiManager != null) 
+    //        {
+    //            _uiManager.UpdateScore(20); //Sends 20 Points to UI
+    //        }
+    //    }
+    //}
 }
