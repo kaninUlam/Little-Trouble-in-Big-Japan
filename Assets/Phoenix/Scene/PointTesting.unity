@@ -513,6 +513,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!4 &744598479 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1217420356973089395, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+  m_PrefabInstance: {fileID: 1139059654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &790627393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,11 +1148,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackType: 1
   damageDealt: 0
-  Hyogen: {fileID: 0}
-  Player: {fileID: 0}
+  Hyogen: {fileID: 1780347573}
+  Player: {fileID: 744598479}
   range: 0.5
   timeBetweenAttack: 0
   puke: {fileID: 0}
+--- !u!195 &1780347573 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 8368823109891935882, guid: 3abd774bbc414ba479359c1e661183af, type: 3}
+  m_PrefabInstance: {fileID: 837781778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2050409363
 GameObject:
   m_ObjectHideFlags: 0
