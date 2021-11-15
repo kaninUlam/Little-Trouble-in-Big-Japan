@@ -8,11 +8,14 @@ public class Spawner : MonoBehaviour
     public float TimeBetweenSpawnning = 10f;
 
     public int enemyCount;
+    public int WaveCount;
 
     public bool waveIsDone = true;
-    
-    public GameObject enemy;
+
     public GameObject EnemyHolder;
+
+    public List<GameObject> Enemies = new List<GameObject>();
+
     public GameObject[] spawners = null;
     private void Start()
     {
@@ -25,25 +28,35 @@ public class Spawner : MonoBehaviour
         {
             StartCoroutine(waveSpawner());
         }
+        if (Input.GetKeyDown("t"))
+        {
+            IncreaseDifficulty();
+        }
+    }
+    void IncreaseDifficulty()
+    {
+        SpawnRate -= 0.1f;
+        enemyCount += 3;
     }
     IEnumerator waveSpawner()
     {
         waveIsDone = false;
+        WaveCount++;
        
-            for (int i = 0; i < enemyCount; i++)
+        for (int i = 0; i < enemyCount; i++)
         {
             foreach (GameObject obj in spawners)
             {
-                GameObject enemyClone = Instantiate(enemy, obj.transform.position, obj.transform.rotation, EnemyHolder.transform);
+                GameObject enemyClone = Enemies[Random.Range(0, Enemies.Count)];
+                Instantiate(enemyClone, obj.transform.position, obj.transform.rotation, EnemyHolder.transform);
                 yield return new WaitForSeconds(SpawnRate);
             }
         }
-        
-        /*SpawnRate -= 0.1f;
-        enemyCount += 3;*/
-
-        yield return new WaitForSeconds(TimeBetweenSpawnning);
-
-        waveIsDone = true;
+        if(enemyCount <= 0)
+        {
+            yield return new WaitForSeconds(TimeBetweenSpawnning);
+            waveIsDone = true;
+        }
+        Debug.Log(TimeBetweenSpawnning);
     }
 }
