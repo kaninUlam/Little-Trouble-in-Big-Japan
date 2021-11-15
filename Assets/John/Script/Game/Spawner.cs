@@ -13,15 +13,13 @@ public class Spawner : MonoBehaviour
 
     GameObject enemyClone;
     GameObject EnemyHolder;
-    GameObject actualspawn;
-    public List<GameObject>EnemiesToSpawn;
+    public GameObject EnemiesToSpawn;
     public GameObject[] spawners = null;
     
     List<GameObject> enemyStorage = new List<GameObject>();
     private void Start()
     {
         EnemyHolder = new GameObject("EnemyHolder");
-        EnemiesToSpawn = new List<GameObject>();
 
     }
     // Update is called once per frame
@@ -48,15 +46,10 @@ public class Spawner : MonoBehaviour
         {
             foreach (GameObject obj in spawners)
             {
-                for (int spawnVariant = 0; spawnVariant < EnemiesToSpawn.Count; spawnVariant   ++)
-                {
-                    int SpawnFromList = Random.Range(0, EnemiesToSpawn.Count);
-
-                    enemyClone = Instantiate(EnemiesToSpawn[SpawnFromList], obj.transform.position, obj.transform.rotation, EnemyHolder.transform);
-                    enemyClone.AddComponent<SpawnerRemover>().mySpawner = this;
-                    enemyStorage.Add(enemyClone);
-                    yield return new WaitForSeconds(SpawnRate);
-                }
+                enemyClone = Instantiate(EnemiesToSpawn, obj.transform.position, obj.transform.rotation, EnemyHolder.transform);
+                enemyClone.AddComponent<SpawnerRemover>().mySpawner = this;
+                enemyStorage.Add(enemyClone);
+                yield return new WaitForSeconds(SpawnRate);
             }
         }
 
