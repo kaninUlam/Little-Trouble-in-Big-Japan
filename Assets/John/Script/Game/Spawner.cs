@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public float SpawnRate = 0.25f;
     public float TimeBetweenSpawnning = 10f;
 
+
     public int enemyCount;
     public int WaveCount;
 
@@ -20,50 +21,52 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         EnemyHolder = new GameObject("EnemyHolder");
-
     }
     // Update is called once per frame
     void Update()
     {
-        if( waveIsDone == true)
+        if (enemyStorage.Count <= 0 && waveIsDone == true)
         {
-            if(enemyStorage.Count <= 0)
-            {
-                StartCoroutine(waveSpawner());
-            }
+            StartCoroutine(waveSpawner());
         }
-        if (Input.GetKeyDown("t"))
+        if (enemyStorage.Count <= 0 && waveIsDone == false)
         {
+            waveIsDone = true;
             IncreaseDifficulty();
         }
     }
-    void IncreaseDifficulty()
-    {
-        SpawnRate -= 0.1f;
-        enemyCount += 3;
-    }
+
     IEnumerator waveSpawner()
     {
-        waveIsDone = false;
-        WaveCount++;
-       
-        for (int i = 0; i < enemyCount; i++)
+
+        if (waveIsDone == true)
         {
-            foreach (GameObject obj in spawners)
+            waveIsDone = false;
+            WaveCount++;
+
+            for (int i = 0; i < enemyCount; i++)
             {
-                GameObject enemyClone = Enemies[Random.Range(0, Enemies.Count)];
-                Instantiate(enemyClone, obj.transform.position, obj.transform.rotation, EnemyHolder.transform);
-                yield return new WaitForSeconds(SpawnRate);
+                foreach (GameObject obj in spawners)
+                {
+                    GameObject enemyClone = Enemies[Random.Range(0, Enemies.Count)];
+                    GameObject CurrentEnemy = Instantiate(enemyClone, obj.transform.position, obj.transform.rotation, EnemyHolder.transform);
+                    enemyStorage.Add(CurrentEnemy);
+                    yield return new WaitForSeconds(SpawnRate);
+                }
             }
+            
         }
-        if(enemyStorage.Count <= 0)
-        {
-            yield return new WaitForSeconds(TimeBetweenSpawnning);
-            waveIsDone = true;
-        }
+
     }
     public void RemoveFromList(GameObject enemyToRemove)
     {
         enemyStorage.Remove(enemyToRemove);
     }
+    void IncreaseDifficulty()
+    {
+        TimeBetweenSpawnning -= 1;
+        SpawnRate -= 0.1f;
+        enemyCount += 1;
+    }
+    
 }

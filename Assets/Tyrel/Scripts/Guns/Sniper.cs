@@ -11,10 +11,12 @@ public class Sniper : GunFire
     float normalFireRate = 1f;
     public float nextFire;
 
-    public GunDamage gunDamage;
+    public GunRayCast gunDamage;
     public float newDamage = 150;
 
     public Animator animator;
+
+    float range = 20;
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class Sniper : GunFire
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && ammo > 0)
         {
             gunDamage.DamageDealt = newDamage;
+            gunDamage.weaponRange = range;
             FireAssualtProjectile();
             animator.Play("Sniper");
             ammo--;

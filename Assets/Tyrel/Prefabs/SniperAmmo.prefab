@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3798695415625915220}
   - component: {fileID: 1492883648969910743}
   - component: {fileID: 14718747073681953}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SniperAmmo
   m_TagString: SAmmo
   m_Icon: {fileID: 0}

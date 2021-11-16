@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5231230239218231681}
   - component: {fileID: 6826020145768646392}
   - component: {fileID: 4166039642300383945}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShotgunAmmo
   m_TagString: SAmmo
   m_Icon: {fileID: 0}

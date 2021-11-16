@@ -22,13 +22,14 @@ public class pointSystem: MonoBehaviour
     private void Start()
     {
         //_playerScore = 5000;
-        ScoreText.text = ScoreText.ToString() + " Points";
+        //ScoreText.text = ScoreText.ToString() + " Points";
     }
 
-    public void UpdateScore()
+    public void UpdateScore(float amount)
     {
-        _scoreText += 1;
-        ScoreText.text = ScoreText.ToString() + " Points";
+        //_scoreText += 1;
+        _playerScore += (int)amount;
+        //ScoreText.text = ScoreText.ToString() + " Points";
     }
 
     void Update()

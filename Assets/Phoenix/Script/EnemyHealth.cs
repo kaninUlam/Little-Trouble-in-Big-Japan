@@ -10,13 +10,14 @@ public class EnemyHealth : MonoBehaviour
     public float Points = 0;
 
     //From pointSystem Script it will be called uiManager
-    
+    public pointSystem points;
 
     public GameObject dropItem;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         MaxEnemyHealth = enemyHealth;
         //_uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>();
     }
@@ -28,7 +29,7 @@ public class EnemyHealth : MonoBehaviour
         if (enemyHealth <= 0)
         {
             Instantiate(dropItem, transform.position, Quaternion.identity);
-            pointSystem.Instance.UpdateScore();
+            pointSystem.Instance.UpdateScore(Points);
 
             Destroy(gameObject);
         }
