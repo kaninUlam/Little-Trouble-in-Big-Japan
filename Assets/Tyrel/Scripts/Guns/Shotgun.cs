@@ -10,9 +10,11 @@ public class Shotgun : GunFire
 
     public float ammo = 0;
 
-    public GunDamage gunDamage;
-    public float newDamage = 20;
+    public GunRayCast gunDamage;
+    public float newDamage = 5;
     public Animator animator;
+
+    float range = 20;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class Shotgun : GunFire
         if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire && ammo > 0)
         {
             gunDamage.DamageDealt = newDamage;
+            gunDamage.weaponRange = range;
             FireProjectile();
             animator.Play("Shotgun");
             ammo--;
