@@ -8,8 +8,7 @@ public class AiBehaviour : MonoBehaviour
     //public enum Tracking { Attack, Chase} //States
     //public Tracking trackType = Tracking.Attack;
 
-    //From pointSystem Script it will be called uiManager
-    private pointSystem _uiManager;
+    
 
     public float damageDealt; // The damage it deals to Player
 
@@ -35,8 +34,6 @@ public class AiBehaviour : MonoBehaviour
         Hyogen = GetComponent<NavMeshAgent>();
 
         playerHP = Player.GetComponent<Health>(); // Player HP
-
-        _uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>();
 
 
     }
@@ -78,10 +75,6 @@ public class AiBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Bullet")
         {
-            if (_uiManager != null)
-            {
-                _uiManager.UpdateScore(20);
-            }
             StartCoroutine(SlowDown());
         }
     }
