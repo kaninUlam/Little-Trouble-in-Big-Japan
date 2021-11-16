@@ -23,6 +23,8 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(dropItem, transform.position, Quaternion.identity);
+
+                
         }
     }
 }

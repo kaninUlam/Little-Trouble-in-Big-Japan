@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3566893364551992243}
   - component: {fileID: -2993676122671265125}
   - component: {fileID: 4963939519256826012}
+  - component: {fileID: 7887587903509217458}
   m_Layer: 0
   m_Name: Crying Laughter
   m_TagString: Enemy
@@ -110,10 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c3c96f4a246d845ae2ff191b7bfc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackType: 0
   Hyogen: {fileID: 3566893364551992243}
   Player: {fileID: 0}
-  range: 0.5
   damageDealt: 0
 --- !u!114 &4963939519256826012
 MonoBehaviour:
@@ -130,6 +129,19 @@ MonoBehaviour:
   enemyHealth: 100
   MaxEnemyHealth: 100
   dropItem: {fileID: 0}
+--- !u!65 &7887587903509217458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186397714347450310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9159191737233352479
 GameObject:
   m_ObjectHideFlags: 0
