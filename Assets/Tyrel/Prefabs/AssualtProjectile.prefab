@@ -203,7 +203,7 @@ SphereCollider:
   m_GameObject: {fileID: 3726448722575715560}
   m_Material: {fileID: 13400000, guid: 201fbb95fc6469a439c6830997f3f22a, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a00813eff37b8f48bf77335bb41d62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 150
+  Speed: 400
 --- !u!54 &3726448722575715561
 Rigidbody:
   m_ObjectHideFlags: 0

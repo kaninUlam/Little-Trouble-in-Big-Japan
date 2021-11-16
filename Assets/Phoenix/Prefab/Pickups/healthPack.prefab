@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1332037365941751304}
   - component: {fileID: -676926605554785136}
   - component: {fileID: 5875574331882777715}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: healthPack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,6 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d7dea675611384b807125e6533582b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  healthup: {fileID: 0}
   heal: 10
 --- !u!1 &7258188110844030059
 GameObject:
@@ -70,7 +72,7 @@ GameObject:
   - component: {fileID: 1876994854002392912}
   - component: {fileID: 3664596954487080474}
   - component: {fileID: 287941903390696078}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

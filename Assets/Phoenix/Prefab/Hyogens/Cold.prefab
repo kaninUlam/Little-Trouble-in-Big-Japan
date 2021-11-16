@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623109939665246871}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6935660726714644724}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &4676831815143207142
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -110,14 +110,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7713463311815434830}
-  m_LocalRotation: {x: -0, y: 0.99976474, z: -0, w: 0.02168989}
-  m_LocalPosition: {x: -18.7, y: -0.3, z: 14.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.62913, y: -0.3000002, z: 14.680052}
   m_LocalScale: {x: 0.25919, y: 0.25919, z: 0.25919}
   m_Children:
   - {fileID: 7507604609863059884}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 177.514, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &-1140251428347588041
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &-5140256285401117581
 MonoBehaviour:
@@ -222,12 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13adb0fdb936107459617fd48b6cd222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackType: 0
+  damageDealt: 0
   Hyogen: {fileID: -1140251428347588041}
   Player: {fileID: 0}
-  range: 0.5
-  damageDealt: 0
-  takeDamage: 50
 --- !u!114 &5561873946935743159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,4 +239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 200
   MaxEnemyHealth: 200
+  Points: 150
+  points: {fileID: 0}
   dropItem: {fileID: 1600981581513612449, guid: 5ab3a9686810a9847b97eff26de06ef8, type: 3}

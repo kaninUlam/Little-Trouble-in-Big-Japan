@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     
-    public float Speed = 150;
+    public float Speed = 800;
 
     
     void Update()

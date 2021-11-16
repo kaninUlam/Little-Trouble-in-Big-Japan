@@ -12,7 +12,7 @@ public class GunFire : MonoBehaviour
     public float spread = 5;
 
     float assualtRange = 1;
-    float shotgunRange = 0.5f;
+    float shotgunRange = 1f;
 
 
     public Movement movement;
@@ -43,7 +43,7 @@ public class GunFire : MonoBehaviour
         {
             GameObject Shells = Instantiate(Projectile, gunEnd.transform.position, transform.rotation);
             Shells.transform.Rotate(Random.Range(spread, -spread), Random.Range(spread, -spread), 0);
-            Shells.GetComponent<Rigidbody>().velocity = (targetPoint - gunEnd.transform.position).normalized * movement.Speed;
+            
             Destroy(Shells, shotgunRange);
 
 

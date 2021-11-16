@@ -1273,6 +1273,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4913098787754104334, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
   m_PrefabInstance: {fileID: 1563876666}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &470718756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470718754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbc6bc62be204e48a9efe5a029ca024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageDealt: 50
+  layersChecked:
+    serializedVersion: 2
+    m_Bits: 311
+  raycastOrigin: {fileID: 470718754}
+  weaponRange: 100
 --- !u!114 &470718761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,6 +1312,11 @@ MonoBehaviour:
   crossair: {fileID: 481824856}
   sniperAmmoImg: {fileID: 1514695994}
   shotgunAmmoImg: {fileID: 1988442587}
+--- !u!20 &470718762 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4913098787754104335, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+  m_PrefabInstance: {fileID: 1563876666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &481824856 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5667337787920140101, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
@@ -3425,6 +3448,34 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.77398
       objectReference: {fileID: 0}
+    - target: {fileID: 5667337787920140100, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667337787920140100, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667337787920140100, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 293
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667337787920140100, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 603
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667337787920140101, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667337787920140101, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667337787920140101, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f892b1ff9e3714fb4bae4e26237d61, type: 3}
 --- !u!1001 &1563876666
@@ -3478,6 +3529,22 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 745958856}
+    - target: {fileID: 1159976746073732684, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 470718762}
+    - target: {fileID: 1159976746073732684, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: movement
+      value: 
+      objectReference: {fileID: 3726448722575715558, guid: 9bc30d5aa755c4c48a7b906a5cfcc8f8, type: 3}
+    - target: {fileID: 1159976746073732684, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: gunDamage
+      value: 
+      objectReference: {fileID: 470718756}
+    - target: {fileID: 1159976746073732684, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: gunRayCast
+      value: 
+      objectReference: {fileID: 470718756}
     - target: {fileID: 1217420356973089395, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3566,6 +3633,22 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1623618064}
+    - target: {fileID: 2798499119998592298, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: movement
+      value: 
+      objectReference: {fileID: 3726448722575715558, guid: bfaf9e1fe1f81e64f86c82342f996f7d, type: 3}
+    - target: {fileID: 2798499119998592298, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 470718762}
+    - target: {fileID: 2798499119998592298, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: gunDamage
+      value: 
+      objectReference: {fileID: 470718756}
+    - target: {fileID: 2798499119998592298, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: gunRayCast
+      value: 
+      objectReference: {fileID: 470718756}
     - target: {fileID: 9117774086424784417, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
       propertyPath: animator
       value: 
@@ -3580,8 +3663,24 @@ PrefabInstance:
       objectReference: {fileID: 903153048}
     - target: {fileID: 9117774086424784417, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
       propertyPath: ammo
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9117774086424784417, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: movement
+      value: 
+      objectReference: {fileID: 3726448722575715558, guid: 7f5267c3a0c52514bbed0a87c2e3424d, type: 3}
+    - target: {fileID: 9117774086424784417, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 470718762}
+    - target: {fileID: 9117774086424784417, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: gunDamage
+      value: 
+      objectReference: {fileID: 470718756}
+    - target: {fileID: 9117774086424784417, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
+      propertyPath: gunRayCast
+      value: 
+      objectReference: {fileID: 470718756}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
 --- !u!1 &1587643273
