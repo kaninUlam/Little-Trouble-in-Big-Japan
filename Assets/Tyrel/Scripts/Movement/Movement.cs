@@ -5,9 +5,12 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     
-    public float Speed = 3;
+    public float Speed = 150;
+
+    
     void Update()
     {
+        
         transform.Translate(Vector3.forward * Speed * Time.deltaTime);
     }
 }
