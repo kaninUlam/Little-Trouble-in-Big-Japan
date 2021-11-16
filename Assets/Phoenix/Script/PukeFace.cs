@@ -38,6 +38,6 @@ public class PukeFace : AiBehaviour
         Rigidbody rb = Instantiate(puke, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
         rb.AddForce(transform.up * 2f, ForceMode.Impulse);
-        Destroy(puke, 0.1f);
+        Destroy(puke.gameObject, 1);
     }
 }
