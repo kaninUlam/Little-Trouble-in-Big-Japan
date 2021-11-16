@@ -44,16 +44,12 @@ public class AiBehaviour : MonoBehaviour
     
     public virtual void Update()
     {
-        // Hyogen will constantly look at Player
-       /* Vector3 lookVector = Player.transform.position - transform.position;
-        lookVector.y = transform.position.y;
-        Quaternion rot = Quaternion.LookRotation(lookVector);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rot, 1);*/
+        FacePlayer();
 
         // Hyogen will chase after the Player
         Hyogen.SetDestination(Player.position);
 
-        //        //Enum depends on chasing and attacking
+        //Enum depends on chasing and attacking
         //        switch (trackType)
         //        {
         //            case Tracking.Attack:
@@ -63,6 +59,14 @@ public class AiBehaviour : MonoBehaviour
         //                ChasePlayer();
         //                break;
         //        }
+    }
+
+    public void FacePlayer()
+    {
+        // Hyogen will constantly look at Player
+        Vector3 direction = (Player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5);
     }
 
     private void OnCollisionEnter(Collision collision) // Collision with the Player and Emoji

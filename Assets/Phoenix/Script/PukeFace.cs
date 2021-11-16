@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class PukeFace : AiBehaviour
 {
-
+    
     //public float attackRange = 0;
-    //public float attackDelay = 0;
-    //private float distanceFromTarget = 0;
-    //private float lastAttackTime = 0;
+    public float attackDelay = 5;
+    //private float nextAttack = 0;
+    private float attackDelayTimer = 0;
 
     public GameObject puke;
 
@@ -23,6 +23,21 @@ public class PukeFace : AiBehaviour
 
     public override void Update()
     {
-        
+        base.Update();
+        ShootPlayer();
+    }
+
+    private void ShootPlayer()
+    {
+        attackDelayTimer -= Time.deltaTime;
+
+        if (attackDelayTimer >= 0) return;
+
+        attackDelayTimer = attackDelay;
+
+        Rigidbody rb = Instantiate(puke, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+        rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+        rb.AddForce(transform.up * 2f, ForceMode.Impulse);
+        Destroy(puke, 0.1f);
     }
 }
