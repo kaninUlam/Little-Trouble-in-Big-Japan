@@ -17,8 +17,4 @@ public class UpdateEnemyHealhBar : MonoBehaviour
     {
         healthBar.SetHealth(enemyHealth.enemyHealth);
     }
-    private void LateUpdate()
-    { 
-        
-    }
 }
