@@ -29,18 +29,17 @@ public class Spawner : MonoBehaviour
         {
             if(enemyStorage.Count <= 0)
             {
+                IncreaseDifficulty();
                 StartCoroutine(waveSpawner());
             }
         }
-        if (Input.GetKeyDown("t"))
-        {
-            IncreaseDifficulty();
-        }
+        
     }
     void IncreaseDifficulty()
     {
+        TimeBetweenSpawnning -= 1;
         SpawnRate -= 0.1f;
-        enemyCount += 3;
+        enemyCount += 1;
     }
     IEnumerator waveSpawner()
     {
