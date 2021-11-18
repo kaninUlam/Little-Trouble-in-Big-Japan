@@ -8,11 +8,7 @@ public class PoisonGas : MonoBehaviour
     public float PoisonDamage = 0.25f;
     public GameObject Player;
     public Health DamageTaken;
-    private void Start()
-    {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        DamageTaken = Player.GetComponent<Health>();
-    }
+   
     private void Update()
     {
         if(Poisoned == true)

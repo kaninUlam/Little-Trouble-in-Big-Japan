@@ -16,6 +16,8 @@ public class EnemyHealth : MonoBehaviour
     //public pointSystem points;
 
     public GameObject[] dropItem;
+    public GameObject enemyDeathParticle;
+    public GameObject dropItem;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
             pointSystem.Instance.UpdateScore(Points);
 
             Destroy(gameObject);
+            Instantiate(enemyDeathParticle, transform.position, transform.rotation);
         }
     }
 }

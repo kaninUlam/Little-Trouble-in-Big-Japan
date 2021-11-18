@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4583873367775852112}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5285866719048635443}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &7637032568832597025
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -149,12 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceda2cc2a6cdc6448868c6459c92b7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackType: 0
+  damageDealt: 0
   Hyogen: {fileID: 0}
   Player: {fileID: 0}
-  range: 0.5
-  damageDealt: 0
-  takeDamage: 50
 --- !u!114 &-6589190884129275160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,4 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 100
   MaxEnemyHealth: 100
-  dropItem: {fileID: 8091996041551283065, guid: 8ea2f3a48e2b9c149a21b6b47b60b288, type: 3}
+  Points: 0
+  dropItem:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
