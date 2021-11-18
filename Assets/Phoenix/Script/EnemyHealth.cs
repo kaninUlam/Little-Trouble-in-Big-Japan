@@ -10,16 +10,17 @@ public class EnemyHealth : MonoBehaviour
     public float MaxEnemyHealth = 200;
     public float Points = 0;
 
-    // Drop Chance
-    public const float _dropRate = 1 / 8;
-    public GameObject[] dropItem;
+    public const float _dropRate = 0.45f;
 
     //From pointSystem Script it will be called uiManager
     //public pointSystem points;
 
+    public GameObject[] dropItem;
+
+    // Start is called before the first frame update
     void Start()
     {
-        MaxEnemyHealth = enemyHealth; // Enemy HP
+        MaxEnemyHealth = enemyHealth;
         //_uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>();
     }
    
@@ -29,13 +30,14 @@ public class EnemyHealth : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
-            if (Random.Range(0, 1) <= _dropRate)
+            if (Random.Range(0f, 1f) <= _dropRate)
             {
                 int indexToDrop = Random.Range(0, dropItem.Length);
                 Instantiate(dropItem[indexToDrop], transform.position, Quaternion.identity);
             }
 
             pointSystem.Instance.UpdateScore(Points);
+
             Destroy(gameObject);
         }
     }
