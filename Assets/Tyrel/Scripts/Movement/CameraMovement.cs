@@ -15,16 +15,6 @@ public class CameraMovement : MonoBehaviour
     public GameObject Player = null;
     public GameObject fpsCam = null;
 
-    
-
-    void Start()
-    {
-        Cursor.lockState =  CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        
-    }
-
 
     void Update()
     {
@@ -37,13 +27,11 @@ public class CameraMovement : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+    }
 
-        
-
-        
-
-        
-
+    public void ChangeMouseSensitivity(float value)
+    {
+        mouseSensitivity = value * 100;
     }
 
 }

@@ -44,6 +44,7 @@ public class PauseController : MonoBehaviour
         Time.timeScale = _isPaused ? 0f : 1f;
         PauseMenu.SetActive(_isPaused);
         _Hud.SetActive(!_isPaused);
+        Cursor.lockState = _isPaused ? CursorLockMode.None : CursorLockMode.Locked;
         
     }
 
