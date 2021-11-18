@@ -12,12 +12,12 @@ public class Health : MonoBehaviour
     private void Start()
     {
         currentHealthPoints = maxHealthPoints;
-        /*healthBar.SetMaxHealth(maxHealthPoints);*/
+        healthBar.SetMaxHealth(maxHealthPoints);
     }
     public void TakeDamageOverTime(float amount)
     {
         currentHealthPoints -= Time.deltaTime * amount;
-        /*healthBar.SetHealth(currentHealthPoints);*/
+        healthBar.SetHealth(currentHealthPoints);
         if (currentHealthPoints <= 0)
         {
             Destroy(gameObject);
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
     public void takeDamage(float amount)
     {
         currentHealthPoints -= amount;
-/*        healthBar.SetHealth(currentHealthPoints);*/
+        healthBar.SetHealth(currentHealthPoints);
         if (currentHealthPoints <= 0)
         {
             Destroy(gameObject);
