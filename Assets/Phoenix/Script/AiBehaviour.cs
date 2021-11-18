@@ -8,8 +8,6 @@ public class AiBehaviour : MonoBehaviour
     //public enum Tracking { Attack, Chase} //States
     //public Tracking trackType = Tracking.Attack;
 
-    
-
     public float damageDealt; // The damage it deals to Player
 
     //Recognizes the Player Damage
@@ -85,7 +83,7 @@ public class AiBehaviour : MonoBehaviour
         Hyogen.speed = 0;
         while (Hyogen.speed < maxSpeed)
         {
-            Hyogen.speed += 5 * Time.deltaTime;
+            Hyogen.speed += 10 * Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
         Hyogen.speed = maxSpeed;
