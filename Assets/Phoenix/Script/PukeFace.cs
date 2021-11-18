@@ -18,7 +18,6 @@ public class PukeFace : AiBehaviour
     {
         base.Start();
 
-        
     }
 
     public override void Update()
@@ -34,7 +33,6 @@ public class PukeFace : AiBehaviour
         if (attackDelayTimer >= 0) return;
 
         attackDelayTimer = attackDelay;
-
 
         GameObject pukeProjectile = Instantiate(puke, transform.position, transform.rotation);
         Rigidbody rb = pukeProjectile.GetComponent<Rigidbody>();
