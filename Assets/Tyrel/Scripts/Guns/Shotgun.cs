@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Shotgun : GunFire
 {
+    public AudioClip[] aClips = null;
+    public AudioSource aSource = null;
+
+
     public float fireRate = 1f;
     float normalFireRate = 1f;
     public float nextFire;
@@ -30,12 +34,29 @@ public class Shotgun : GunFire
             gunDamage.DamageDealt = newDamage;
             gunDamage.weaponRange = range;
             FireProjectile();
+            RandomGunAudio();
             animator.Play("Shotgun");
             ammo--;
             nextFire = Time.time + fireRate;
         }
     }
 
-    
+    void RandomGunAudio()
+    {
+        int aIndex = Random.Range(0, aClips.Length);
+
+        aSource.clip = aClips[aIndex];
+
+        PlayGunAudio(aClips[aIndex]);
+    }
+
+    void PlayGunAudio(AudioClip clip)
+    {
+
+        aSource.PlayOneShot(clip);
+
+    }
+
+
 
 }

@@ -39,7 +39,7 @@ public class Hud : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = playerHealth.maxHealthPoints + "/" + playerHealth.currentHealthPoints;
+        healthText.text = playerHealth.currentHealthPoints + "";
         sniperAmmoText.text = sniperAmmo.ammo + "";
         shotgunAmmoText.text = shotgunAmmo.ammo + "";
 

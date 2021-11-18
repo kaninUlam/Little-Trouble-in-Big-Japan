@@ -11,6 +11,7 @@ public class HealthUp : MonoBehaviour
     public void HealthUpPerk()
     {
         character.GetComponent<Health>();
+        newHealth = character.currentHealthPoints * 2;
 
         character.maxHealthPoints = newHealth;
         character.currentHealthPoints = newHealth;

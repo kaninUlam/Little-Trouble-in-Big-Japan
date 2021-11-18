@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunFire : MonoBehaviour
 {
     public GunRayCast gunRayCast;
-    
+
     public GameObject Projectile;
     public Transform gunEnd;
 
@@ -27,13 +27,13 @@ public class GunFire : MonoBehaviour
     {
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
-        
+
         Vector3 targetPoint;
         if (Physics.Raycast(ray, out hit))
         {
             targetPoint = hit.point;
         }
-            
+
         else
         {
             targetPoint = ray.GetPoint(1000);
@@ -43,7 +43,7 @@ public class GunFire : MonoBehaviour
         {
             GameObject Shells = Instantiate(Projectile, gunEnd.transform.position, transform.rotation);
             Shells.transform.Rotate(Random.Range(spread, -spread), Random.Range(spread, -spread), 0);
-            
+
             Destroy(Shells, shotgunRange);
 
 
@@ -56,7 +56,7 @@ public class GunFire : MonoBehaviour
     {
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
-       
+
         Vector3 targetPoint;
         if (Physics.Raycast(ray, out hit))
             targetPoint = hit.point;
@@ -69,5 +69,5 @@ public class GunFire : MonoBehaviour
         Destroy(bullets, assualtRange);
     }
 
-   
+
 }

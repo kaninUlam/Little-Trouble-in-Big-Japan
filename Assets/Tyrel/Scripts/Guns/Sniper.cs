@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Sniper : GunFire
 {
+    public AudioClip[] aClips = null;
+    public AudioSource aSource = null;
+
 
     public float ammo = 0;
 
@@ -32,9 +35,26 @@ public class Sniper : GunFire
             gunDamage.DamageDealt = newDamage;
             gunDamage.weaponRange = range;
             FireAssualtProjectile();
+            RandomGunAudio();
             animator.Play("Sniper");
             ammo--;
             nextFire = Time.time + fireRate;
         }
+    }
+
+    void RandomGunAudio()
+    {
+        int aIndex = Random.Range(0, aClips.Length);
+
+        aSource.clip = aClips[aIndex];
+
+        PlayGunAudio(aClips[aIndex]);
+    }
+
+    void PlayGunAudio(AudioClip clip)
+    {
+
+        aSource.PlayOneShot(clip);
+
     }
 }
