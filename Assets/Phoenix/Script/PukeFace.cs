@@ -36,8 +36,9 @@ public class PukeFace : AiBehaviour
 
         GameObject pukeProjectile = Instantiate(puke, transform.position, transform.rotation);
         Rigidbody rb = pukeProjectile.GetComponent<Rigidbody>();
+        float speed = rb.velocity.magnitude;
         rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-        rb.AddForce(transform.up * 2f, ForceMode.Impulse);
+        rb.AddForce(transform.up * 4f, ForceMode.Impulse);
         Destroy(pukeProjectile, 2);
 
 

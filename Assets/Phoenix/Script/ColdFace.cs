@@ -12,4 +12,10 @@ public class ColdFace : AiBehaviour
         base.Start();
 
     }
+
+    public override void Update()
+    {
+        base.Update();
+    }
+
 }
