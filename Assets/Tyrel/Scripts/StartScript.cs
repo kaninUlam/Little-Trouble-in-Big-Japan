@@ -28,10 +28,7 @@ public class StartScript : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit, 100f))
             {
-                if(hit.transform != null)
-                {
-                    Debug.Log(hit.transform.gameObject);
-                }
+                
 
                 if(hit.transform.gameObject.tag == "Start")
                 {
@@ -51,13 +48,23 @@ public class StartScript : MonoBehaviour
 
                 if(hit.transform.gameObject.tag == "Options")
                 {
-                    
-                    animator.SetBool("Options", true);
                     Debug.Log("Options");
+                    animator.SetBool("Options", true);
+                    
                 }
                 else
                 {
                     animator.SetBool("Options", false);
+                }
+
+                if(hit.transform.gameObject.tag == "Back")
+                {
+                    Debug.Log("back");
+                    animator.SetBool("BackToMenu", true);
+                }
+                else
+                {
+                    animator.SetBool("BackToMenu", false);
                 }
             }
 
@@ -67,7 +74,7 @@ public class StartScript : MonoBehaviour
 
     IEnumerator LoadStart()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(1);
     }
 

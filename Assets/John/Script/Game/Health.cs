@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     public float maxHealthPoints = 100;
     public float currentHealthPoints = 100;
 
+    
     public HealthBar healthBar;
     private void Start()
     {
@@ -29,6 +30,7 @@ public class Health : MonoBehaviour
         if (currentHealthPoints <= 0)
         {
             Destroy(gameObject);
+            
         }
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CameraMovement : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
-    public LayerMask LayersToCheck;
+    
 
     public Transform playerBody;
     float rotationX = 0;
@@ -38,7 +38,10 @@ public class CameraMovement : MonoBehaviour
         transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
 
         
 

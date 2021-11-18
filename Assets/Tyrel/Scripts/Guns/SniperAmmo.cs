@@ -16,9 +16,6 @@ public class SniperAmmo : MonoBehaviour
             
         }
 
-        if (collision.gameObject)
-        {
-            Debug.Log(collision.gameObject);
-        }
+       
     }
 }

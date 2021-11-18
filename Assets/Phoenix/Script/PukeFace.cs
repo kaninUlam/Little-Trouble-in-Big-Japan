@@ -2,44 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PukeFace : AiBehaviour
 {
-    [SerializeField] private float startingHP = 100; // Max Enemy HP
-    public float enemyHP; // current amount of health it has
+    
+    //public float attackRange = 0;
+    public float attackDelay = 5;
+    //private float nextAttack = 0;
+    private float attackDelayTimer = 0;
 
-    public float damageDealt; // The damage it deals out to t
+    public GameObject puke;
 
-    public GameObject healthPack; //Health Pack tied to the Enemy
-
-    Health playerHP; // Recognizes the Player Damage
-
-    private void Start()
+    public override void Start()
     {
-        enemyHP = startingHP; // enemy HP is the same as the Starting HP
-        playerHP = Player.GetComponent<Health>(); // Player HP
-        StartCoroutine(attackDelay()); // For delays between hit recognization
+        base.Start();
+
+        
     }
 
-    IEnumerator attackDelay() // Attack Delay Script
+    public override void Update()
     {
-        yield return new WaitForSeconds(5); // Wait after 5 Seconds
+        base.Update();
+        ShootPlayer();
     }
 
-    private void Update()
+    private void ShootPlayer()
     {
-        if (enemyHP <= 0) //When Enemy HP is set to 0
-        {
-            Instantiate(healthPack, transform.position, Quaternion.identity); // 
-            Destroy(gameObject); // Destroys gameObject when it Dies
-        }
-    }
+        attackDelayTimer -= Time.deltaTime;
 
-    private void OnCollisionEnter(Collision collision) // Collision with the Player and Emoji
-    {
-        if (collision.gameObject.tag == "Player") // If colliding with the Player
-        {
-            playerHP.takeDamage(damageDealt); // The Player takes Damage
-        }
+        if (attackDelayTimer >= 0) return;
+
+        attackDelayTimer = attackDelay;
+
+
+        GameObject pukeProjectile = Instantiate(puke, transform.position, transform.rotation);
+        Rigidbody rb = pukeProjectile.GetComponent<Rigidbody>();
+        rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+        rb.AddForce(transform.up * 2f, ForceMode.Impulse);
+        Destroy(pukeProjectile, 2);
+
+
+        //Rigidbody rb = Instantiate(puke, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+        //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+        //rb.AddForce(transform.up * 2f, ForceMode.Impulse);
+        //Destroy(puke, 0.1f);
     }
 }

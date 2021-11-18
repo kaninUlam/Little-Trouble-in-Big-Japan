@@ -14,7 +14,6 @@ public class sampleEnemy : MonoBehaviour
             {
                 healthcomp.takeDamage(damagetaken);
             }
-           
         }
     }
 }

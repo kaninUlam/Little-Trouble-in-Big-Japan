@@ -10,6 +10,12 @@ TagManager:
   - Start
   - Exit
   - SAmmo
+  - FireRatePerk
+  - SpeedUpPerk
+  - GunDamageUpPerk
+  - HealthUpPerk
+  - Options
+  - Back
   layers:
   - Default
   - TransparentFX
@@ -21,8 +27,8 @@ TagManager:
   - 
   - Ground
   - PostProcessing
-  - 
-  - 
+  - Player
+  - Bullet
   - 
   - 
   - 
@@ -46,4 +52,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Crossair
+    uniqueID: 3220292381
     locked: 0
