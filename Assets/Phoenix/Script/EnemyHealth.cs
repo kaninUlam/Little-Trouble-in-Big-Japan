@@ -12,6 +12,7 @@ public class EnemyHealth : MonoBehaviour
     //From pointSystem Script it will be called uiManager
     public pointSystem points;
 
+    public GameObject enemyDeathParticle;
     public GameObject dropItem;
 
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
             pointSystem.Instance.UpdateScore(Points);
 
             Destroy(gameObject);
+            Instantiate(enemyDeathParticle, transform.position, transform.rotation);
         }
     }
 }
