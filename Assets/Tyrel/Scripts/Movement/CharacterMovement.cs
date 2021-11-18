@@ -23,8 +23,8 @@ public class CharacterMovement : MonoBehaviour
 
     bool IsMoveing;
     
-    float walkStepLength = 0.75f;
-    float runStepLength = 0.25f;
+    float walkStepLength = 0.5f;
+    float runStepLength = 0.1f;
 
     public AudioClip[] aClips = null;
 

@@ -16,6 +16,7 @@ public class HealthUp : MonoBehaviour
     {
         character.GetComponent<Health>();
         health.SetMaxHealth(newHealth);
+        newHealth = character.currentHealthPoints * 2;
 
         character.maxHealthPoints = newHealth;
         character.currentHealthPoints = newHealth;
