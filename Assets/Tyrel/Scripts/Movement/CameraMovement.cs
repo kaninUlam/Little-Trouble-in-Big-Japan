@@ -15,6 +15,10 @@ public class CameraMovement : MonoBehaviour
     public GameObject Player = null;
     public GameObject fpsCam = null;
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
 
     void Update()
     {

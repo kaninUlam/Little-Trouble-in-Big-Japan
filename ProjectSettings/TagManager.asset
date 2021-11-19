@@ -16,6 +16,8 @@ TagManager:
   - HealthUpPerk
   - Options
   - Back
+  - Win
+  - Lore
   layers:
   - Default
   - TransparentFX

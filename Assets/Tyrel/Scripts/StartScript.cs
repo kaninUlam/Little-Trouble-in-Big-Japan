@@ -8,6 +8,8 @@ public class StartScript : MonoBehaviour
 
     public Animator animator;
 
+    public AudioClip[] aClips = null;
+    public AudioSource aSource = null;
 
 
     // Start is called before the first frame update
@@ -15,7 +17,7 @@ public class StartScript : MonoBehaviour
     {
         Time.timeScale = 1;
         animator.GetComponent<Animator>();
-
+        
     }
 
     // Update is called once per frame
@@ -54,24 +56,40 @@ public class StartScript : MonoBehaviour
                     animator.SetBool("Options", true);
                     
                 }
-                else
-                {
-                    animator.SetBool("Options", false);
-                }
+                
 
                 if(hit.transform.gameObject.tag == "Back")
                 {
                     Debug.Log("back");
                     animator.SetBool("BackToMenu", true);
+                    animator.SetBool("Options", false);
+                    StartCoroutine(BackToIdle());
                 }
-                else
-                {
-                    animator.SetBool("BackToMenu", false);
-                }
+                
             }
 
         }
 
+
+
+        //RaycastHit hit2;
+
+        //Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        //if (Physics.Raycast(ray2, out hit2, 100f))
+        //{
+        //    if (hit2.transform.gameObject.tag == "Start")
+        //        MenuSound(1);
+
+        //    if (hit2.transform.gameObject.tag == "Options")
+        //        MenuSound(2);
+
+        //    if (hit2.transform.gameObject.tag == "Exit")
+        //        MenuSound(3);
+
+        //    if (hit2.transform.gameObject.tag == "Back")
+        //        MenuSound(4);
+        //}
     }
 
     IEnumerator LoadStart()
@@ -80,7 +98,25 @@ public class StartScript : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    IEnumerator BackToIdle()
+    {
+        yield return new WaitForSeconds(2);
+        animator.SetBool("BackToMenu", false);
+    }
 
 
+    //void MenuSound(int amount)
+    //{
+        
+
+    //    aSource.clip = aClips[amount];
+
+    //    PlayMenuSound(aClips[amount]);
+    //}
+
+    //void PlayMenuSound(AudioClip clip)
+    //{
+    //    aSource.PlayOneShot(clip);
+    //}
 
 }
