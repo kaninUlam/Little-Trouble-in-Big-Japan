@@ -21,6 +21,6 @@ public class ShotGunAmmo : MonoBehaviour
 
     private void Update()
     {
-        Destroy(gameObject, 60f);
+        Destroy(gameObject, 30f);
     }
 }

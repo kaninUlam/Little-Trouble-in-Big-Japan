@@ -159,6 +159,21 @@ public class CharacterMovement : MonoBehaviour
         
     }
 
+    //private void OnCollisionEnter(Collision collision)
+    //{
+
+    //    if (collision.gameObject.name == "Cold")
+    //    {
+    //        StartCoroutine(Freeze());
+    //    }
+    //}
+
+    //IEnumerator Freeze()
+    //{
+    //    IsMoveing = false;
+    //    yield return new WaitForSeconds(5);
+        
+    //}
 
     void PlayRunning()
     {
