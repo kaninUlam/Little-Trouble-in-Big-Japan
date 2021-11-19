@@ -36,6 +36,7 @@ public class AssualtRifle : GunFire
             gunDamage.weaponRange = range;
             FireAssualtProjectile();
             RandomGunAudio();
+            
             animator.Play("AssualtRifle");
             nextFire = Time.time + fireRate;
         }
