@@ -22,6 +22,8 @@ public class CharacterMovement : MonoBehaviour
     AudioSource aSource = null;
 
     bool IsMoveing;
+    bool isFrozen;
+    bool canbeFrozen = true;
     
     float walkStepLength = 0.5f;
     float runStepLength = 0.1f;
@@ -71,7 +73,7 @@ public class CharacterMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-
+        if (!isFrozen)
         controller.Move(move * speed * Time.deltaTime);
 
         if (!isGrounded)
@@ -159,6 +161,26 @@ public class CharacterMovement : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.name == "Cold" && canbeFrozen)
+        {
+            Debug.Log("I am Frozen");
+            StartCoroutine(freeze());
+        }
+    }
+
+    IEnumerator freeze()
+    {
+        isFrozen = true;
+        canbeFrozen = false;
+        yield return new WaitForSeconds(2);
+        isFrozen = false;
+        yield return new WaitForSeconds(5);
+        canbeFrozen = true;
+
+    }
 
     void PlayRunning()
     {

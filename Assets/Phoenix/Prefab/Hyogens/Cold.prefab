@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623109939665246871}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6935660726714644724}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &4676831815143207142
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -240,5 +240,7 @@ MonoBehaviour:
   enemyHealth: 200
   MaxEnemyHealth: 200
   Points: 150
-  points: {fileID: 0}
-  dropItem: {fileID: 1600981581513612449, guid: 5ab3a9686810a9847b97eff26de06ef8, type: 3}
+  dropItem:
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyDeathParticle: {fileID: 0}

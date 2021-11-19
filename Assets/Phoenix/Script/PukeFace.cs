@@ -18,7 +18,6 @@ public class PukeFace : AiBehaviour
     {
         base.Start();
 
-        
     }
 
     public override void Update()
@@ -35,12 +34,12 @@ public class PukeFace : AiBehaviour
 
         attackDelayTimer = attackDelay;
 
-
         GameObject pukeProjectile = Instantiate(puke, transform.position, transform.rotation);
         Rigidbody rb = pukeProjectile.GetComponent<Rigidbody>();
+        float speed = rb.velocity.magnitude;
         rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-        rb.AddForce(transform.up * 2f, ForceMode.Impulse);
-        Destroy(pukeProjectile, 2);
+        rb.AddForce(transform.up * 4f, ForceMode.Impulse);
+        Destroy(pukeProjectile);
 
 
         //Rigidbody rb = Instantiate(puke, transform.position, Quaternion.identity).GetComponent<Rigidbody>();

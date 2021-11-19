@@ -8,8 +8,6 @@ public class AiBehaviour : MonoBehaviour
     //public enum Tracking { Attack, Chase} //States
     //public Tracking trackType = Tracking.Attack;
 
-    
-
     public float damageDealt; // The damage it deals to Player
 
     //Recognizes the Player Damage
@@ -19,10 +17,6 @@ public class AiBehaviour : MonoBehaviour
     public NavMeshAgent Hyogen;
     //Player
     public Transform Player;
-
-    //public float range = 0.5f;
-    //int i = 0;
-
 
     public virtual void Start()
     {
@@ -34,7 +28,6 @@ public class AiBehaviour : MonoBehaviour
         Hyogen = GetComponent<NavMeshAgent>();
 
         playerHP = Player.GetComponent<Health>(); // Player HP
-
 
     }
 
@@ -81,14 +74,18 @@ public class AiBehaviour : MonoBehaviour
 
     IEnumerator SlowDown()
     {
-        float maxSpeed = Hyogen.speed;
-        Hyogen.speed = 0;
-        while (Hyogen.speed < maxSpeed)
-        {
-            Hyogen.speed += 5 * Time.deltaTime;
-            yield return new WaitForEndOfFrame();
-        }
-        Hyogen.speed = maxSpeed;
+        gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+        yield return new WaitForSeconds(5);
+        gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+
+        //float maxSpeed = Hyogen.speed;
+        //Hyogen.speed = 0;
+        //while (Hyogen.speed < maxSpeed)
+        //{
+        //    Hyogen.speed += 10 * Time.deltaTime;
+        //    yield return new WaitForEndOfFrame();
+        //}
+        //Hyogen.speed = maxSpeed;
     }
 
     ////Hyogen Attack System
