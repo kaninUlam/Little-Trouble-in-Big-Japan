@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Tyrel/scenes/StartScreenMenu.unity
     guid: 35ded1e37d715924da169200ececd5b4
   - enabled: 1
-    path: Assets/John/Scenes/TestArea2.unity
-    guid: fc5d4adf95601164b9ac7c07a4093d64
+    path: Assets/John/Scenes/TestLevel3.unity
+    guid: 060b99413318fcd46be480cd35d1d35d
   - enabled: 1
     path: Assets/Jacob/Scenes/game_over.unity
     guid: a2a018dce7942814aaadbb576b6f559f

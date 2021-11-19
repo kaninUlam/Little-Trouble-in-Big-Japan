@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageDealt: 0
   Hyogen: {fileID: 5492441813635428421}
-  Player: {fileID: 0}
+  Player: {fileID: 5515220447297999904, guid: 011e4bfd04ac61b4a8a945b6d028d773, type: 3}
 --- !u!114 &8159307591509536965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   MaxEnemyHealth: 200
   Points: 0
   dropItem:
-  - {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
-  - {fileID: 1817070790947968178, guid: 5b4079c3ddae93043b12c18862c6185f, type: 3}
-  enemyDeathParticle: {fileID: 4233841226735060423, guid: 2c714834950743247ab473075609f8b5, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyDeathParticle: {fileID: 0}
