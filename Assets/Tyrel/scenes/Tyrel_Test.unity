@@ -2638,8 +2638,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 25.865156, y: 28.010065, z: 6.146672}
+  m_Center: {x: -0.69606304, y: 13.444197, z: -0.06971693}
 --- !u!23 &2030532803
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2659,7 +2659,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -8469494145858465668, guid: b82d70dcabf799d4c9ac6b0d93160add, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2688,7 +2688,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030532801}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: b82d70dcabf799d4c9ac6b0d93160add, type: 3}
 --- !u!4 &2030532805
 Transform:
   m_ObjectHideFlags: 0
@@ -2696,13 +2696,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030532801}
-  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -60.7, y: -5.8, z: 9.23}
-  m_LocalScale: {x: 5, y: 10, z: 2}
+  m_LocalRotation: {x: -0.14840633, y: 0.6913567, z: 0.14840673, w: 0.6913588}
+  m_LocalPosition: {x: -74.23, y: -11, z: 7.07}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: -24.23, y: 90, z: 0}
 --- !u!114 &2032417472 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7852899751895711517, guid: 90c81ddbf252fa4408b470b919ff99fd, type: 3}
@@ -2719,6 +2719,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7474113912446547436, guid: bd2be42cbabcebb4b8b62be3f1f9a6a4, type: 3}
   m_PrefabInstance: {fileID: 7474113910462014486}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2120045738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1699877440247460818, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+  m_PrefabInstance: {fileID: 1699877440473448019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2120045741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120045738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14bf1be2e5912b4da2906c2acaac8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSens: {fileID: 1741824839}
 --- !u!4 &2127089028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2335589126602384031, guid: f5a84d8081570ab4fac6c541cc0edab3, type: 3}
@@ -2751,6 +2769,30 @@ PrefabInstance:
       propertyPath: mouseSens
       value: 
       objectReference: {fileID: 1741824839}
+    - target: {fileID: 1699877440247460816, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2120045741}
+    - target: {fileID: 1699877440247460816, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699877440247460816, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699877440247460816, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699877440247460816, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MouseSensitivityControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699877440247460816, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeMouseSens
+      objectReference: {fileID: 0}
     - target: {fileID: 1699877441497010325, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
