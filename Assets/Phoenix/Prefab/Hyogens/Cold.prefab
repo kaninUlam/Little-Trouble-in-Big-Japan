@@ -243,4 +243,4 @@ MonoBehaviour:
   dropItem:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+  enemyDeathParticle: {fileID: 0}

@@ -137,8 +137,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 35.000008, y: 38, z: 6.0000014}
-  m_Center: {x: 0, y: 21, z: -3.500001}
+  m_Size: {x: 13.147859, y: 37.999996, z: 15.089174}
+  m_Center: {x: 0.96195877, y: 21.000002, z: 1.0445851}
 --- !u!114 &8550131514583772016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,12 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e52588bab3073b439bec5975768bb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackType: 0
+  damageDealt: 10
   Hyogen: {fileID: 4103922239609802353}
   Player: {fileID: 5515220447297999904, guid: 011e4bfd04ac61b4a8a945b6d028d773, type: 3}
-  range: 0.5
-  damageDealt: 10
-  takeDamage: 0
+  attackDelay: 5
+  puke: {fileID: 0}
 --- !u!114 &3332247268740691543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +170,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 50
   MaxEnemyHealth: 200
-  dropItem: {fileID: 0}
+  Points: 0
+  dropItem:
+  - {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
+  enemyDeathParticle: {fileID: 4233841226735060423, guid: 2c714834950743247ab473075609f8b5, type: 3}
 --- !u!114 &5534932530413754908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +199,7 @@ GameObject:
   - component: {fileID: 5534932530130341261}
   - component: {fileID: 5534932530130341260}
   - component: {fileID: 5534932530130341263}
-  - component: {fileID: 5534932530130341262}
+  - component: {fileID: 6082990441350007817}
   m_Layer: 5
   m_Name: EnemyHealthHolder
   m_TagString: Untagged
@@ -289,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 5534932530130341260}
---- !u!114 &5534932530130341262
+--- !u!114 &6082990441350007817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,10 +300,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5534932530130341250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750eb14dab84da84499307102982f64b, type: 3}
+  m_Script: {fileID: 11500000, guid: 57444c075000242ea99e263cee940de2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
+  manageVisibility: 1
 --- !u!1 &5534932530147579925
 GameObject:
   m_ObjectHideFlags: 0

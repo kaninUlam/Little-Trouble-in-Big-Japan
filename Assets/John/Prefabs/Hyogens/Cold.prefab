@@ -222,12 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13adb0fdb936107459617fd48b6cd222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackType: 1
+  damageDealt: 0
   Hyogen: {fileID: 5492441813635428421}
   Player: {fileID: 0}
-  range: 0.5
-  damageDealt: 0
-  takeDamage: 50
 --- !u!114 &8159307591509536965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,4 +239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 200
   MaxEnemyHealth: 200
-  dropItem: {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
+  Points: 0
+  dropItem:
+  - {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
+  - {fileID: 1817070790947968178, guid: 5b4079c3ddae93043b12c18862c6185f, type: 3}
+  enemyDeathParticle: {fileID: 4233841226735060423, guid: 2c714834950743247ab473075609f8b5, type: 3}

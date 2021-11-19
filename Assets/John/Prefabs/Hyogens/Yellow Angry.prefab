@@ -71,12 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceda2cc2a6cdc6448868c6459c92b7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackType: 0
+  damageDealt: 5
   Hyogen: {fileID: 2505117629987981098}
   Player: {fileID: 0}
-  range: 0.5
-  damageDealt: 5
-  takeDamage: 50
 --- !u!114 &1724114073811342049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,7 +88,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: 200
   MaxEnemyHealth: 200
-  dropItem: {fileID: 0}
+  Points: 0
+  dropItem:
+  - {fileID: 0}
+  enemyDeathParticle: {fileID: 0}
 --- !u!54 &2221474672129610500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -231,7 +231,6 @@ GameObject:
   - component: {fileID: 2221474671788099251}
   - component: {fileID: 2221474671788099249}
   - component: {fileID: 2221474671788099250}
-  - component: {fileID: 2221474671788099248}
   m_Layer: 5
   m_Name: EnemyHealthHolder
   m_TagString: Untagged
@@ -323,19 +322,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2221474671788099249}
---- !u!114 &2221474671788099248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2221474671788099252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750eb14dab84da84499307102982f64b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Camera: {fileID: 0}
 --- !u!1 &2221474672187679091
 GameObject:
   m_ObjectHideFlags: 0
