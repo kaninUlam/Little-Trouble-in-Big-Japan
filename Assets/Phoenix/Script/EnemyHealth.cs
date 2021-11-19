@@ -17,7 +17,6 @@ public class EnemyHealth : MonoBehaviour
 
     public GameObject[] dropItem;
     public GameObject enemyDeathParticle;
-    public GameObject dropItem;
 
     // Start is called before the first frame update
     void Start()

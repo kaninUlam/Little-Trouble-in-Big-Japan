@@ -8,7 +8,7 @@ public class PerkRayCast : MonoBehaviour
     public LayerMask layersToCheck;
 
     
-    public pointSystem scoreSystem;
+    public DifferentPointSystem scoreSystem;
 
     bool fireRatePerk = false;
     bool speedPerk = false;
@@ -42,7 +42,7 @@ public class PerkRayCast : MonoBehaviour
         speedUpImg.gameObject.SetActive(false);
         fireRateImg.gameObject.SetActive(false);
 
-        scoreSystem.GetComponent<pointSystem>();
+        scoreSystem.GetComponent<DifferentPointSystem>();
 
     }
 
@@ -58,38 +58,38 @@ public class PerkRayCast : MonoBehaviour
 
             if (Physics.Raycast(transform.position, transform.forward, out hit, 10, layersToCheck))
             {
-                if (hit.collider.tag == "FireRatePerk" && fireRatePerk == false && scoreSystem._playerScore >= 1000)
+                if (hit.collider.tag == "FireRatePerk" && fireRatePerk == false && scoreSystem._PlayerScore >= 1000)
                 {
                     
                     fireRateImg.gameObject.SetActive(true);
                     GameObject fireRateUpPerk = hit.collider.gameObject;
                     fireRateUpPerk.GetComponent<FireRateUp>().FireRateUpPerk();
                     fireRatePerk = true;
-                    scoreSystem._playerScore -= 1000;
+                    scoreSystem._PlayerScore -= 1000;
                 }
-                if (hit.collider.tag == "SpeedUpPerk" && speedPerk == false && scoreSystem._playerScore >= 1000)
+                if (hit.collider.tag == "SpeedUpPerk" && speedPerk == false && scoreSystem._PlayerScore >= 1000)
                 {
                     speedUpImg.gameObject.SetActive(true);
                     GameObject SpeedUpPerk = hit.collider.gameObject;
                     SpeedUpPerk.GetComponent<SpeedUp>().SpeedUpPerk();
                     speedPerk = true;
-                    scoreSystem._playerScore -= 1000;
+                    scoreSystem._PlayerScore -= 1000;
                 }
-                if (hit.collider.tag == "GunDamageUpPerk" && gunDamagePerk == false && scoreSystem._playerScore >= 1000)
+                if (hit.collider.tag == "GunDamageUpPerk" && gunDamagePerk == false && scoreSystem._PlayerScore >= 1000)
                 {
                     gunDamageUpImg.gameObject.SetActive(true);
                     GameObject gunDamageUpPerk = hit.collider.gameObject;
                     gunDamageUpPerk.GetComponent<DamageUp>().DamageUpPerk();
                     gunDamagePerk = true;
-                    scoreSystem._playerScore -= 1000;
+                    scoreSystem._PlayerScore -= 1000;
                 }
-                if(hit.collider.tag == "HealthUpPerk" && healthPerk == false && scoreSystem._playerScore >= 1000)
+                if(hit.collider.tag == "HealthUpPerk" && healthPerk == false && scoreSystem._PlayerScore >= 1000)
                 {
                     healthUpImg.gameObject.SetActive(true);
                     GameObject healthUpPerk = hit.collider.gameObject;
                     healthUpPerk.GetComponent<HealthUp>().HealthUpPerk();
                     healthPerk = true;
-                    scoreSystem._playerScore -= 1000;
+                    scoreSystem._PlayerScore -= 1000;
                 }
 
 
