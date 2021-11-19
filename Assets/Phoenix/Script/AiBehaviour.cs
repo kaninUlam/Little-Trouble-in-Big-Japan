@@ -68,25 +68,25 @@ public class AiBehaviour : MonoBehaviour
 
         if (collision.gameObject.tag == "Bullet")
         {
-            StartCoroutine(SlowDown());
+            //StartCoroutine(SlowDown());
         }
     }
 
-    IEnumerator SlowDown()
-    {
-        gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-        yield return new WaitForSeconds(5);
-        gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+    //IEnumerator SlowDown()
+    //{
+    //    gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+    //    yield return new WaitForSeconds(5);
+    //    gameObject.GetComponent<NavMeshAgent>().isStopped = false;
 
-        //float maxSpeed = Hyogen.speed;
-        //Hyogen.speed = 0;
-        //while (Hyogen.speed < maxSpeed)
-        //{
-        //    Hyogen.speed += 10 * Time.deltaTime;
-        //    yield return new WaitForEndOfFrame();
-        //}
-        //Hyogen.speed = maxSpeed;
-    }
+    //    float maxSpeed = Hyogen.speed;
+    //    Hyogen.speed = 0;
+    //    while (Hyogen.speed < maxSpeed)
+    //    {
+    //        Hyogen.speed += 10 * Time.deltaTime;
+    //        yield return new WaitForEndOfFrame();
+    //    }
+    //    Hyogen.speed = maxSpeed;
+    //}
 
     ////Hyogen Attack System
     //private void Attack()
