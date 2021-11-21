@@ -60,11 +60,11 @@ public class PerkRayCast : MonoBehaviour
         {
             
 
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 10, layersToCheck))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 20, layersToCheck))
             {
                 if (hit.collider.tag == "FireRatePerk" && fireRatePerk == false && scoreSystem._PlayerScore >= 1000)
                 {
-                    
+                    Debug.Log("fireRateIncreased");
                     fireRateImg.gameObject.SetActive(true);
                     GameObject fireRateUpPerk = hit.collider.gameObject;
                     fireRateUpPerk.GetComponent<FireRateUp>().FireRateUpPerk();

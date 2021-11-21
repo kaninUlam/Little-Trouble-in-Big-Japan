@@ -89,7 +89,7 @@ public class CharacterMovement : MonoBehaviour
         {
             Debug.Log("jump");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            Debug.Log(velocity.y);
+            
         }
 
 

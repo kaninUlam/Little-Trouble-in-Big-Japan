@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
+
+    public PlayerAudio playerAudio;
+
     // Stats
     public float enemyHealth = 200;
     public float MaxEnemyHealth = 200;
@@ -41,8 +44,10 @@ public class EnemyHealth : MonoBehaviour
 
             DifferentPointSystem.Points.UpdateScore(Points);
 
+            playerAudio.GetComponent<PlayerAudio>().RandomVoiceLine();
+
             Destroy(gameObject);
-            Instantiate(enemyDeathParticle, transform.position + Vector3.up, transform.rotation);
+            Instantiate(enemyDeathParticle, transform.position + Vector3.up * 5, transform.rotation);
         }
     }
 }
