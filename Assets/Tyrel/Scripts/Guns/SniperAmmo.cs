@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SniperAmmo : MonoBehaviour
 {
-    public Sniper sniper;.
+    public Sniper sniper;
 
     private void OnCollisionEnter(Collision collision)
     {
