@@ -17,4 +17,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void OnDeath()
+    {
+        SceneManager.LoadScene(2);
+    }
 }
