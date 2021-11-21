@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
+
+    public PlayerAudio playerAudio;
+
     // Stats
     public float enemyHealth = 200;
     public float MaxEnemyHealth = 200;
@@ -36,13 +39,15 @@ public class EnemyHealth : MonoBehaviour
             if (Random.Range(0f, 1f) <= _dropRate) // Percentage to drop with the Rate
             {
                 int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
-                Instantiate(dropItem[indexToDrop], transform.position, Quaternion.identity); // What it Drops
+                Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
             }
 
-            pointSystem.Instance.UpdateScore(Points);
+            DifferentPointSystem.Points.UpdateScore(Points);
+
+            playerAudio.GetComponent<PlayerAudio>().RandomVoiceLine();
 
             Destroy(gameObject);
-            Instantiate(enemyDeathParticle, transform.position, transform.rotation);
+            Instantiate(enemyDeathParticle, transform.position + Vector3.up * 5, transform.rotation);
         }
     }
 }

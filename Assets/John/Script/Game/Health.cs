@@ -6,8 +6,9 @@ public class Health : MonoBehaviour
 {
     public float maxHealthPoints = 100;
     public float currentHealthPoints = 100;
+    public GameManager gameManager;
 
-    
+
     public HealthBar healthBar;
     private void Start()
     {
@@ -20,7 +21,7 @@ public class Health : MonoBehaviour
         healthBar.SetHealth(currentHealthPoints);
         if (currentHealthPoints <= 0)
         {
-            Destroy(gameObject);
+            gameManager.GetComponent<GameManager>().OnDeath();
         }
     }
     public void takeDamage(float amount)

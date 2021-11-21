@@ -8,7 +8,7 @@ public class PerkRayCast : MonoBehaviour
     public LayerMask layersToCheck;
 
     
-    public pointSystem scoreSystem;
+    public DifferentPointSystem scoreSystem;
 
     bool fireRatePerk = false;
     bool speedPerk = false;
@@ -19,6 +19,8 @@ public class PerkRayCast : MonoBehaviour
     public Text SpeedUpText;
     public Text gunDamageUpText;
     public Text healthUpText;
+    public Text WinText;
+    public Text LoreText;
 
     public Image fireRateImg;
     public Image speedUpImg;
@@ -41,8 +43,10 @@ public class PerkRayCast : MonoBehaviour
         gunDamageUpImg.gameObject.SetActive(false);
         speedUpImg.gameObject.SetActive(false);
         fireRateImg.gameObject.SetActive(false);
+        WinText.gameObject.SetActive(false);
+        LoreText.gameObject.SetActive(false);
 
-        scoreSystem.GetComponent<pointSystem>();
+        scoreSystem.GetComponent<DifferentPointSystem>();
 
     }
 
@@ -56,40 +60,50 @@ public class PerkRayCast : MonoBehaviour
         {
             
 
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 10, layersToCheck))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 20, layersToCheck))
             {
-                if (hit.collider.tag == "FireRatePerk" && fireRatePerk == false && scoreSystem._playerScore >= 1000)
+                if (hit.collider.tag == "FireRatePerk" && fireRatePerk == false && scoreSystem._PlayerScore >= 1000)
                 {
-                    
+                    Debug.Log("fireRateIncreased");
                     fireRateImg.gameObject.SetActive(true);
                     GameObject fireRateUpPerk = hit.collider.gameObject;
                     fireRateUpPerk.GetComponent<FireRateUp>().FireRateUpPerk();
                     fireRatePerk = true;
-                    scoreSystem._playerScore -= 1000;
+                    scoreSystem._PlayerScore -= 1000;
                 }
-                if (hit.collider.tag == "SpeedUpPerk" && speedPerk == false && scoreSystem._playerScore >= 1000)
+                if (hit.collider.tag == "SpeedUpPerk" && speedPerk == false && scoreSystem._PlayerScore >= 1000)
                 {
                     speedUpImg.gameObject.SetActive(true);
                     GameObject SpeedUpPerk = hit.collider.gameObject;
                     SpeedUpPerk.GetComponent<SpeedUp>().SpeedUpPerk();
                     speedPerk = true;
-                    scoreSystem._playerScore -= 1000;
+                    scoreSystem._PlayerScore -= 1000;
                 }
-                if (hit.collider.tag == "GunDamageUpPerk" && gunDamagePerk == false && scoreSystem._playerScore >= 1000)
+                if (hit.collider.tag == "GunDamageUpPerk" && gunDamagePerk == false && scoreSystem._PlayerScore >= 1000)
                 {
                     gunDamageUpImg.gameObject.SetActive(true);
                     GameObject gunDamageUpPerk = hit.collider.gameObject;
                     gunDamageUpPerk.GetComponent<DamageUp>().DamageUpPerk();
                     gunDamagePerk = true;
-                    scoreSystem._playerScore -= 1000;
+                    scoreSystem._PlayerScore -= 1000;
                 }
-                if(hit.collider.tag == "HealthUpPerk" && healthPerk == false && scoreSystem._playerScore >= 1000)
+                if(hit.collider.tag == "HealthUpPerk" && healthPerk == false && scoreSystem._PlayerScore >= 1000)
                 {
                     healthUpImg.gameObject.SetActive(true);
                     GameObject healthUpPerk = hit.collider.gameObject;
                     healthUpPerk.GetComponent<HealthUp>().HealthUpPerk();
                     healthPerk = true;
-                    scoreSystem._playerScore -= 1000;
+                    scoreSystem._PlayerScore -= 1000;
+                }
+
+                if(hit.collider.tag == "Lore")
+                {
+                    Time.timeScale = 0;
+
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        Time.timeScale = 1;
+                    }
                 }
 
 
@@ -141,6 +155,15 @@ public class PerkRayCast : MonoBehaviour
                 healthUpText.gameObject.SetActive(false);
             }
 
+            if (hit.collider.tag == "Win")
+                WinText.gameObject.SetActive(true);
+            else
+                WinText.gameObject.SetActive(false);
+
+            if (hit.collider.tag == "Lore")
+                LoreText.gameObject.SetActive(true);
+            else
+                LoreText.gameObject.SetActive(false);
 
         }
 

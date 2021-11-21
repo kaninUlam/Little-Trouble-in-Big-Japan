@@ -34,7 +34,7 @@ public class Sniper : GunFire
         {
             gunDamage.DamageDealt = newDamage;
             gunDamage.weaponRange = range;
-            FireAssualtProjectile();
+            FireSniperProjectile();
             RandomGunAudio();
             animator.Play("Sniper");
             ammo--;

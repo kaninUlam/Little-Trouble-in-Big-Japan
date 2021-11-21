@@ -11,9 +11,9 @@ public class GunFire : MonoBehaviour
 
     public float spread = 5;
 
-    float assualtRange = 1;
-    float shotgunRange = 1f;
-
+    float assualtRange = 100;
+    float shotgunRange = 50f;
+    float sniperRange = 500;
 
     public Movement movement;
     public Camera Camera;
@@ -25,6 +25,8 @@ public class GunFire : MonoBehaviour
 
     public virtual void FireProjectile()
     {
+        gunRayCast.weaponRange = shotgunRange;
+
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
 
@@ -44,7 +46,7 @@ public class GunFire : MonoBehaviour
             GameObject Shells = Instantiate(Projectile, gunEnd.transform.position, transform.rotation);
             Shells.transform.Rotate(Random.Range(spread, -spread), Random.Range(spread, -spread), 0);
 
-            Destroy(Shells, shotgunRange);
+            Destroy(Shells, 0.1f);
 
 
 
@@ -54,6 +56,8 @@ public class GunFire : MonoBehaviour
 
     public void FireAssualtProjectile()
     {
+        gunRayCast.weaponRange = assualtRange;
+
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
 
@@ -66,8 +70,25 @@ public class GunFire : MonoBehaviour
         gunRayCast.raycastShoot();
         GameObject bullets = Instantiate(Projectile, gunEnd.transform.position, transform.rotation);
         bullets.GetComponent<Rigidbody>().velocity = (targetPoint - gunEnd.transform.position).normalized * movement.Speed;
-        Destroy(bullets, assualtRange);
+        Destroy(bullets, .5f);
     }
 
+    public void FireSniperProjectile()
+    {
+        gunRayCast.weaponRange = sniperRange;
 
+        Ray ray = Camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+        RaycastHit hit;
+
+        Vector3 targetPoint;
+        if (Physics.Raycast(ray, out hit))
+            targetPoint = hit.point;
+        else
+            targetPoint = ray.GetPoint(1000);
+
+        gunRayCast.raycastShoot();
+        GameObject bullets = Instantiate(Projectile, gunEnd.transform.position, transform.rotation);
+        bullets.GetComponent<Rigidbody>().velocity = (targetPoint - gunEnd.transform.position).normalized * movement.Speed;
+        Destroy(bullets, 1);
+    }
 }
