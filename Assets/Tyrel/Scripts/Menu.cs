@@ -23,7 +23,7 @@ public class Menu : MonoBehaviour
     private void OnMouseOver()
     {
         mouseOver = true;
-
+        
         transform.position = newPos;
         
     }

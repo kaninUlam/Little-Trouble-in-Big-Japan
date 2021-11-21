@@ -210,4 +210,5 @@ MonoBehaviour:
   MaxEnemyHealth: 100
   Points: 0
   dropItem:
-  - {fileID: 0}
+  - {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
+  enemyDeathParticle: {fileID: 4233841226735060423, guid: 2c714834950743247ab473075609f8b5, type: 3}
