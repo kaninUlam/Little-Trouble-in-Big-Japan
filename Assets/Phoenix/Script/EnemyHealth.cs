@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
     public float MaxEnemyHealth = 200;
     public float Points = 0;
     // Drop Rate Percentage
-    public const float _dropRate = 0.45f;
+    public const float _dropRate = 0.5f;
 
     // From pointSystem Script it will be called uiManager
     //public pointSystem points;
@@ -23,7 +23,6 @@ public class EnemyHealth : MonoBehaviour
     // Particle Effect
     public GameObject enemyDeathParticle;
 
-    // Start is called before the first frame update
     void Start()
     {
         MaxEnemyHealth = enemyHealth;

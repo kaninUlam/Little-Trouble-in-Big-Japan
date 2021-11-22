@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PukeFace : AiBehaviour
 {
-    
+
     //public float attackRange = 0;
     public float attackDelay = 5;
     //private float nextAttack = 0;
@@ -36,10 +36,10 @@ public class PukeFace : AiBehaviour
 
         GameObject pukeProjectile = Instantiate(puke, transform.position, transform.rotation);
         Rigidbody rb = pukeProjectile.GetComponent<Rigidbody>();
-        float speed = rb.velocity.magnitude;
+        
         rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
         rb.AddForce(transform.up * 4f, ForceMode.Impulse);
-        Destroy(pukeProjectile);
+        Destroy(pukeProjectile, 2f);
 
 
         //Rigidbody rb = Instantiate(puke, transform.position, Quaternion.identity).GetComponent<Rigidbody>();

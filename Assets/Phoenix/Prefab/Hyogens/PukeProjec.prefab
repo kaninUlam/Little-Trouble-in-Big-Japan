@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4014378440243038669}
   - component: {fileID: -6431215317038621575}
-  - component: {fileID: -5800138544277036389}
   - component: {fileID: -8736651892404722999}
+  - component: {fileID: -5800138544277036389}
   m_Layer: 0
   m_Name: PukeProjec
   m_TagString: Untagged
@@ -44,12 +44,25 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!135 &-8736651892404722999
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4395019832720626551}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10.8
+  m_Center: {x: -2, y: 19, z: -3}
 --- !u!114 &-5800138544277036389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,21 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755c04f7a9cac774db4e6925abc67f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDealt: 15
+  damageDealt: 50
   Player: {fileID: 1994802103981541577, guid: 26e0adcec2327834684c71f044f7cf44, type: 3}
---- !u!135 &-8736651892404722999
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4395019832720626551}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 10.365965
-  m_Center: {x: -1.6342963, y: 18.871021, z: -2.9207144}
 --- !u!1 &4716382206308608942
 GameObject:
   m_ObjectHideFlags: 0

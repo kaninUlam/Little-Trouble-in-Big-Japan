@@ -153,9 +153,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageDealt: 10
   Hyogen: {fileID: 4103922239609802353}
-  Player: {fileID: 5515220447297999904, guid: 011e4bfd04ac61b4a8a945b6d028d773, type: 3}
+  Player: {fileID: 0}
   attackDelay: 5
-  puke: {fileID: 0}
+  puke: {fileID: 4395019832720626551, guid: d21ea6866559c174db9540bd278ecef1, type: 3}
 --- !u!114 &3332247268740691543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,10 +168,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701ae31d37c0f904e87804048aca847e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAudio: {fileID: 0}
   enemyHealth: 50
   MaxEnemyHealth: 200
-  Points: 0
+  Points: 100
   dropItem:
+  - {fileID: 0}
   - {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
   enemyDeathParticle: {fileID: 4233841226735060423, guid: 2c714834950743247ab473075609f8b5, type: 3}
 --- !u!114 &5534932530413754908
