@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 999332994567020429}
   - component: {fileID: 2505117629987981098}
-  - component: {fileID: 8898478589565849829}
-  - component: {fileID: 1724114073811342049}
   - component: {fileID: 2221474672129610500}
   - component: {fileID: 2221474672129610501}
+  - component: {fileID: 8898478589565849829}
+  - component: {fileID: 1724114073811342049}
+  - component: {fileID: 4001528692321247542}
   m_Layer: 0
   m_Name: Yellow Angry
   m_TagString: Enemy
@@ -59,39 +60,6 @@ NavMeshAgent:
   m_BaseOffset: -5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8898478589565849829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474435680077792567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceda2cc2a6cdc6448868c6459c92b7e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageDealt: 5
-  Hyogen: {fileID: 2505117629987981098}
-  Player: {fileID: 0}
---- !u!114 &1724114073811342049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474435680077792567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 701ae31d37c0f904e87804048aca847e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: 200
-  MaxEnemyHealth: 200
-  Points: 0
-  dropItem:
-  - {fileID: 0}
-  enemyDeathParticle: {fileID: 0}
 --- !u!54 &2221474672129610500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -121,6 +89,56 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.400246, y: 45.50908, z: 45.584106}
   m_Center: {x: -0.487957, y: 22.25454, z: -0.14282227}
+--- !u!114 &8898478589565849829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474435680077792567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceda2cc2a6cdc6448868c6459c92b7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDealt: 5
+  Hyogen: {fileID: 2505117629987981098}
+  Player: {fileID: 0}
+--- !u!114 &1724114073811342049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474435680077792567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701ae31d37c0f904e87804048aca847e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio: {fileID: 0}
+  enemyHealth: 200
+  MaxEnemyHealth: 200
+  Points: 0
+  dropItem:
+  - {fileID: 0}
+  - {fileID: 1817070790947968178, guid: 5b4079c3ddae93043b12c18862c6185f, type: 3}
+  - {fileID: 0}
+  enemyDeathParticle: {fileID: 0}
+--- !u!114 &4001528692321247542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474435680077792567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e4b99e42dd4b44a94a0e168b74e81a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 1724114073811342049}
+  healthBar: {fileID: 2221474671788099250}
 --- !u!1 &2221474671709713111
 GameObject:
   m_ObjectHideFlags: 0

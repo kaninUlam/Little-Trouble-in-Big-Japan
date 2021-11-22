@@ -5,5 +5,13 @@ using UnityEngine.AI;
 
 public class CommonAi : AiBehaviour
 {
-   
+    public override void Start()
+    {
+        base.Start();
+
+    }
+    public override void Update()
+    {
+        base.Update();
+    }
 }
