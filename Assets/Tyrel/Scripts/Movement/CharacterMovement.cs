@@ -19,16 +19,18 @@ public class CharacterMovement : MonoBehaviour
 
     bool sprinting = false;
 
-    AudioSource aSource = null;
+    
 
     bool IsMoveing;
     bool isFrozen;
     bool canbeFrozen = true;
     
     float walkStepLength = 0.5f;
-    float runStepLength = 0.1f;
+    float runStepLength = 0.5f;
 
     public AudioClip[] aClips = null;
+    AudioSource aSource = null;
+
 
     public Vector3 velocity;
 
