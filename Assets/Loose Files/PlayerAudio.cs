@@ -19,7 +19,7 @@ public class PlayerAudio : MonoBehaviour
         int aIndex = Random.Range(0, aClips.Length);
 
         aSource.clip = aClips[aIndex];
-        if(RandomNum >= 90)
+        if(RandomNum >= 50)
         {
             PlayVoiceAudio(aClips[aIndex]);
         }

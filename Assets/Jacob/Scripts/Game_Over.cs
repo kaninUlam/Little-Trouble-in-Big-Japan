@@ -14,8 +14,8 @@ public class Game_Over : MonoBehaviour
 
     private void Start()
     {
-
-
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 1;
         pos = transform.position;
         newPos = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
     }

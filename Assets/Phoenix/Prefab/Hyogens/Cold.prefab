@@ -243,4 +243,4 @@ MonoBehaviour:
   dropItem:
   - {fileID: 0}
   - {fileID: 0}
-  enemyDeathParticle: {fileID: 0}
+  enemyDeathParticle: {fileID: 4233841226735060423, guid: 2c714834950743247ab473075609f8b5, type: 3}

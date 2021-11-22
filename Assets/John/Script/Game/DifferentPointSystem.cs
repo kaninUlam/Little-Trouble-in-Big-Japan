@@ -20,7 +20,7 @@ public class DifferentPointSystem: MonoBehaviour
 
     private void Start()
     {
-        //_playerScore = 5000;
+        _PlayerScore = 0;
         //ScoreText.text = ScoreText.ToString() + " Points";
     }
 

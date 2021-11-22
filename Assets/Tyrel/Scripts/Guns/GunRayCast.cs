@@ -16,11 +16,11 @@ public class GunRayCast : MonoBehaviour
 
 	public void raycastShoot()
 	{
-		Debug.Log("imGay");
+		
 		
 		RaycastHit hit;
 		Debug.DrawRay(raycastOrigin.transform.position, raycastOrigin.transform.forward, Color.green, 2000);
-		if (Physics.Raycast(transform.position, transform.forward, out hit, 100, layersChecked))
+		if (Physics.Raycast(transform.position, transform.forward, out hit, weaponRange, layersChecked))
 		{
 			Debug.Log(hit.collider.gameObject);
 			if (hit.collider.tag == "Enemy")

@@ -6,11 +6,18 @@ public class Health : MonoBehaviour
 {
     public float maxHealthPoints = 100;
     public float currentHealthPoints = 100;
-
     
+    public DeathAudio dAudio;
+
+    bool notAlive = false;
+
+    public AudioClip[] aClips = null;
+    public AudioSource aSource = null;
+
     public HealthBar healthBar;
     private void Start()
     {
+        notAlive = false;
         currentHealthPoints = maxHealthPoints;
         healthBar.SetMaxHealth(maxHealthPoints);
     }
@@ -18,9 +25,10 @@ public class Health : MonoBehaviour
     {
         currentHealthPoints -= Time.deltaTime * amount;
         healthBar.SetHealth(currentHealthPoints);
-        if (currentHealthPoints <= 0)
+        if (currentHealthPoints <= 0 && notAlive == false)
         {
-            Destroy(gameObject);
+            StartCoroutine(dAudio.GetComponent<DeathAudio>().OnDeathSounds());
+            notAlive = true;
         }
     }
     public void takeDamage(float amount)
@@ -29,8 +37,10 @@ public class Health : MonoBehaviour
         healthBar.SetHealth(currentHealthPoints);
         if (currentHealthPoints <= 0)
         {
-            Destroy(gameObject);
-            
+
+            dAudio.GetComponent<DeathAudio>().OnDeathSounds();
         }
     }
+
+    
 }
