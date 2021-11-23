@@ -50,13 +50,13 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 33743b94151f57842bfff96519ba9577
-    name: Enemies
+    name: EnemyVolume
   - guid: 9ac773d9cf23c724da178eba31366da2
-    name: Guns
+    name: GunVolume
   - guid: ec629fbe17ab0f94d9fb5c58ac2482c9
-    name: MasterSFX
+    name: MasterVolume
   - guid: 69b85d493463c3b4486ea64caabb9453
-    name: VoiceLines
+    name: VoiceVolume
   m_AudioMixerGroupViews:
   - guids:
     - b91afd87861262e4eb0b9583b0c6ffe5
