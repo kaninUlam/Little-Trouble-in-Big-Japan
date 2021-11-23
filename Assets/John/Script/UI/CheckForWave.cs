@@ -13,19 +13,12 @@ public class CheckForWave : MonoBehaviour
     void Start()
     {
         
-        //Enemycheck = GetComponent<Spawner>();
-        WaveCheck.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Enemycheck.enemyStorage.Count <= 3)
-        {
-
-            WaveCheck.SetActive(true);
-            EnemyRemaining();
-        }
+        EnemyRemaining();
     }
     void EnemyRemaining()
     {
