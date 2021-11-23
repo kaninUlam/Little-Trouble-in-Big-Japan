@@ -22,6 +22,7 @@ public class Spawner : MonoBehaviour
     {
         EnemyHolder = new GameObject("EnemyHolder");
         StartCoroutine(waveSpawner());
+        WaveCount--;
     }
     // Update is called once per frame
     void Update()
