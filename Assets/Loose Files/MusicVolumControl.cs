@@ -2,15 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MusicVolumControl : MonoBehaviour
 {
-    [SerializeField] private AudioMixer audioMixer = null;
+    public AudioMixer audioMixer = null;
+    public string ParamName;
+
+    Slider _slider;
+
+    void Start()
+    {
+        _slider.GetComponent<Slider>();
+        float vol = PlayerPrefs.GetFloat(ParamName, 1);
+        _slider.value = vol;
+        SetVolume(vol);
+    }
 
     public void SetVolume(float Value)
     {
-        audioMixer.SetFloat("Musics", Mathf.Log10(Value) * 20);
-        audioMixer.SetFloat("MasterSFX", Mathf.Log10(Value) * 20);
+        PlayerPrefs.SetFloat(ParamName, Value);
+        Value *= 80;
+        Value -= 80;
+
+        
+        audioMixer.SetFloat(ParamName, Value);
     }
 
 
