@@ -5,8 +5,11 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
-
+    //Audio
     public PlayerAudio playerAudio;
+    public AudioClip[] aClips = null;
+    public AudioSource aSource = null;
+
 
     // Stats
     public float enemyHealth = 200;
@@ -43,10 +46,28 @@ public class EnemyHealth : MonoBehaviour
 
             DifferentPointSystem.Points.UpdateScore(Points);
 
+            //plays audio on death
             playerAudio.GetComponent<PlayerAudio>().RandomVoiceLine();
+            DeathSound();
 
             Destroy(gameObject);
             Instantiate(enemyDeathParticle, transform.position + Vector3.up * 5, transform.rotation);
         }
     }
+
+
+    void DeathSound()
+    {
+        int aIndex = Random.Range(0, aClips.Length);
+
+        aSource.clip = aClips[aIndex];
+
+        PlayDeathSound(aClips[aIndex]);
+    }
+
+    void PlayDeathSound(AudioClip clip)
+    {
+        aSource.PlayOneShot(clip);
+    }
+
 }
