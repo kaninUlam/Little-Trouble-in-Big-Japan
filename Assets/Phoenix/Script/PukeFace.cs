@@ -8,7 +8,7 @@ public class PukeFace : AiBehaviour
 {
 
     //public float attackRange = 0;
-    public float attackDelay = 5;
+    public float attackDelay = 3;
     //private float nextAttack = 0;
     private float attackDelayTimer = 0;
 
@@ -38,7 +38,7 @@ public class PukeFace : AiBehaviour
         Rigidbody rb = pukeProjectile.GetComponent<Rigidbody>();
         
         rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-        rb.AddForce(transform.up * 4f, ForceMode.Impulse);
+        rb.AddForce(transform.up * 6f, ForceMode.Impulse);
         Destroy(pukeProjectile, 2f);
 
 

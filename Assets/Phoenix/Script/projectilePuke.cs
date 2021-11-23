@@ -21,11 +21,14 @@ public class projectilePuke : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
+
         if (collision.gameObject.tag == "Player") // If colliding with the Player
         {
-            playerHP.takeDamage(damageDealt); // The Player takes Damage
+            Health playerHealth = collision.gameObject.GetComponent<Health>();
+
+            playerHealth.takeDamage(damageDealt); // The Player takes Damage
             Destroy(gameObject, 2f); // Object is Destroyed
         }
     }

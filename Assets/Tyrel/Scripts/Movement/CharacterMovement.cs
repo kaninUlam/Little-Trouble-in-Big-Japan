@@ -166,7 +166,7 @@ public class CharacterMovement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.name == "Cold" && canbeFrozen)
+        if (collision.gameObject.tag == "Cold" && canbeFrozen)
         {
             Debug.Log("I am Frozen");
             StartCoroutine(freeze());

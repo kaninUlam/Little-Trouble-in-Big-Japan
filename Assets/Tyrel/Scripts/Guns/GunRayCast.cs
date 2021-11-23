@@ -23,7 +23,7 @@ public class GunRayCast : MonoBehaviour
 		if (Physics.Raycast(transform.position, transform.forward, out hit, weaponRange, layersChecked))
 		{
 			Debug.Log(hit.collider.gameObject);
-			if (hit.collider.tag == "Enemy")
+			if (hit.collider.tag == "Enemy" || hit.collider.tag == "Cold")
 			{
 				Debug.Log("hit enemy");
 				EnemyHealth enemyHP = hit.collider.gameObject.GetComponent<EnemyHealth>();

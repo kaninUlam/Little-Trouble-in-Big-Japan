@@ -18,7 +18,7 @@ public class GunDamage : Health
             Debug.Log(DamageDealt);
         }
 
-        if (collision.collider.tag == "Enemy")
+        if (collision.collider.tag == "Enemy" && collision.collider.tag == "Cold")
         {
             EnemyHealth enemyHP = collision.gameObject.GetComponent<EnemyHealth>();
             Health healthComponent = collision.gameObject.GetComponent<Health>();
@@ -37,7 +37,7 @@ public class GunDamage : Health
             }
 
         }
-    }
 
+    }
 
 }

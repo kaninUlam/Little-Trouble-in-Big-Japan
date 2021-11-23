@@ -18,6 +18,7 @@ TagManager:
   - Back
   - Win
   - Lore
+  - Cold
   layers:
   - Default
   - TransparentFX
