@@ -8,18 +8,14 @@ public class StartScript : MonoBehaviour
 
     public Animator animator;
 
-    public AudioClip[] aClips = null;
-    public AudioSource aSource = null;
-
-    bool OnHover = false;
-    bool hover = true;
+    
 
     // Start is called before the first frame update
     void Start()
     {
 
         Time.timeScale = 1;
-        OnHover = true;
+        
         animator.GetComponent<Animator>();
 
     }
@@ -76,63 +72,10 @@ public class StartScript : MonoBehaviour
 
 
 
-        RaycastHit hit2;
-
-        Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray2, out hit2, 100f))
-        {
-            if (hit2.transform.gameObject.tag == "Start" && OnHover == true)
-            {
-                
-                MenuSound(0);
-                OnHover = false;
-            }
-            
-                
-
-            if (hit2.transform.gameObject.tag == "Options" && OnHover == true)
-            {
-                MenuSound(1);
-                OnHover = false;
-            }
-            
-
-            if (hit2.transform.gameObject.tag == "Exit" && OnHover == true)
-            {
-                MenuSound(2);
-                OnHover = false;
-            }
-            
-
-            if (hit2.transform.gameObject.tag == "Back" && OnHover == true)
-            {
-                MenuSound(3);
-                OnHover = false;
-            }
-            
-        }
+        
     }
 
-    IEnumerator OnHoverTrue()
-    {
-        yield return new WaitForSeconds(1);
-        OnHover = true;
-    }
-
-    void MenuSound(int amount)
-    {
-
-
-        aSource.clip = aClips[amount];
-
-        PlayMenuSound(aClips[amount]);
-    }
-
-    void PlayMenuSound(AudioClip clip)
-    {
-        aSource.PlayOneShot(clip);
-    }
+    
 
 
     IEnumerator LoadStart()

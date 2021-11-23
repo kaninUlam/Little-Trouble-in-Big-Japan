@@ -1035,6 +1035,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5e77f463169e45ba6722223b88092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aClips:
+  - {fileID: 8300000, guid: 8a0d7b5fe502c21449d9c12ffce6aee4, type: 3}
+  - {fileID: 8300000, guid: 6970b7efc764e3c4f8c2f8f6a3ddf8e5, type: 3}
+  - {fileID: 8300000, guid: c9797970c3592004dabf12acb810cf36, type: 3}
+  aSource: {fileID: 1234712818}
 --- !u!65 &784822815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1090,7 +1095,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: de88cc1658c03704dab54aedc2decfdb, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1eb3d77546e72924980bdf5017c881ab, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.07
   m_Pitch: 1
   Loop: 1
@@ -1848,6 +1853,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5e77f463169e45ba6722223b88092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aClips:
+  - {fileID: 8300000, guid: 2c4bea8e9d6dbdb40be797da111386be, type: 3}
+  - {fileID: 8300000, guid: b47cf59b6519fbb4ab11a8dd7e71a6f7, type: 3}
+  - {fileID: 8300000, guid: 1fa823e1c502c69478a9d9dcefedb416, type: 3}
+  aSource: {fileID: 1234712818}
 --- !u!65 &1345562674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1967,6 +1977,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63c71fb1c5f14b44a9cdb62f2dde5796, type: 3}
+--- !u!1 &1396614529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bc43f14c265531f4ca0a93307d0aba31, type: 3}
+  m_PrefabInstance: {fileID: 1514868106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1396614531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396614529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d674be51d60730e4f80f96ecc1cc71c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aClips:
+  - {fileID: 8300000, guid: 32339c7562022aa4690d918c561fe986, type: 3}
+  - {fileID: 8300000, guid: 37ae18a0bffdd7946beb35574d6c10f7, type: 3}
+  - {fileID: 8300000, guid: d3127cddeed75e24a9bf05ea3e5f12ae, type: 3}
+  aSource: {fileID: 1234712818}
 --- !u!1 &1401087955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,6 +4555,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f5e77f463169e45ba6722223b88092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aClips:
+  - {fileID: 8300000, guid: 13709fe9ca97f6c4bae56f7eee8de5e6, type: 3}
+  - {fileID: 8300000, guid: e05296ec7765a9d4f916abe6dc752a3c, type: 3}
+  - {fileID: 8300000, guid: 98ca81f7147a7234d910e40b898b2e9e, type: 3}
+  aSource: {fileID: 1234712818}
 --- !u!1001 &2124871180
 PrefabInstance:
   m_ObjectHideFlags: 0

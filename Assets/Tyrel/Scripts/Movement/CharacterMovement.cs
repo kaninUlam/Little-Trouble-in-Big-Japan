@@ -212,9 +212,21 @@ public class CharacterMovement : MonoBehaviour
     }
 
 
-    
+
+    void DeathSound()
+    {
+        int aIndex = Random.Range(0, aClips.Length);
+
+        aSource.clip = aClips[aIndex];
+
+        PlayDeathSound(aClips[aIndex]);
+    }
+
+    void PlayDeathSound(AudioClip clip)
+    {
+        aSource.PlayOneShot(clip);
+    }
 
 
-    
 
 }

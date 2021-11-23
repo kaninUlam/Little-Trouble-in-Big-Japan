@@ -9,7 +9,8 @@ public class Menu : MonoBehaviour
     Vector3 pos;
     Vector3 newPos;
 
-   
+    public AudioClip[] aClips = null;
+    public AudioSource aSource = null;
 
 
 
@@ -34,8 +35,24 @@ public class Menu : MonoBehaviour
     }
 
 
-    
+    void MenuSound()
+    {
+        int aIndex = Random.Range(0, aClips.Length);
 
+        aSource.clip = aClips[aIndex];
+
+        PlayMenuSound(aClips[aIndex]);
+    }
+
+    void PlayMenuSound(AudioClip clip)
+    {
+        aSource.PlayOneShot(clip);
+    }
+
+    void OnMouseEnter()
+    {
+        MenuSound();
+    }
 
     private void Update()
     {
