@@ -10,8 +10,7 @@ public class SniperAmmo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Hit");
-            sniper.ammo += 20;
+            sniper.ammo += 5;
             Destroy(gameObject);
             
         }

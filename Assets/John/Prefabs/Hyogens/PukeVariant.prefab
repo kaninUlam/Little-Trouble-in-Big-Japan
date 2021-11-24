@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8550131514583772016}
   - component: {fileID: 3332247268740691543}
   - component: {fileID: 5534932530413754908}
+  - component: {fileID: 4634709279829767764}
   m_Layer: 0
   m_Name: PukeVariant
   m_TagString: Enemy
@@ -154,6 +155,8 @@ MonoBehaviour:
   damageDealt: 10
   Hyogen: {fileID: 4103922239609802353}
   Player: {fileID: 0}
+  aClips: []
+  aSource: {fileID: 0}
   attackDelay: 5
   puke: {fileID: 4395019832720626551, guid: d21ea6866559c174db9540bd278ecef1, type: 3}
 --- !u!114 &3332247268740691543
@@ -169,12 +172,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAudio: {fileID: 0}
-  enemyHealth: 50
+  aClips:
+  - {fileID: 8300000, guid: 33eb78abfbee10e448768173ccf22698, type: 3}
+  - {fileID: 8300000, guid: a1491df5088b2294bbeb2d9881a70ecf, type: 3}
+  - {fileID: 8300000, guid: 4a890baaf80505b49b412b22b7a5377f, type: 3}
+  - {fileID: 8300000, guid: 94f246d85efb83e4a96a280de60e25fa, type: 3}
+  aSource: {fileID: 766260523922160491, guid: 3abd774bbc414ba479359c1e661183af, type: 3}
+  enemyHealth: 200
   MaxEnemyHealth: 200
-  Points: 100
+  Points: 50
   dropItem:
-  - {fileID: 0}
   - {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
+  - {fileID: 3798695415625915211, guid: 832e98ba4f7e75248b15522a0791bc0f, type: 3}
   enemyDeathParticle: {fileID: 4233841226735060423, guid: 2c714834950743247ab473075609f8b5, type: 3}
 --- !u!114 &5534932530413754908
 MonoBehaviour:
@@ -190,6 +199,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth: {fileID: 3332247268740691543}
   healthBar: {fileID: 5534932530130341263}
+--- !u!82 &4634709279829767764
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2733101945318737727}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a4404427fd852004887e7fbba358f27d, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 16.29461
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5534932530130341250
 GameObject:
   m_ObjectHideFlags: 0

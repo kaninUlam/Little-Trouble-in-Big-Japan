@@ -5,29 +5,28 @@ using UnityEngine.AI;
 
 public class AiBehaviour : MonoBehaviour
 {
-    //public enum Tracking { Attack, Chase} //States
-    //public Tracking trackType = Tracking.Attack;
+    // The damage it deals to Player
+    public float damageDealt;
 
-    public float damageDealt; // The damage it deals to Player
-
-    //Recognizes the Player Damage
+    // Recognizes the Player Damage
     Health playerHP;
 
-    //Hyogen
+    // Hyogen
     public NavMeshAgent Hyogen;
-    //Player
+    // Player
     public Transform Player;
 
     public virtual void Start()
     {
             
-        //Identify and Chase the Player
+        // Identify and Chase the Player
         Player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        //NavMesh Agent Component so it will move independently around the map
+        // NavMesh Agent Component so it will move independently around the map
         Hyogen = GetComponent<NavMeshAgent>();
 
-        playerHP = Player.GetComponent<Health>(); // Player HP
+        // Player HP
+        playerHP = Player.GetComponent<Health>();
 
     }
 
@@ -38,17 +37,6 @@ public class AiBehaviour : MonoBehaviour
 
         // Hyogen will chase after the Player
         Hyogen.SetDestination(Player.position);
-
-        //Enum depends on chasing and attacking
-        //        switch (trackType)
-        //        {
-        //            case Tracking.Attack:
-        //                Attack();
-        //                break;
-        //            case Tracking.Chase:
-        //                ChasePlayer();
-        //                break;
-        //        }
     }
 
     public void FacePlayer()
@@ -59,16 +47,17 @@ public class AiBehaviour : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5);
     }
 
-    private void OnCollisionEnter(Collision collision) // Collision with the Player and Emoji
+    // Collision with the Player and Emoji
+    private void OnCollisionEnter(Collision collision) 
     {
         if (collision.gameObject.tag == "Player") // If colliding with the Player
         {
             playerHP.takeDamage(damageDealt); // The Player takes Damage
         }
 
-        if (collision.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet") // When Colliding with Bullet
         {
-            StartCoroutine(SlowDown());
+            StartCoroutine(SlowDown()); // It Slows Down
         }
     }
 
@@ -88,19 +77,4 @@ public class AiBehaviour : MonoBehaviour
         Hyogen.speed = maxSpeed;
     }
 
-    ////Hyogen Attack System
-    //private void Attack()
-    //{
-    //    //Chases Player for Attack
-    //    Hyogen.SetDestination(transform.position);
-
-
-    //}
-
-    //private void ChasePlayer()
-    //{
-    //    //Chases Player
-    //    Hyogen.SetDestination(Player.position);
-
-    //}
 }
