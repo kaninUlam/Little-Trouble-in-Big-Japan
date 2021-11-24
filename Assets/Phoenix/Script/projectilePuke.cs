@@ -5,31 +5,42 @@ using UnityEngine.AI;
 
 public class projectilePuke : MonoBehaviour
 {
-    Health playerHP; // Player Health
+    public float lifeTime = 3.0f;
 
-    public float damageDealt = 50; // Damage
+    public float moveSpeed = 35.0f;
 
-    public GameObject Player; // Player Object
+    public float damage;
 
-    public void Start()
+    public Health playerHP;
+
+    public Transform Player;
+
+    void Start()
     {
-        playerHP = Player.GetComponent<Health>(); // Puke Component recognizes playerHP as a component of Player
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        Destroy(this.gameObject, lifeTime); // Destroys game Object
+
+        playerHP = Player.GetComponent<Health>();
     }
 
     void Update()
     {
-
+        Speed();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void Speed()
     {
+        transform.position += Time.deltaTime * moveSpeed * transform.forward;
+    }
 
-        if (collision.gameObject.tag == "Player") // If colliding with the Player
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            Health playerHealth = collision.gameObject.GetComponent<Health>();
-
-            playerHealth.takeDamage(damageDealt); // The Player takes Damage
-            Destroy(gameObject, 2f); // Object is Destroyed
+            playerHP.takeDamage(damage);
+            
+            Destroy(gameObject);
         }
     }
 }
