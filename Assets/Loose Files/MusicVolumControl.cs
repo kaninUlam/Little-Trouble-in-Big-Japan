@@ -9,7 +9,7 @@ public class MusicVolumControl : MonoBehaviour
     public AudioMixer audioMixer = null;
     public string ParamName;
 
-    Slider _slider;
+    [SerializeField] private Slider _slider;
 
     void Start()
     {
