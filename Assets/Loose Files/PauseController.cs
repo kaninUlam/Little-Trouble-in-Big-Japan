@@ -11,11 +11,14 @@ public class PauseController : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject _Hud;
     public GameObject OptionMenu;
+    public GameObject ControlMenu;
 
     // Start is called before the first frame update
     void Start()
     {
         PauseMenu.SetActive(false);
+        OptionMenu.SetActive(false);
+        ControlMenu.SetActive(false);
         _Hud.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -45,6 +48,7 @@ public class PauseController : MonoBehaviour
         Time.timeScale = _isPaused ? 0f : 1f;
         PauseMenu.SetActive(_isPaused);
         OptionMenu.SetActive(false);
+        ControlMenu.SetActive(false);
         _Hud.SetActive(!_isPaused);
         Cursor.lockState = _isPaused ? CursorLockMode.None : CursorLockMode.Locked;
         
