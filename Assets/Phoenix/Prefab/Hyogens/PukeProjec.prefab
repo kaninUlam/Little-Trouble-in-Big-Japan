@@ -77,7 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 3
   moveSpeed: 35
-  damageToPlayer: 15
+  damage: 15
+  playerHP: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &4716382206308608942
 GameObject:
   m_ObjectHideFlags: 0

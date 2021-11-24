@@ -10,16 +10,13 @@ public class EnemyHealth : MonoBehaviour
     public AudioClip[] aClips = null;
     public AudioSource aSource = null;
 
-
     // Stats
     public float enemyHealth = 200;
     public float MaxEnemyHealth = 200;
     public float Points = 0;
+
     // Drop Rate Percentage
     public const float _dropRate = 0.75f;
-
-    // From pointSystem Script it will be called uiManager
-    //public pointSystem points;
 
     // Drop Items
     public GameObject[] dropItem;
@@ -29,7 +26,6 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         MaxEnemyHealth = enemyHealth;
-        //_uiManager = GameObject.Find("Canvas").GetComponent<pointSystem>();
     }
    
     public void takeDamage(float amount)
@@ -50,6 +46,7 @@ public class EnemyHealth : MonoBehaviour
             playerAudio.GetComponent<PlayerAudio>().RandomVoiceLine();
             DeathSound();
 
+            //Destroy Hyogen
             Destroy(gameObject);
             Instantiate(enemyDeathParticle, transform.position + Vector3.up * 5, transform.rotation);
         }
