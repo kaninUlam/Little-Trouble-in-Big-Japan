@@ -49,10 +49,6 @@ public class PukeFace : AiBehaviour
         //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
         //rb.AddForce(transform.up * 6f, ForceMode.Impulse);
 
-        //Rigidbody rb = Instantiate(puke, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-        //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-        //rb.AddForce(transform.up * 2f, ForceMode.Impulse);
-        //Destroy(puke, 0.1f);
     }
 
     IEnumerator PlayAudio()
