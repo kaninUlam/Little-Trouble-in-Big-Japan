@@ -19,6 +19,7 @@ TagManager:
   - Win
   - Lore
   - Cold
+  - PostProcessVignette
   layers:
   - Default
   - TransparentFX
