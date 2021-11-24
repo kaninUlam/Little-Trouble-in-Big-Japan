@@ -7,7 +7,7 @@ public class LoreAudio : MonoBehaviour
 
     
     public AudioSource aSource = null;
-
+    public AudioSource MenuASource = null;
 
     public Animator animator;
 
@@ -17,26 +17,29 @@ public class LoreAudio : MonoBehaviour
         StartCoroutine(PlayLore());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
 
     IEnumerator PlayLore()
     {
+        Debug.Log("LoreAudio");
         Time.timeScale = 0;
-        
+        PlayLoreAudio();
 
-        yield return new WaitForSecondsRealtime(4);
+        yield return new WaitForSecondsRealtime(17);
         Time.timeScale = 1;
+        PlayMenuMusic();
         animator.Play("LoreScreen");
     }
 
 
-    void PlauLoreAudio()
+    void PlayLoreAudio()
     {
         aSource.Play();
+    }
+
+    void PlayMenuMusic()
+    {
+        MenuASource.Play();
     }
 }

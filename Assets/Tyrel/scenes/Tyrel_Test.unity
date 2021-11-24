@@ -342,6 +342,7 @@ MonoBehaviour:
   PauseMenu: {fileID: 1555754577}
   _Hud: {fileID: 3921610539879796955}
   OptionMenu: {fileID: 8697607}
+  ControlMenu: {fileID: 1285448860}
 --- !u!114 &242423989 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7474113910624746659, guid: bd2be42cbabcebb4b8b62be3f1f9a6a4, type: 3}
@@ -585,6 +586,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &412911878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5275333285183031249, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+  m_PrefabInstance: {fileID: 1699877440473448019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &421153252 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6434122616091622500, guid: dcf45afa7c165744cb73f232672ec035, type: 3}
@@ -1929,6 +1941,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63be8ee6823012e44a94bf93a57bba8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1285448860 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6211279420062875627, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+  m_PrefabInstance: {fileID: 1699877440473448019}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1327287482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2335589126602384031, guid: f5a84d8081570ab4fac6c541cc0edab3, type: 3}
@@ -2245,6 +2262,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4725d92aaa196634aaa3d6ad3ad0ae46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1705862595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5275333285426581712, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+  m_PrefabInstance: {fileID: 1699877440473448019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1736304582
@@ -3162,6 +3190,22 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeMouseSens
       objectReference: {fileID: 0}
+    - target: {fileID: 1699877440266744491, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 412911878}
+    - target: {fileID: 1699877440266744491, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: ParamName
+      value: MasterVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699877441495371357, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 1705862595}
+    - target: {fileID: 1699877441495371357, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: ParamName
+      value: MasterVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 1699877441497010325, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3249,6 +3293,14 @@ PrefabInstance:
     - target: {fileID: 1699877441497010326, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
       propertyPath: m_Name
       value: MenuScreens
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275333285183031249, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: m_MinValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275333285426581712, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
+      propertyPath: m_MinValue
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7560694459196550183, guid: fedcb72cfe7b1c048870a997490fbfe4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
