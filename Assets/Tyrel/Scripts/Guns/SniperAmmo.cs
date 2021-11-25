@@ -5,14 +5,19 @@ using UnityEngine;
 public class SniperAmmo : MonoBehaviour
 {
     public Sniper sniper;
+    public AudioSource aSource;
+    public MeshRenderer mesh;
+    public Collider boxCollider;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Hit");
-            sniper.ammo += 20;
-            Destroy(gameObject);
+            aSource.Play();
+            sniper.ammo += 5;
+            mesh.enabled = false;
+            boxCollider.enabled = false;
+            Destroy(gameObject, 5);
             
         }
 
@@ -21,6 +26,6 @@ public class SniperAmmo : MonoBehaviour
 
     private void Update()
     {
-        Destroy(gameObject, 30f);
+        Destroy(gameObject, 25);
     }
 }

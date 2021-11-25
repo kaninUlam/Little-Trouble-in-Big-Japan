@@ -5,14 +5,20 @@ using UnityEngine;
 public class ShotGunAmmo : MonoBehaviour
 {
     public Shotgun shotgunAmmo;
+    public AudioSource aSource;
+    public MeshRenderer mesh;
+    public Collider boxCollider;
+    
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Hit");
-            shotgunAmmo.ammo += 20;
-            Destroy(gameObject);
+            aSource.Play();
+            shotgunAmmo.ammo += 5;
+            mesh.enabled = false;
+            boxCollider.enabled = false;
+            Destroy(gameObject, 5);
 
         }
 
