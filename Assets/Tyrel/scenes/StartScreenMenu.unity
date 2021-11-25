@@ -463,9 +463,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Team Jap
-
-'
+  m_Text: EGO WANG
 --- !u!222 &88068122
 CanvasRenderer:
   m_ObjectHideFlags: 0

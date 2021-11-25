@@ -35,7 +35,7 @@ public class CameraMovement : MonoBehaviour
 
     public void ChangeMouseSensitivity(float value)
     {
-        mouseSensitivity = value * 100;
+        mouseSensitivity = value * 10;
     }
 
 }
