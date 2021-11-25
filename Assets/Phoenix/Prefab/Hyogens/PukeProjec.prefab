@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5800138544277036389}
   m_Layer: 0
   m_Name: PukeProjec
-  m_TagString: Untagged
+  m_TagString: PukeProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
