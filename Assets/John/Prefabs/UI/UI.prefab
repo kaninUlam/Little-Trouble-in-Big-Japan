@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 529763989238350460}
   - component: {fileID: 529763989238350459}
   - component: {fileID: 529763989238350463}
+  - component: {fileID: 4332204303432329333}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -252,6 +253,24 @@ MonoBehaviour:
   WaveCheck: {fileID: 0}
   text: {fileID: 0}
   Enemycheck: {fileID: 0}
+--- !u!114 &4332204303432329333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529763989238350458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1c93b2a97d5fe4bbf1eb85727a8326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aSource: {fileID: 0}
+  PauseMenu: {fileID: 0}
+  _Hud: {fileID: 3883348695446266548}
+  OptionMenu: {fileID: 0}
+  ControlMenu: {fileID: 0}
+  Quit: {fileID: 0}
 --- !u!1 &529763989383316055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1110,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00caa1b8693ec5545a8722d1cc34e148, type: 3}
+--- !u!1 &3883348695446266548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1667144177656835962, guid: 00caa1b8693ec5545a8722d1cc34e148, type: 3}
+  m_PrefabInstance: {fileID: 2505848416552455630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &254507332765033365 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2400065424678235739, guid: 00caa1b8693ec5545a8722d1cc34e148, type: 3}

@@ -1,31 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &65398067523799621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7774318179723817839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0c1c860349e8fd4d90e155060aa339e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpawner: {fileID: 0}
---- !u!114 &65398067823224902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6982993099613504933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0c1c860349e8fd4d90e155060aa339e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySpawner: {fileID: 0}
 --- !u!1 &65398068235740307
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +37,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &65398068624261540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179687179225814396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c1c860349e8fd4d90e155060aa339e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySpawner: {fileID: 0}
+--- !u!114 &65398068682098586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467775739454641385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0c1c860349e8fd4d90e155060aa339e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySpawner: {fileID: 0}
 --- !u!114 &65398068332740849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,26 +89,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySpawner: {fileID: 0}
---- !u!114 &65398068624261540
+--- !u!114 &65398067823224902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 179687179225814396}
+  m_GameObject: {fileID: 6982993099613504933}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0c1c860349e8fd4d90e155060aa339e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mySpawner: {fileID: 0}
---- !u!114 &65398068682098586
+--- !u!114 &65398067523799621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467775739454641385}
+  m_GameObject: {fileID: 7774318179723817839}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0c1c860349e8fd4d90e155060aa339e, type: 3}
@@ -136,9 +136,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 65398068235740304}
     m_Modifications:
     - target: {fileID: 407390471325870997, guid: 1f5f434a83bdd084eb65967c724aa875, type: 3}
+      propertyPath: dropItem.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 407390471325870997, guid: 1f5f434a83bdd084eb65967c724aa875, type: 3}
       propertyPath: playerAudio
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 407390471325870997, guid: 1f5f434a83bdd084eb65967c724aa875, type: 3}
+      propertyPath: dropItem.Array.data[1]
+      value: 
+      objectReference: {fileID: 1817070790947968178, guid: 5b4079c3ddae93043b12c18862c6185f, type: 3}
     - target: {fileID: 1368545158726704473, guid: 1f5f434a83bdd084eb65967c724aa875, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -349,7 +357,7 @@ PrefabInstance:
     - target: {fileID: 1724114073811342049, guid: 2a521df5051eda54b86abac1f6621bf1, type: 3}
       propertyPath: dropItem.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
     - target: {fileID: 1724114073811342049, guid: 2a521df5051eda54b86abac1f6621bf1, type: 3}
       propertyPath: Points
       value: 100
@@ -361,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 1724114073811342049, guid: 2a521df5051eda54b86abac1f6621bf1, type: 3}
       propertyPath: dropItem.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3798695415625915211, guid: 832e98ba4f7e75248b15522a0791bc0f, type: 3}
     - target: {fileID: 2221474671709713110, guid: 2a521df5051eda54b86abac1f6621bf1, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
@@ -445,6 +453,18 @@ PrefabInstance:
       propertyPath: playerAudio
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5511226742858784690, guid: 8f9dbe45fd38a494b8b6e90f0a7e0731, type: 3}
+      propertyPath: dropItem.Array.data[0]
+      value: 
+      objectReference: {fileID: 1817070790947968178, guid: 5b4079c3ddae93043b12c18862c6185f, type: 3}
+    - target: {fileID: 5511226742858784690, guid: 8f9dbe45fd38a494b8b6e90f0a7e0731, type: 3}
+      propertyPath: dropItem.Array.data[1]
+      value: 
+      objectReference: {fileID: 3798695415625915211, guid: 832e98ba4f7e75248b15522a0791bc0f, type: 3}
+    - target: {fileID: 5511226742858784690, guid: 8f9dbe45fd38a494b8b6e90f0a7e0731, type: 3}
+      propertyPath: dropItem.Array.data[2]
+      value: 
+      objectReference: {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
     - target: {fileID: 5775325470262786731, guid: 8f9dbe45fd38a494b8b6e90f0a7e0731, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -544,6 +564,10 @@ PrefabInstance:
       propertyPath: playerAudio
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -4266811624305488880, guid: 1b299ec63e382d241979b9cadd48cf4c, type: 3}
+      propertyPath: dropItem.Array.data[1]
+      value: 
+      objectReference: {fileID: 3798695415625915211, guid: 832e98ba4f7e75248b15522a0791bc0f, type: 3}
     - target: {fileID: -1929868429668413272, guid: 1b299ec63e382d241979b9cadd48cf4c, type: 3}
       propertyPath: Player
       value: 
@@ -779,6 +803,14 @@ PrefabInstance:
       propertyPath: playerAudio
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4963939519256826012, guid: d94bac9eec71cbb42ae612298f4329f7, type: 3}
+      propertyPath: dropItem.Array.data[1]
+      value: 
+      objectReference: {fileID: 3798695415625915211, guid: 832e98ba4f7e75248b15522a0791bc0f, type: 3}
+    - target: {fileID: 4963939519256826012, guid: d94bac9eec71cbb42ae612298f4329f7, type: 3}
+      propertyPath: dropItem.Array.data[2]
+      value: 
+      objectReference: {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
     - target: {fileID: 6128117974872853333, guid: d94bac9eec71cbb42ae612298f4329f7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -820,7 +852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5561873946935743159, guid: 290cbac4fee2a82479779d5a776d7c47, type: 3}
       propertyPath: dropItem.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5561873946935743159, guid: 290cbac4fee2a82479779d5a776d7c47, type: 3}
       propertyPath: dropItem.Array.data[0]
@@ -830,6 +862,10 @@ PrefabInstance:
       propertyPath: playerAudio
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5561873946935743159, guid: 290cbac4fee2a82479779d5a776d7c47, type: 3}
+      propertyPath: dropItem.Array.data[1]
+      value: 
+      objectReference: {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
     - target: {fileID: 6935660726714644724, guid: 290cbac4fee2a82479779d5a776d7c47, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.1
@@ -936,7 +972,7 @@ PrefabInstance:
     - target: {fileID: 3332247268740691543, guid: dcd945f763f181149b81a0394b5687ea, type: 3}
       propertyPath: dropItem.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
     - target: {fileID: 3332247268740691543, guid: dcd945f763f181149b81a0394b5687ea, type: 3}
       propertyPath: playerAudio
       value: 

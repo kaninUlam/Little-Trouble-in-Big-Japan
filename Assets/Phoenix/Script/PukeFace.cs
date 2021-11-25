@@ -43,7 +43,9 @@ public class PukeFace : AiBehaviour
 
         attackDelayTimer = attackDelay;
 
-        GameObject pukeProjectile = Instantiate(puke, transform.position, transform.rotation);
+        Vector3 pos = new Vector3(0f, 10f, 0f);
+
+        GameObject pukeProjectile = Instantiate(puke, transform.position + pos, transform.rotation);
 
         //Rigidbody rb = pukeProjectile.GetComponent<Rigidbody>();
         //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
