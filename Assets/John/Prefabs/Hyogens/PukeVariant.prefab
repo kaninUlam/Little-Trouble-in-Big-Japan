@@ -156,7 +156,7 @@ MonoBehaviour:
   Hyogen: {fileID: 4103922239609802353}
   Player: {fileID: 0}
   aClips: []
-  aSource: {fileID: 0}
+  aSource: {fileID: 4634709279829767764}
   attackDelay: 5
   puke: {fileID: 4395019832720626551, guid: d21ea6866559c174db9540bd278ecef1, type: 3}
 --- !u!114 &3332247268740691543
