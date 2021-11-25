@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -22,7 +23,13 @@ public class Health : MonoBehaviour
         currentHealthPoints = maxHealthPoints;
         healthBar.SetMaxHealth(maxHealthPoints);
     }
-
+    private void Update()
+    {
+        if (currentHealthPoints <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
     public void TakeDamageOverTime(float amount)
     {
         currentHealthPoints -= Time.deltaTime * amount;
@@ -59,5 +66,5 @@ public class Health : MonoBehaviour
     {
         aSource.PlayOneShot(clip);
     }
-
+   
 }
