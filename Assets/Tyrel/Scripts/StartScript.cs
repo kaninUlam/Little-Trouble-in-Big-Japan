@@ -7,15 +7,18 @@ public class StartScript : MonoBehaviour
 {
 
     public Animator animator;
+    public GameObject confirmation;
 
-    
+    bool loreAudio = true;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        Time.timeScale = 1;
         
+        Time.timeScale = 1;
+        loreAudio = true;
+        StartCoroutine(loreAudioPlaying());
+        confirmation.SetActive(false);
         animator.GetComponent<Animator>();
 
     }
@@ -23,8 +26,8 @@ public class StartScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetMouseButtonDown(0))
+        
+        if (Input.GetMouseButtonDown(0) && loreAudio == false)
         {
             RaycastHit hit;
 
@@ -47,7 +50,7 @@ public class StartScript : MonoBehaviour
 
                 if (hit.transform.gameObject.tag == "Exit")
                 {
-                    Application.Quit();
+                    confirmation.SetActive(true);
                 }
 
                 if (hit.transform.gameObject.tag == "Options")
@@ -75,7 +78,10 @@ public class StartScript : MonoBehaviour
         
     }
 
-    
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
 
     IEnumerator LoadStart()
@@ -90,7 +96,11 @@ public class StartScript : MonoBehaviour
         animator.SetBool("BackToMenu", false);
     }
 
-
+    IEnumerator loreAudioPlaying()
+    {
+        yield return new WaitForSeconds(17.5f);
+        loreAudio = false;
+    }
 
 
 }

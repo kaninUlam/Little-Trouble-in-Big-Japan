@@ -10,6 +10,7 @@ public class LoreAudio : MonoBehaviour
     public AudioSource MenuASource = null;
 
     public Animator animator;
+    public GameObject fullBlack;
 
     // Start is called before the first frame update
     void Start()
@@ -22,16 +23,23 @@ public class LoreAudio : MonoBehaviour
 
     IEnumerator PlayLore()
     {
-        Debug.Log("LoreAudio");
-        Time.timeScale = 0;
-        PlayLoreAudio();
 
+        fullBlack.SetActive(true);
+        PlayLoreAudio();
+        
         yield return new WaitForSecondsRealtime(17);
-        Time.timeScale = 1;
+        
         PlayMenuMusic();
         animator.Play("LoreScreen");
+        StartCoroutine(FullBlackActive());
     }
 
+    IEnumerator FullBlackActive()
+    {
+        yield return new WaitForSeconds(1);
+
+        fullBlack.SetActive(false);
+    }
 
     void PlayLoreAudio()
     {
