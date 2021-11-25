@@ -25,6 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Start()
     {
+        // Max Health Represnets the Enemy HP
         MaxEnemyHealth = enemyHealth;
     }
    
@@ -32,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
     {
         enemyHealth -= amount;
 
+        // If the enemy reaches 0 HP it will be destroyed and drops an Item
         if (enemyHealth <= 0)
         {
             if (Random.Range(0f, 1f) <= _dropRate) // Percentage to drop with the Rate
