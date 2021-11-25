@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class PauseController : MonoBehaviour
 {
     bool _isPaused;
-    
+
+    public AudioSource aSource = null;
 
     public GameObject PauseMenu;
     public GameObject _Hud;
     public GameObject OptionMenu;
     public GameObject ControlMenu;
+    public GameObject Quit;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class PauseController : MonoBehaviour
         PauseMenu.SetActive(false);
         OptionMenu.SetActive(false);
         ControlMenu.SetActive(false);
+        Quit.SetActive(false);
         _Hud.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -32,7 +35,7 @@ public class PauseController : MonoBehaviour
             TogglePause();
         }
 
-        
+
 
     }
 
@@ -43,15 +46,21 @@ public class PauseController : MonoBehaviour
 
     public void TogglePause()
     {
-        
+
         _isPaused = !_isPaused;
         Time.timeScale = _isPaused ? 0f : 1f;
         PauseMenu.SetActive(_isPaused);
         OptionMenu.SetActive(false);
         ControlMenu.SetActive(false);
+        Quit.SetActive(false);
         _Hud.SetActive(!_isPaused);
         Cursor.lockState = _isPaused ? CursorLockMode.None : CursorLockMode.Locked;
-        
+
+    }
+
+    public void PlayUISound()
+    {
+        aSource.Play();
     }
 
 }
