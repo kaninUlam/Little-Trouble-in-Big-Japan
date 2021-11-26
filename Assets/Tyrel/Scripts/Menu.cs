@@ -5,6 +5,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     bool mouseOver = false;
+    bool loreAudio = true;
 
     Vector3 pos;
     Vector3 newPos;
@@ -16,7 +17,8 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-       
+        loreAudio = true;
+        StartCoroutine(loreAudioPlaying());
 
         pos = transform.position;
         newPos = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
@@ -51,7 +53,14 @@ public class Menu : MonoBehaviour
 
     void OnMouseEnter()
     {
+        if(loreAudio == false)
         MenuSound();
+    }
+
+    IEnumerator loreAudioPlaying()
+    {
+        yield return new WaitForSeconds(17.5f);
+        loreAudio = false;
     }
 
     private void Update()

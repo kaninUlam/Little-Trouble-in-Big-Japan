@@ -20,6 +20,7 @@ TagManager:
   - Lore
   - Cold
   - PostProcessVignette
+  - PukeProjectile
   layers:
   - Default
   - TransparentFX

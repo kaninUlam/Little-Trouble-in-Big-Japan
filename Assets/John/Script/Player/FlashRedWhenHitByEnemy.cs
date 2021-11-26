@@ -10,7 +10,11 @@ public class FlashRedWhenHitByEnemy : MonoBehaviour
     float duration = 0.25f;
     private void Start()
     {
-        _volume = GameObject.FindObjectOfType<PostProcessVolume>();
+        /*GameObject something = GameObject.FindGameObjectWithTag("PostProcessVignette");
+        _volume = something.GetComponent<PostProcessVolume>();   // works when multiple post process present in scene need to set tag to inspector*/
+
+
+        _volume = GameObject.FindObjectOfType<PostProcessVolume>();// works if one post process present in scene
         _volume.profile.TryGetSettings<Vignette>(out _vignette);
     }
     private void OnCollisionEnter(Collision collision)

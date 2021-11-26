@@ -16,10 +16,13 @@ public class EnemyHealth : MonoBehaviour
     public float Points = 0;
 
     // Drop Rate Percentage
-    public const float _dropRate = 0.75f;
+    //public const float _dropRate = 0.5f;
 
     // Drop Items
-    public GameObject[] dropItem;
+    [SerializeField]
+    public GameObject[] dropItem; //Stores the Drops
+    private int itemNum; // the Item Number
+    private int randNum; // Random Number
     // Particle Effect
     public GameObject enemyDeathParticle;
 
@@ -36,10 +39,29 @@ public class EnemyHealth : MonoBehaviour
         // If the enemy reaches 0 HP it will be destroyed and drops an Item
         if (enemyHealth <= 0)
         {
-            if (Random.Range(0f, 1f) <= _dropRate) // Percentage to drop with the Rate
+            /*if (Random.Range(0f, 1f) <= _dropRate)*/ // Percentage to drop with the Rate
+            //{
+               //int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
+               //Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
+            //}
+
+            randNum = Random.Range(0, 101);
+            Debug.Log(randNum);
+
+            if (randNum >= 95)
             {
-                int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
-                Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
+                itemNum = 0;
+                Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
+            }
+            else if (randNum > 75 && randNum < 95)
+            {
+                itemNum = 1;
+                Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
+            }
+            else if (randNum > 40 && randNum < 75)
+            {
+                itemNum = 1;
+                Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
             }
 
             DifferentPointSystem.Points.UpdateScore(Points);
