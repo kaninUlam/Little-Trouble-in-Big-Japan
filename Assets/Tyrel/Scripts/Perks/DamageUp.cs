@@ -17,7 +17,7 @@ public class DamageUp : MonoBehaviour
         assault.GetComponent<AssualtRifle>();
         assault.newDamage = 40;
         shotgun.GetComponent<Shotgun>();
-        shotgun.newDamage = 100;
+        shotgun.newDamage = 200;
         sniper.GetComponent<Sniper>();
         sniper.newDamage = 300;
 

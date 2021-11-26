@@ -24,7 +24,7 @@ public class Shotgun : GunFire
     {
         gunDamage.GetComponent<GunDamage>();
         fireRate = normalFireRate;
-        newDamage = 20;
+        newDamage = 100;
     }
 
     void Update()

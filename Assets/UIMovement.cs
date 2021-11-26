@@ -14,7 +14,7 @@ public class UIMovement : MonoBehaviour
     void Start()
     {
         minimum = transform.localPosition.x;
-        maximum = 918;
+        maximum = 1000;
         StartCoroutine(UISlide()); 
     }
 
