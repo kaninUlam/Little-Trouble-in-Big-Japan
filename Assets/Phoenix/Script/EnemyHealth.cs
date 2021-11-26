@@ -53,12 +53,12 @@ public class EnemyHealth : MonoBehaviour
                 itemNum = 0;
                 Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
             }
-            else if (randNum > 50 && randNum < 80)
+            else if (randNum > 60 && randNum < 80)
             {
                 itemNum = 1;
                 Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
             }
-            else if (randNum > 1 && randNum < 50)
+            else if (randNum > 1 && randNum < 60)
             {
                 itemNum = 2;
                 Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
