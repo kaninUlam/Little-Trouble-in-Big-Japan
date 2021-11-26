@@ -48,22 +48,22 @@ public class EnemyHealth : MonoBehaviour
             randNum = Random.Range(0, 101);
             Debug.Log(randNum);
 
-            if (randNum >= 80)
+            if (randNum >= 40)
             {
                 int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
                 GameObject DropedItem = Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
                 Destroy(DropedItem, 25);
             }
-            else if (randNum > 60 && randNum < 80)
-            {
-                itemNum = 1;
-                Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
-            }
-            else if (randNum > 1 && randNum < 60)
-            {
-                itemNum = 2;
-                Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
-            }
+            //else if (randNum > 75 && randNum < 95)
+            //{
+            //    itemNum = 1;
+            //    Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
+            //}
+            //else if (randNum > 40 && randNum < 75)
+            //{
+            //    itemNum = 1;
+            //    Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
+            //}
 
             DifferentPointSystem.Points.UpdateScore(Points);
 

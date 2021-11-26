@@ -25,10 +25,7 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
-        if (currentHealthPoints <= 0)
-        {
-            SceneManager.LoadScene(3);
-        }
+       
     }
     public void TakeDamageOverTime(float amount)
     {
@@ -36,6 +33,7 @@ public class Health : MonoBehaviour
         healthBar.SetHealth(currentHealthPoints);
         if (currentHealthPoints <= 0 && notAlive == false)
         {
+
             StartCoroutine(dAudio.GetComponent<DeathAudio>().OnDeathSounds());
             DeathSound();
             notAlive = true;
