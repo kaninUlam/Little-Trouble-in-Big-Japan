@@ -48,19 +48,19 @@ public class EnemyHealth : MonoBehaviour
             randNum = Random.Range(0, 101);
             Debug.Log(randNum);
 
-            if (randNum >= 95)
+            if (randNum >= 80)
             {
                 itemNum = 0;
                 Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
             }
-            else if (randNum > 75 && randNum < 95)
+            else if (randNum > 50 && randNum < 80)
             {
                 itemNum = 1;
                 Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
             }
-            else if (randNum > 40 && randNum < 75)
+            else if (randNum > 1 && randNum < 50)
             {
-                itemNum = 1;
+                itemNum = 2;
                 Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
             }
 
