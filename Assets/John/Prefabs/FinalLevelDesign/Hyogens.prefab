@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2806362595020054170, guid: 1f5f434a83bdd084eb65967c724aa875, type: 3}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3385694560997148829, guid: 1f5f434a83bdd084eb65967c724aa875, type: 3}
       propertyPath: Player
       value: 
@@ -466,6 +470,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 7.18
       objectReference: {fileID: 0}
+    - target: {fileID: -3470914125966124886, guid: 8f9dbe45fd38a494b8b6e90f0a7e0731, type: 3}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3961579631750494731, guid: 8f9dbe45fd38a494b8b6e90f0a7e0731, type: 3}
       propertyPath: Player
       value: 
@@ -706,6 +714,14 @@ PrefabInstance:
       propertyPath: m_Height
       value: 37.84
       objectReference: {fileID: 0}
+    - target: {fileID: 6059645053283022371, guid: 1b299ec63e382d241979b9cadd48cf4c, type: 3}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059645053283022371, guid: 1b299ec63e382d241979b9cadd48cf4c, type: 3}
+      propertyPath: m_Acceleration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6734377684024209348, guid: 1b299ec63e382d241979b9cadd48cf4c, type: 3}
       propertyPath: m_Size.y
       value: 38.15883
@@ -837,6 +853,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 11.26
       objectReference: {fileID: 0}
+    - target: {fileID: 3566893364551992243, guid: d94bac9eec71cbb42ae612298f4329f7, type: 3}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4963939519256826012, guid: d94bac9eec71cbb42ae612298f4329f7, type: 3}
       propertyPath: enemyDeathParticle
       value: 
@@ -880,6 +900,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 65398068235740304}
     m_Modifications:
+    - target: {fileID: -1140251428347588041, guid: 290cbac4fee2a82479779d5a776d7c47, type: 3}
+      propertyPath: m_Speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 592896395720638809, guid: 290cbac4fee2a82479779d5a776d7c47, type: 3}
       propertyPath: Player
       value: 
