@@ -26,6 +26,6 @@ public class SniperAmmo : MonoBehaviour
 
     private void Update()
     {
-        Destroy(gameObject, 25);
+        
     }
 }

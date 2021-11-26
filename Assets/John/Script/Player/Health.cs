@@ -46,10 +46,11 @@ public class Health : MonoBehaviour
     {
         currentHealthPoints -= amount;
         healthBar.SetHealth(currentHealthPoints);
-        if (currentHealthPoints <= 0)
+        if (currentHealthPoints <= 0 && notAlive == false)
         {
+            StartCoroutine(dAudio.GetComponent<DeathAudio>().OnDeathSounds());
             DeathSound();
-            dAudio.GetComponent<DeathAudio>().OnDeathSounds();
+            notAlive = true;
         }
     }
 

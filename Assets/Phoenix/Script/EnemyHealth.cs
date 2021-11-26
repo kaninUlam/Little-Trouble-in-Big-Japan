@@ -39,7 +39,8 @@ public class EnemyHealth : MonoBehaviour
             if (Random.Range(0f, 1f) <= _dropRate) // Percentage to drop with the Rate
             {
                 int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
-                Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
+                GameObject DropedItem = Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
+                Destroy(DropedItem, 25);
             }
 
             DifferentPointSystem.Points.UpdateScore(Points);
