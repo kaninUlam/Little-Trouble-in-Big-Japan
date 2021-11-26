@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndGameScript : MonoBehaviour
 {
     bool PlayerNearLadder = false;
+    public GameObject Exit;
 
     public DifferentPointSystem _currentscore;
     private void Update()
@@ -22,6 +24,7 @@ public class EndGameScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Exit.SetActive(true);
             Debug.Log("Player near Ladder");
             PlayerNearLadder = true;
         }
@@ -30,6 +33,7 @@ public class EndGameScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Exit.SetActive(false);
             Debug.Log("Player Left Ladder");
             PlayerNearLadder = false;
         }
