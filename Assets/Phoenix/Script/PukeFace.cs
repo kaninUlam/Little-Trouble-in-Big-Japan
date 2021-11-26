@@ -43,7 +43,7 @@ public class PukeFace : AiBehaviour
 
         attackDelayTimer = attackDelay;
 
-        Vector3 pos = new Vector3(0f, 10f, 0f);
+        Vector3 pos = new Vector3(0f, 5f, 0f);
 
         GameObject pukeProjectile = Instantiate(puke, transform.position + pos, transform.rotation);
 
