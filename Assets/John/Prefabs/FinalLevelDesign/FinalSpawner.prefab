@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 7498993894840253250}
   - component: {fileID: 7498993894840253251}
   m_Layer: 0
-  m_Name: SpawnHolder (1)
+  m_Name: FinalSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,6 +206,12 @@ MonoBehaviour:
   hasIncreasedDifficulty: 0
   waveIsDone: 1
   Enemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   spawners:
   - {fileID: 7498993895172622934}
