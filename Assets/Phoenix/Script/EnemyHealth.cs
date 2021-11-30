@@ -16,12 +16,12 @@ public class EnemyHealth : MonoBehaviour
     public float Points = 0;
 
     // Drop Rate Percentage
-    //public const float _dropRate = 0.5f;
+    //public const float _dropRate = 0.65f;
 
     // Drop Items
     [SerializeField]
     public GameObject[] dropItem; //Stores the Drops
-    private int itemNum; // the Item Number
+    /*private int itemNum;*/ // the Item Number
     private int randNum; // Random Number
     // Particle Effect
     public GameObject enemyDeathParticle;
@@ -39,16 +39,19 @@ public class EnemyHealth : MonoBehaviour
         // If the enemy reaches 0 HP it will be destroyed and drops an Item
         if (enemyHealth <= 0)
         {
-            /*if (Random.Range(0f, 1f) <= _dropRate)*/ // Percentage to drop with the Rate
+            //if (Random.Range(0f, 1f) <= _dropRate) // Percentage to drop with the Rate
+            //    Debug.Log(_dropRate);
             //{
-               //int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
-               //Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
+            //    int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
+            //    GameObject DropedItem = Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
+            //    Debug.Log(dropItem.Length);
+            //    Destroy(DropedItem, 25);
             //}
 
-            randNum = Random.Range(0, 101);
+            randNum = Random.Range(15, 100);
             Debug.Log(randNum);
 
-            if (randNum >= 40)
+            if (randNum >= 30)
             {
                 int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
                 GameObject DropedItem = Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
@@ -61,7 +64,7 @@ public class EnemyHealth : MonoBehaviour
             //}
             //else if (randNum > 40 && randNum < 75)
             //{
-            //    itemNum = 1;
+            //    itemNum = 2;
             //    Instantiate(dropItem[itemNum], transform.position + Vector3.up, Quaternion.identity);
             //}
 
