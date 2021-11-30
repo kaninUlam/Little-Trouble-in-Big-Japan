@@ -19,7 +19,7 @@ public class FlashRedWhenHitByEnemy : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy" || collision.collider.gameObject.tag == "PukeProjectile")
         {
             StartCoroutine(FlashRed());
         }

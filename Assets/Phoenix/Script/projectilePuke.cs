@@ -7,7 +7,7 @@ public class projectilePuke : MonoBehaviour
 {
     public float lifeTime = 3.0f;
 
-    public float moveSpeed = 35.0f;
+    public float moveSpeed = 50.0f;
 
     public float damage;
 
