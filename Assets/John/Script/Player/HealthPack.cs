@@ -6,7 +6,7 @@ public class HealthPack : MonoBehaviour
 {
     public GameObject player;
     public Health healthup;
-    public float heal = 10;
+    public float heal = 20;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
