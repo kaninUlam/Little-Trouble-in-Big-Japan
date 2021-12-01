@@ -70,7 +70,7 @@ public class GunFire : MonoBehaviour
         gunRayCast.raycastShoot();
         GameObject bullets = Instantiate(Projectile, gunEnd.transform.position, transform.rotation);
         bullets.GetComponent<Rigidbody>().velocity = (targetPoint - gunEnd.transform.position).normalized * movement.Speed;
-        Destroy(bullets, .5f);
+        Destroy(bullets, .3f);
     }
 
     public void FireSniperProjectile()
