@@ -23,6 +23,8 @@ public class EnemyHealth : MonoBehaviour
     public GameObject[] dropItem; //Stores the Drops
     /*private int itemNum;*/ // the Item Number
     private int randNum; // Random Number
+    Vector3 pos = new Vector3(0f, 3.5f, 0f);
+
     // Particle Effect
     public GameObject enemyDeathParticle;
 
@@ -54,7 +56,7 @@ public class EnemyHealth : MonoBehaviour
             if (randNum >= 30)
             {
                 int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
-                GameObject DropedItem = Instantiate(dropItem[indexToDrop], transform.position + Vector3.up, Quaternion.identity); // What it Drops
+                GameObject DropedItem = Instantiate(dropItem[indexToDrop], transform.position + pos, Quaternion.identity); // What it Drops
                 Destroy(DropedItem, 25);
             }
             //else if (randNum > 75 && randNum < 95)

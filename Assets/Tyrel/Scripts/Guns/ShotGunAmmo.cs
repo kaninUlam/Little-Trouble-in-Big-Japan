@@ -9,7 +9,6 @@ public class ShotGunAmmo : MonoBehaviour
     public MeshRenderer mesh;
     public Collider boxCollider;
     
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -18,7 +17,7 @@ public class ShotGunAmmo : MonoBehaviour
             shotgunAmmo.ammo += 5;
             mesh.enabled = false;
             boxCollider.enabled = false;
-            Destroy(gameObject, 5);
+            //Destroy(gameObject, 5);
 
         }
 
