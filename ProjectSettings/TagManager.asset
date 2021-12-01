@@ -21,6 +21,7 @@ TagManager:
   - Cold
   - PostProcessVignette
   - PukeProjectile
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

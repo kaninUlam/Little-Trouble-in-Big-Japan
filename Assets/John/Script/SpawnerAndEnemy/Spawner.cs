@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public float SpawnRate = 0.25f;
     public float TimeBetweenSpawnning = 10f;
 
+    int index;
     public int enemyCount;
     public int WaveCount;
     
@@ -20,6 +21,7 @@ public class Spawner : MonoBehaviour
     GameObject EnemyHolder;
     private void Start()
     {
+        index = Random.Range(0, spawners.Length);
         EnemyHolder = new GameObject("EnemyHolder");
         StartCoroutine(waveSpawner());
         WaveCount--;

@@ -18,9 +18,10 @@ public class SwitchWeapons : MonoBehaviour
 
     void Start()
     {
-        weaponSelected = 1;
 
+        
         GunsActive();
+        weaponSelected = 1;
     }
 
     IEnumerator GunsActive()
@@ -30,6 +31,7 @@ public class SwitchWeapons : MonoBehaviour
         Sniper.SetActive(true);
         
         yield return new WaitForSeconds(1);
+        
         Shotgun.SetActive(false);
         AssualtRifle.SetActive(false);
         Sniper.SetActive(false);

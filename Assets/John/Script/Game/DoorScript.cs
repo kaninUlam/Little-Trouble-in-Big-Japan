@@ -6,20 +6,17 @@ public class DoorScript : MonoBehaviour
 {
     public DifferentPointSystem _Score;
     public GameObject Door;
-    public int ScoreNeeded;
+    public GameObject OpenDoorObject;
+    public int cost;
 
     bool playerInZone = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        _Score = GetComponent<DifferentPointSystem>();
-    }
     private void Update()
     {
         if(playerInZone == true && Input.GetKeyDown(KeyCode.E))
         {
-            if(_Score._PlayerScore>= 10000)
+            if(_Score._PlayerScore>= cost)
             {
+                _Score._PlayerScore -= cost;
                 OpenDoor();
             }
         }
@@ -30,6 +27,7 @@ public class DoorScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            OpenDoorObject.SetActive(true);
             playerInZone = true;
         }    
     }
@@ -37,12 +35,14 @@ public class DoorScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            OpenDoorObject.SetActive(false);
             playerInZone = false;
         }
     }
 
     void OpenDoor()
     {
+        OpenDoorObject.SetActive(false);
         Door.SetActive(false);
     }
 }
