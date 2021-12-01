@@ -17,7 +17,7 @@ public class ShotGunAmmo : MonoBehaviour
             shotgunAmmo.ammo += 5;
             mesh.enabled = false;
             boxCollider.enabled = false;
-            //Destroy(gameObject, 5);
+            Destroy(gameObject, 5);
 
         }
 
