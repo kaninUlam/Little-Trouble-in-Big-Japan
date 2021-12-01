@@ -17,7 +17,7 @@ public class SkipCredits : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(3);
+            Application.Quit();
         }
         
 

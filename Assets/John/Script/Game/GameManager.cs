@@ -20,6 +20,6 @@ public class GameManager : MonoBehaviour
 
     public void OnDeath()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }

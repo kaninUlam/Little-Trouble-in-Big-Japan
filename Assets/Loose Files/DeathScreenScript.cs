@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class DeathScreenScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
+    
+    
 
     // Update is called once per frame
     void Update()
@@ -33,11 +31,14 @@ public class DeathScreenScript : MonoBehaviour
 
                 if (hit.transform.gameObject.tag == "Exit")
                 {
-                    Debug.Log("exit");
-                    Application.Quit();
+                    SceneManager.LoadScene(2);
                 }
 
             }
         }
+
+
     }
+
+    
 }

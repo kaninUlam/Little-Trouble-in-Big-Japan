@@ -2,23 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathAudio : MonoBehaviour
+public class ScriptToPlayAudio : MonoBehaviour
 {
 
-    public GameManager gameManager;
     public AudioClip[] aClips = null;
     public AudioSource aSource = null;
-
-    
-
-    public IEnumerator OnDeathSounds()
+    // Start is called before the first frame update
+    void Start()
     {
-        Time.timeScale = 0;
         DeathSound();
-        
-        gameManager.GetComponent<GameManager>().OnDeath();
-        yield return new WaitForSeconds(0.1f);
-        
     }
 
 
