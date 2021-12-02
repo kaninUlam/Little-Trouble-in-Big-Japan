@@ -8,10 +8,10 @@ public class ShotGunAmmo : MonoBehaviour
     public AudioSource aSource;
     public MeshRenderer mesh;
     public Collider boxCollider;
-    
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             aSource.Play();
             shotgunAmmo.ammo += 5;
