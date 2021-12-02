@@ -84770,6 +84770,10 @@ PrefabInstance:
       propertyPath: playerAudio
       value: 
       objectReference: {fileID: 1144261104}
+    - target: {fileID: 3602267913976466759, guid: 83556c494573cc744a59da742142148f, type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 4301307611040344839, guid: 83556c494573cc744a59da742142148f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -85189,6 +85193,14 @@ PrefabInstance:
     - target: {fileID: 8065281806968749064, guid: 83556c494573cc744a59da742142148f, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266113623323348358, guid: 83556c494573cc744a59da742142148f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266113623323348358, guid: 83556c494573cc744a59da742142148f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8449598290179206093, guid: 83556c494573cc744a59da742142148f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
