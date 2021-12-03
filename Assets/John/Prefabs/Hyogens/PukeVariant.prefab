@@ -138,8 +138,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.147859, y: 33.56581, z: 15.089174}
-  m_Center: {x: 0.96195877, y: 23.217094, z: 1.0445851}
+  m_Size: {x: 35.82873, y: 38, z: 9.711904}
+  m_Center: {x: 0.40821108, y: 23.217094, z: 1.765953}
 --- !u!114 &8550131514583772016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,17 +173,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAudio: {fileID: 0}
   aClips:
-  - {fileID: 8300000, guid: 33eb78abfbee10e448768173ccf22698, type: 3}
-  - {fileID: 8300000, guid: a1491df5088b2294bbeb2d9881a70ecf, type: 3}
   - {fileID: 8300000, guid: 4a890baaf80505b49b412b22b7a5377f, type: 3}
-  - {fileID: 8300000, guid: 94f246d85efb83e4a96a280de60e25fa, type: 3}
   aSource: {fileID: 766260523922160491, guid: 3abd774bbc414ba479359c1e661183af, type: 3}
   enemyHealth: 200
   MaxEnemyHealth: 200
   Points: 50
   dropItem:
   - {fileID: 5231230239218231686, guid: 0c15dcaa06dfe0f40b28c45addbd1c8f, type: 3}
-  - {fileID: 3798695415625915211, guid: 832e98ba4f7e75248b15522a0791bc0f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   enemyDeathParticle: {fileID: 4233841226735060423, guid: 2c714834950743247ab473075609f8b5, type: 3}
 --- !u!114 &5534932530413754908
 MonoBehaviour:
@@ -208,8 +206,8 @@ AudioSource:
   m_GameObject: {fileID: 2733101945318737727}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: a4404427fd852004887e7fbba358f27d, type: 2}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5741834271350467337, guid: a4404427fd852004887e7fbba358f27d, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 4a890baaf80505b49b412b22b7a5377f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -217,7 +215,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 200
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 16.29461
@@ -255,7 +253,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

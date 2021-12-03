@@ -209,14 +209,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898368632920528767}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.110410005, y: 0.110410005, z: 11.040998}
   m_Children:
   - {fileID: 6417086158087405346}
   m_Father: {fileID: 9153030593721379540}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 51.81666}
@@ -389,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 8380574899860402286}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25814041, y: 0.25814041, z: 0.25814041}
   m_Children:
   - {fileID: 8608117104983841676}
   - {fileID: 7500662011444754647}
@@ -406,7 +406,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 25
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -445,8 +445,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 17.020874, y: 45.5971, z: 25.773624}
-  m_Center: {x: 0.10121663, y: 22.298546, z: -0.9163896}
+  m_Size: {x: 39.06999, y: 36.172695, z: 25.773624}
+  m_Center: {x: 0, y: 22.807926, z: 0}
 --- !u!114 &3961579631750494731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4a890baaf80505b49b412b22b7a5377f, type: 3}
   - {fileID: 8300000, guid: 33eb78abfbee10e448768173ccf22698, type: 3}
   - {fileID: 8300000, guid: 53531910e3c452a4abc03ca0fb8e5b46, type: 3}
-  aSource: {fileID: 0}
+  aSource: {fileID: 2940775921895067340}
   enemyHealth: 200
   MaxEnemyHealth: 200
   Points: 200
