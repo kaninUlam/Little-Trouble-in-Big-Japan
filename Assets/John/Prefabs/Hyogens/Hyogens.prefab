@@ -2557,9 +2557,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8335866151838568886, guid: 1d8b872fc5799884588d7367e36a7a60, type: 3}
-      propertyPath: dropItem.Array.data[0]
+      propertyPath: aClips.Array.data[0]
       value: 
-      objectReference: {fileID: 3798695415625915211, guid: 832e98ba4f7e75248b15522a0791bc0f, type: 3}
+      objectReference: {fileID: 8300000, guid: 6e8334c2444a98a4f944826ccd775543, type: 3}
+    - target: {fileID: 8335866151838568886, guid: 1d8b872fc5799884588d7367e36a7a60, type: 3}
+      propertyPath: aClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 94f246d85efb83e4a96a280de60e25fa, type: 3}
+    - target: {fileID: 8335866151838568886, guid: 1d8b872fc5799884588d7367e36a7a60, type: 3}
+      propertyPath: aSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8497439028914299128, guid: 1d8b872fc5799884588d7367e36a7a60, type: 3}
       propertyPath: m_Name
       value: SpookyHyogen
