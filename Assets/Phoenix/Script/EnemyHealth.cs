@@ -50,14 +50,14 @@ public class EnemyHealth : MonoBehaviour
             //    Destroy(DropedItem, 25);
             //}
 
-            randNum = Random.Range(15, 100);
+            randNum = Random.Range(1, 70);
             Debug.Log(randNum);
 
             if (randNum >= 30)
             {
                 int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
                 GameObject DropedItem = Instantiate(dropItem[indexToDrop], transform.position + pos, Quaternion.identity); // What it Drops
-                Destroy(DropedItem, 25);
+                Destroy(DropedItem, 15);
             }
             //else if (randNum > 75 && randNum < 95)
             //{
