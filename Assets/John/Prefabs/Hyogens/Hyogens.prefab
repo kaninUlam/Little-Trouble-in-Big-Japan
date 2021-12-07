@@ -2561,7 +2561,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 94f246d85efb83e4a96a280de60e25fa, type: 3}
     - target: {fileID: 8335866151838568886, guid: 1d8b872fc5799884588d7367e36a7a60, type: 3}
-      propertyPath: aSource
+      propertyPath: dropItem.Array.data[0]
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8497439028914299128, guid: 1d8b872fc5799884588d7367e36a7a60, type: 3}
