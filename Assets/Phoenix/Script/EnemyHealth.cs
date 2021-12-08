@@ -53,7 +53,7 @@ public class EnemyHealth : MonoBehaviour
             randNum = Random.Range(1, 70);
             Debug.Log(randNum);
 
-            if (randNum >= 25)
+            if (randNum >= 35)
             {
                 int indexToDrop = Random.Range(0, dropItem.Length); // Drop Items
                 GameObject DropedItem = Instantiate(dropItem[indexToDrop], transform.position + pos, Quaternion.identity); // What it Drops

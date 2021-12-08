@@ -1712,14 +1712,6 @@ PrefabInstance:
       propertyPath: gunEnd
       value: 
       objectReference: {fileID: 2770297819632941394}
-    - target: {fileID: 7975298729751110684, guid: c04323bfcf391c1498e53ae84dc9e666, type: 3}
-      propertyPath: newDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7975298729751110684, guid: c04323bfcf391c1498e53ae84dc9e666, type: 3}
-      propertyPath: ammo
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8234002747898563029, guid: c04323bfcf391c1498e53ae84dc9e666, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.609
